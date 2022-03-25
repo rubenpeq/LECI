@@ -17,9 +17,12 @@ import java.util.Scanner;
 
      public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Number? ");
-        int N = sc.nextInt();
-        System.out.println(N + " is a prime number is a " + isPrime(N) + " statement!");
+        int N;
+        do{
+            System.out.print("Number? ");
+            N = sc.nextInt();
+        } while (N<=0);
+        System.out.println(isPrime(N) ? "The number "+N+" is prime" : "The number "+N+" is not prime");
         sc.close();
     }
 }
