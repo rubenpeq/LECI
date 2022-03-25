@@ -1,0 +1,19 @@
+|ISDSim2
+out[0] <= MEF:inst.Q[0]
+out[1] <= MEF:inst.Q[1]
+X => MEF:inst.X
+ck => MEF:inst.CK
+
+
+|ISDSim2|MEF:inst
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst4[1].DB_MAX_OUTPUT_PORT_TYPE
+CK => inst4[1].CLK
+CK => inst4[0].CLK
+CK => inst2.CLK
+X => inst9.IN0
+X => inst1.IN1
+X => inst8.IN0
+X => inst5.IN1
+
+

@@ -1,0 +1,88 @@
+|CmpDemo
+Xo <= Cmp4bit:inst.Xo
+a[0] => Cmp4bit:inst.b1
+a[1] => Cmp4bit:inst.a1
+a[2] => Cmp4bit:inst.b2
+a[3] => Cmp4bit:inst.a2
+b[0] => Cmp4bit:inst.b3
+b[1] => Cmp4bit:inst.a3
+b[2] => Cmp4bit:inst.b0
+b[3] => Cmp4bit:inst.a0
+Yo <= Cmp4bit:inst.Yo
+Zo <= Cmp4bit:inst.Zo
+
+
+|CmpDemo|Cmp4bit:inst
+Xo <= Cmp1bit:inst4.Xo
+a0 => Cmp1bit:inst.ai
+b0 => Cmp1bit:inst.bi
+a1 => Cmp1bit:inst2.ai
+b1 => Cmp1bit:inst2.bi
+a2 => Cmp1bit:inst3.ai
+b2 => Cmp1bit:inst3.bi
+a3 => Cmp1bit:inst4.ai
+b3 => Cmp1bit:inst4.bi
+Yo <= Cmp1bit:inst4.Yo
+Zo <= Cmp1bit:inst4.Zo
+
+
+|CmpDemo|Cmp4bit:inst|Cmp1bit:inst4
+Yo <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst.IN0
+ai => inst9.IN1
+ai => inst6.IN0
+bi => inst.IN1
+bi => inst7.IN0
+bi => inst8.IN0
+yi => inst1.IN1
+Xo <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+XI => inst15.IN1
+Zo <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+zi => inst3.IN1
+
+
+|CmpDemo|Cmp4bit:inst|Cmp1bit:inst3
+Yo <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst.IN0
+ai => inst9.IN1
+ai => inst6.IN0
+bi => inst.IN1
+bi => inst7.IN0
+bi => inst8.IN0
+yi => inst1.IN1
+Xo <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+XI => inst15.IN1
+Zo <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+zi => inst3.IN1
+
+
+|CmpDemo|Cmp4bit:inst|Cmp1bit:inst2
+Yo <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst.IN0
+ai => inst9.IN1
+ai => inst6.IN0
+bi => inst.IN1
+bi => inst7.IN0
+bi => inst8.IN0
+yi => inst1.IN1
+Xo <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+XI => inst15.IN1
+Zo <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+zi => inst3.IN1
+
+
+|CmpDemo|Cmp4bit:inst|Cmp1bit:inst
+Yo <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst.IN0
+ai => inst9.IN1
+ai => inst6.IN0
+bi => inst.IN1
+bi => inst7.IN0
+bi => inst8.IN0
+yi => inst1.IN1
+Xo <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+XI => inst15.IN1
+Zo <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+zi => inst3.IN1
+
+

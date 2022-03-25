@@ -1,0 +1,64 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {portuguese}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.0.1}Referências bibliográficas}{1}{subsection.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}GPU (Graphics Processing Unit)}{2}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Historia das GPUs}{2}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Desempenho}{4}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Clock}{5}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Shaders}{5}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}TMU}{5}{subsection.2.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}ROP}{5}{subsection.2.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.5}Controlador de memoria RAM}{6}{subsection.2.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.6}Interface}{6}{subsection.2.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}CPU (Central Processing Unit)}{7}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}História dos Processadores}{7}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Geração Pré-x86}{8}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Processadores de 32 bits}{8}{subsection.3.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}A luta entre Intel e AMD}{9}{subsection.3.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.4}A lei de Moore}{9}{subsection.3.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.5}Multicore}{10}{subsection.3.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.6}Era 64 bits}{10}{subsection.3.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.7}Blackfin}{10}{subsection.3.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.8}Intel Core}{10}{subsection.3.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Degradação da Performance do Hardware}{11}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Partes Mecânicas}{11}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Componentes que Degradam por Reações Químicas e Magnéticas}{12}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Resto dos Componentes}{13}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Metodologia}{13}{subsection.4.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Resultados}{14}{subsection.4.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Análise dos Resultados}{16}{subsection.4.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{O que poderá ter causado a diferença dos valores obtidos?}{16}{section*.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{O que é Silicone Lottery?\cite {siliclot}}{17}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusão}{18}{chapter.5}%

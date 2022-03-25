@@ -1,0 +1,52 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{canaltech}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{note}{https://canaltech.com/}
+    \field{title}{"Canal Tech"}
+  \endentry
+
+  \entry{furmark}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{note}{https://geeks3d.com/furmark/}
+    \field{title}{"Furmark"}
+  \endentry
+
+  \entry{hardware}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{note}{https://www.hardware.com/}
+    \field{title}{"Hardware"}
+  \endentry
+
+  \entry{siliclot}{article}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+  \field{note}{https://www.nicehash.com/blog/post/what-is-a-silicon-lottery-and-how-does-affect-mining}
+    \field{title}{"What is a silicon lottery?"}
+  \endentry
+\enddatalist
+\endinput

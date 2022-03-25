@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/rubenpeq/UA/ISD/P8/Parte_1/simulation/qsim
+vAddSubDemo
+Z1 !s110 1638881707
+!i10b 1
+!s100 DJGgEYNU]e61UfS@``kOI0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IlZ^lNTR8i]bPhdKYPc4gC0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1638881706
+8AddSubDemo.vo
+FAddSubDemo.vo
+!i122 12
+L0 32 395
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1638881707.000000
+!s107 AddSubDemo.vo|
+!s90 -work|work|AddSubDemo.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@add@sub@demo
+vAddSubDemo_vlg_vec_tst
+R1
+!i10b 1
+!s100 9QSSa7097P[4Y`OWH6EAI0
+R2
+I>GAdT2zCSQIcn9:<kLBe60
+R3
+R0
+w1638881705
+8AddSubDemo.vwf.vt
+FAddSubDemo.vwf.vt
+!i122 13
+L0 30 87
+R4
+r1
+!s85 0
+31
+R5
+!s107 AddSubDemo.vwf.vt|
+!s90 -work|work|AddSubDemo.vwf.vt|
+!i113 1
+R6
+R7
+n@add@sub@demo_vlg_vec_tst

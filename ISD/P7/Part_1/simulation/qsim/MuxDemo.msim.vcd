@@ -1,0 +1,81 @@
+$comment
+	File created using the following command:
+		vcd file MuxDemo.msim.vcd -direction
+$end
+$date
+	Wed Dec  1 15:31:53 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module MuxDemo_vlg_vec_tst $end
+$var reg 1 ! I0 $end
+$var reg 1 " I1 $end
+$var reg 1 # S $end
+$var wire 1 $ Y $end
+
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + Y~output_o $end
+$var wire 1 , I0~input_o $end
+$var wire 1 - I1~input_o $end
+$var wire 1 . S~input_o $end
+$var wire 1 / inst|inst2~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+0#
+0$
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+1,
+0-
+0.
+0/
+$end
+#120000
+1#
+1.
+1/
+1+
+1$
+#240000
+1"
+1-
+#320000
+0#
+0.
+#380000
+0!
+0,
+#450000
+1#
+1.
+0/
+0+
+0$
+#480000
+0"
+0-
+#610000
+0#
+0.
+#1000000

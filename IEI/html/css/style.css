@@ -1,0 +1,25 @@
+h1{
+    color: aquamarine;
+}
+h2{
+    color: #3f3f;
+    background-color: #000;
+}
+table,td,th{
+    border: 1px solid #000;
+}
+#coldest{
+    background-color: lightblue;
+}
+.cold{
+    background-color:cyan;
+}
+.hot{
+    background-color:orange;
+}
+.button-ok{
+    color: white; background-color: green;
+}
+.button-cancel{
+    color: white; background-color: red;
+}
