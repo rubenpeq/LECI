@@ -27,16 +27,21 @@ public class ex4 {
         return (av/i);
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         double[] a = new double[64];
         int i;
-        for (i=0; i<a.length; i++){
-            a[i]=sc.nextDouble();
-            if (i>0 && a[i]==a[0]){
-                 break;
+        Scanner sc = null;
+        try{
+            sc = new Scanner(System.in);
+            for (i=0; i<a.length; i++){
+                a[i]=sc.nextDouble();
+                if (i>0 && a[i]==a[0]){
+                    break;
+                }
             }
+        }finally{
+            if (sc != null)
+                sc.close();
         }
         System.out.format("Numeros lidos: %d \n Max: %.2f \n Min: %.2f \n Media: %.2f \n", i+1, Max(a), Min(a,i), Average(a, i));
-        sc.close();
     }    
 }
