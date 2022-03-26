@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity NAND2Gate is
+	port(inPort0 : in std_logic;
+		  inPort1 : in std_logic;
+		  outPort : out std_logic);
+end GateDemo;
+
+architecture Shell of GateDemo is
+begin
+	system_core : entity work.AND2Gate(Behavioral)
+							port map(inPort0 => SW(0),
+										inPort1 =>SW(1),
+										outPort => LEDR(0));
+end Shell;
