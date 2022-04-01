@@ -26,7 +26,7 @@ public class ex2 {
         else return false;
     }
     public static String rmSpaces(String s){
-        // completar
+        s = s.trim().replaceAll(" +", " ");
         return s;
     }
     public static boolean isPalindrome(String s){
@@ -37,7 +37,6 @@ public class ex2 {
         if (s.compareTo(rs)==0) return true;
         else return false;
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s1 = sc.nextLine();
