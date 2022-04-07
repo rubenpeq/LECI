@@ -3,9 +3,11 @@ package poo;
 public class Date{
     int year, month, day;
     public Date(int d, int m, int y){
+      if (valid(d, m, y)){
       day = d;
-      month=m;
-      year=y;
+      month = m;
+      year = y;
+      }
     }
     public static boolean validMonth(int month){
         if (month<0 || month>12){
@@ -43,7 +45,42 @@ public class Date{
         return false;
       }
     }
-    public String toString(int day, int month, int year){
+    /*public Date set(int d, int m, int y){
+      ... completar
+    }*/
+    public static Date incrementDate(Date d){
+      if (d.day==monthDays(d.month, d.year)){
+        if (d.month==12){
+          d.day=1;
+          d.month=1;
+          d.year+=1;
+        } else{
+          d.day=1;
+          d.month+=1;
+        }
+      } else{
+        d.day+=1;
+      }
+      return d;
+    }
+    public static Date decrementDate(Date d){
+      if (d.day==1){
+        if (d.month==1){
+          d.year-=1;
+          d.month=12;
+          d.day=31;
+        } else{
+          d.month-=1;
+          d.day=monthDays(d.month, d.year);
+        }
+      } else{
+        d.day-=1;
+      }
+      return d;
+    }
+
+    @Override
+    public String toString(){
       return String.format("%04d-%02d-%02d", year, month, day);
     }
   }
