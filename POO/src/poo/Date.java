@@ -1,6 +1,12 @@
 package poo;
 
 public class Date{
+    int year, month, day;
+    public Date(int d, int m, int y){
+      day = d;
+      month=m;
+      year=y;
+    }
     public static boolean validMonth(int month){
         if (month<0 || month>12){
             return false;
@@ -31,6 +37,14 @@ public class Date{
       return d;
     }
     public static boolean valid(int day, int month, int year){
+      if (day>0 && day<=monthDays(month, year) && validMonth(month) && year>=0){
         return true;
+      } else{
+        return false;
+      }
     }
-}
+    public String toString(int day, int month, int year){
+      return String.format("%04d-%02d-%02d", year, month, day);
+    }
+  }
+  
