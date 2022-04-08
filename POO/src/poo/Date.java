@@ -1,13 +1,32 @@
 package poo;
 
+import java.util.Scanner;
+
 public class Date{
     int year, month, day;
-    public Date(int d, int m, int y){
-      if (valid(d, m, y)){
-      day = d;
-      month = m;
-      year = y;
+    public Date(int day, int month, int year){
+      if (valid(day, month, year)){
+      this.day = day;
+      this.month = month;
+      this.year = year;
+      } else{
+        System.out.println("Invalid date. ");
       }
+    }
+    public static int[] readValues(Scanner sc){
+      int d[]= new int[3];
+      do{
+          System.out.print("day: ");
+          d[0]=sc.nextInt();
+          System.out.print("month: ");
+          d[1]=sc.nextInt();
+          System.out.print("year: ");
+          d[2]=sc.nextInt();
+          if (!(valid(d[0], d[1], d[2]))){
+            System.out.println("Invalid date.");
+          }
+      }while(!(valid(d[0], d[1], d[2])));
+      return d;
     }
     public static boolean validMonth(int month){
         if (month<0 || month>12){
@@ -45,10 +64,37 @@ public class Date{
         return false;
       }
     }
-    /*public Date set(int d, int m, int y){
-      ... completar
-    }*/
-    public static Date incrementDate(Date d){
+    public void setDay(int day){
+      if (valid(day, this.month, this.year)){
+        this.day=day;
+      } else{
+        System.out.println("Invalid day. ");
+      }
+    }
+    public void setMonth(int month){
+      if (valid(this.day, month, this.year)){
+        this.month=month;
+      } else{
+        System.out.println("Invalid month. ");
+      }
+    }
+    public void setYear(int year){
+      if (valid(this.day, this.month, year)){
+        this.year=year;
+      } else{
+        System.out.println("Invalid year. ");
+      }
+    }
+    public void setDate(int day, int month, int year){
+      if (valid(day, month, year)){
+        this.day=day;
+        this.month=month;
+        this.year=year;
+      } else{
+        System.out.println("Invalid date. ");
+      }
+    }
+    public Date incrementDate(Date d){
       if (d.day==monthDays(d.month, d.year)){
         if (d.month==12){
           d.day=1;
@@ -63,7 +109,7 @@ public class Date{
       }
       return d;
     }
-    public static Date decrementDate(Date d){
+    public Date decrementDate(Date d){
       if (d.day==1){
         if (d.month==1){
           d.year-=1;
