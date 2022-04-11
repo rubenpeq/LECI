@@ -3,10 +3,8 @@ package poo;
 public class Calendar {
     int year, weekDay;
     public Calendar(int year, int weekDay){
-        do{
             this.year = year;
             this.weekDay = weekDay;
-        } while (!validWeekday(weekDay) || year<0);
     }
     public static boolean validWeekday(int weekDay){
         if (weekDay<1 || weekDay>7){
@@ -16,10 +14,8 @@ public class Calendar {
         }
     }
     public void set(int year, int weekDay){
-        do{
         this.year = year;
         this.weekDay = weekDay;
-        } while (!validWeekday(weekDay) || year<0);
     }
     public int year(){
         return this.year;
