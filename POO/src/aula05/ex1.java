@@ -10,9 +10,9 @@ public class ex1{
         int op;
         int d[]= Date.readValues(sc);
         Date d1 = new Date(d[0], d[1], d[2]);
-        String s1 = String.format("Date operations:\n1 - create new date\n2 - show current date\n3 - increment date\n4 - decrement date\n5 - Show operation menu\n0 - exit\n");
-        System.out.format(s1);
+        String s1 = String.format("Date operations:\n1 - create new date\n2 - show current date\n3 - increment date\n4 - decrement date\n0 - exit\n");
         do{
+            System.out.format(s1);
             op = sc.nextInt();
             if (op==1){
                 d= Date.readValues(sc);
@@ -23,8 +23,6 @@ public class ex1{
                 d1.incrementDate(d1);
             } else if (op==4){
                 d1.decrementDate(d1);
-            } else if (op==5){
-                System.out.println(s1);
             }
         } while (op !=0);
         sc.close();

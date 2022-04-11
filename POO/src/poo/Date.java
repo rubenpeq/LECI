@@ -64,6 +64,15 @@ public class Date{
         return false;
       }
     }
+    public int getDay(){
+      return this.day;
+    }
+    public int getMonth(){
+      return this.month;
+    }
+    public int getYear(){
+      return this.year;
+    }
     public void setDay(int day){
       if (valid(day, this.month, this.year)){
         this.day=day;
