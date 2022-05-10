@@ -1,0 +1,97 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/simulation/modelsim
+Ealu16
+Z1 w1652186263
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z5 8C:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/ALU16.vhd
+Z6 FC:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/ALU16.vhd
+l0
+L4 1
+Vb2:G>D<d`j`@ARWjGiRe90
+!s100 4=CGLa@VMZFgd6@M_664k2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1652186284
+!i10b 1
+Z9 !s108 1652186284.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/ALU16.vhd|
+Z11 !s107 C:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/ALU16.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 5 alu16 0 22 b2:G>D<d`j`@ARWjGiRe90
+!i122 3
+l13
+L11 30
+Vc:MMZO67kATNIWEh]8oKW0
+!s100 FMI7i3[i^6[JJ5^^ENKZS1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu16_tb
+Z15 w1652184152
+R3
+R4
+!i122 4
+R0
+Z16 8C:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/ALU16_Tb.vhd
+Z17 FC:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/ALU16_Tb.vhd
+l0
+L3 1
+V4XS:60_1c?_EKR3;9FY1E2
+!s100 Eh?kM9jbZoUlT:C36>IbA2
+R7
+32
+Z18 !s110 1652186286
+!i10b 1
+Z19 !s108 1652186286.000000
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/ALU16_Tb.vhd|
+Z21 !s107 C:/Users/Ruben/Documents/UA/UA_rep/LSD/aula07/parte_3/ALU16_Tb.vhd|
+!i113 1
+R12
+R13
+Astimulus
+R2
+R14
+R3
+R4
+Z22 DEx4 work 8 alu16_tb 0 22 4XS:60_1c?_EKR3;9FY1E2
+!i122 4
+l13
+Z23 L5 44
+Z24 VBc=>H8@edm2ob1>TYoT`=1
+Z25 !s100 noehCf8jO_:LQTC@STXdA2
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
