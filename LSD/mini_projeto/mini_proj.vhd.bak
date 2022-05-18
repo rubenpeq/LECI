@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity mini_proj is
+	port();
+end mini_proj;
+
+architecture Structural of mini_proj is
+
+end Structural;
