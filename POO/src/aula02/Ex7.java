@@ -3,7 +3,7 @@ package aula02;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class ex7 {
+public class Ex7 {
     public static void main(String[] args){
         double p1[] = new double [2], p2[] = new double [2];
         Scanner sc = new Scanner(System.in);

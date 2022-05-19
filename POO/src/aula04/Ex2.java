@@ -2,7 +2,7 @@ package aula04;
 
 import java.util.Scanner;
 
-public class ex2 {
+public class Ex2 {
     public static int countDigits(String s){
         int c=0;
         for (int i=0; i<s.length();i++){

@@ -3,7 +3,7 @@ package aula05;
 import java.util.Scanner;
 import poo.*;
 
-public class ex2 {
+public class Ex2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int op, year, weekDay, month;

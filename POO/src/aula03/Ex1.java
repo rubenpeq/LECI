@@ -2,7 +2,7 @@ package aula03;
 
 import java.util.Scanner;
 
-public class ex1{
+public class Ex1{
     static boolean validValue(double nota){
         if (nota>=0 && nota <=20) return (true);
         else return(false);

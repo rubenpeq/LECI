@@ -1,6 +1,6 @@
 package aula07;
 
-public class ex3 {
+public class Ex1 {
     public static void main(String[] args) {
         
     }

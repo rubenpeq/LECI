@@ -2,7 +2,7 @@ package aula04;
 
 import java.util.Scanner;
 
-public class ex3 {
+public class Ex3 {
     public static String toAcronym(String s){
         String ac = "";
         String[] split = s.split("\\s");

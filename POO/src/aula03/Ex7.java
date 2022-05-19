@@ -3,7 +3,7 @@ package aula03;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class ex7 {
+public class Ex7 {
     public static void highLow(Scanner sc){
         int secretNumber = (int) (1 + Math.random() * 99), guess=0, count=0;
         System.out.println("Try to guess the secret number between 1 and 100! ");

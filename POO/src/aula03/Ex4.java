@@ -3,7 +3,7 @@ package aula03;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class ex4 {
+public class Ex4 {
     public static double Max(double n[]){
         double max=n[0];
         for (int i = 1; i<n.length;i++){

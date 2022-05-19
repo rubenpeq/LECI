@@ -2,7 +2,7 @@ package aula03;
 
 import java.util.Scanner;
 
-public class ex6 {
+public class Ex6 {
     public static boolean isLeapYear(int year) {
         if (year % 4 != 0) {
           return false;

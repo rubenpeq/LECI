@@ -2,7 +2,7 @@ package aula04;
 
 import java.util.Scanner;
 
-public class ex4 {
+public class Ex4 {
   public static int[] readValues(){
     Scanner sc = new Scanner(System.in);
     int[] date = new int[3];

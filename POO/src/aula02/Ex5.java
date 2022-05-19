@@ -2,7 +2,7 @@ package aula02;
 
 import java.util.Scanner;
 
-public class ex5 {
+public class Ex5 {
     public static void main(String[] args){
         double v1, d1, v2, d2, averageSpeed;
         Scanner sc = new Scanner(System.in);

@@ -2,7 +2,7 @@ package aula03;
 
 import java.util.Scanner;
 
-  public class ex3 {
+  public class Ex3 {
     public static boolean isPrime(int num){
         if (num <= 1) {
             return false;

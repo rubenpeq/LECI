@@ -2,7 +2,7 @@ package aula02;
 
 import java.util.Scanner;
 
-public class ex2 {
+public class Ex2 {
     public static void main(String[] args) {
 		double C, F;
 		Scanner sc = new Scanner(System.in);

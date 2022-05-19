@@ -2,7 +2,7 @@ package aula02;
 
 import java.util.Scanner;
 
-public class ex6 {
+public class Ex6 {
     public static void main(String[] args){
         int hours, min, secs;
         Scanner sc = new Scanner(System.in);

@@ -3,7 +3,7 @@ package aula02;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class ex8 {
+public class Ex8 {
     public static void main(String[] args){
         double A,B,C,O;
         Scanner sc = new Scanner(System.in);
