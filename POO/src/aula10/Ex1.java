@@ -5,18 +5,17 @@ import java.util.Map;
 
 public class Ex1 {
     public static void main(String[] args) {
-        Map<String, String> dados = new HashMap<>();
-        add(dados, "branco", "cor da neve");
-        add(dados, "vermelho", "cor do sangue");
-        add(dados, "verde", "cor do relvado");
-        add(dados, "azul", "cor do horizonte");
-        add(dados, "cinzento", "asfalto");
-        add(dados, "preto", "escravo");
-        remove(dados, "branco", "cor da neve");
-        System.out.println(dados);
-        System.out.println(dados.keySet());
-        System.out.println(dados.values());
-        imprimir(dados);
+        Map<String, String> data = new HashMap<>();
+        add(data, "branco", "cor da neve");
+        add(data, "vermelho", "cor do sangue");
+        add(data, "verde", "cor da relva");
+        add(data, "azul", "cor da agua");
+        add(data, "cinzento", "asfalto");
+        remove(data, "branco", "cor da neve");
+        System.out.println(data);
+        System.out.println(data.keySet());
+        System.out.println(data.values());
+        imprimir(data);
     }
 
     public static void add(Map<String, String> m, String k, String v) {

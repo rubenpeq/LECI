@@ -11,12 +11,12 @@ public class Ex3 {
     }
 
     public static String mostradeiro(String str) {
-        Map<Character, ArrayList<Integer>> mapa = new HashMap<>();
+        Map<Character, ArrayList<Integer>> map = new HashMap<>();
         for (int i = 0; i < str.length(); i++) {
-            if (mapa.putIfAbsent(str.charAt(i), new ArrayList<>(Arrays.asList(i))) != null) {
-                mapa.get(str.charAt(i)).add(i);
+            if (map.putIfAbsent(str.charAt(i), new ArrayList<>(Arrays.asList(i))) != null) {
+                map.get(str.charAt(i)).add(i);
             }
         }
-        return mapa.toString();
+        return map.toString();
     }
 }

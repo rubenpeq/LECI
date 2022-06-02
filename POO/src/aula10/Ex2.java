@@ -8,21 +8,21 @@ import java.util.TreeMap;
 
 public class Ex2 {
     public static void main(String[] args) {
-        Map<String, List<String>> dados = new TreeMap<>();
-        add(dados, "branco", "cor da neve");
-        add(dados, "branco", "descorado");
-        add(dados, "branco", "palido");
-        add(dados, "branco", "leite");
-        add(dados, "vermelho", "cor de sangue venoso");
-        add(dados, "vermelho", "cor de sangue arterial");
-        add(dados, "verde", "cor da relva");
-        add(dados, "azul", "cor do ceu");
-        add(dados, "cinzento", "passeio");
+        Map<String, List<String>> data = new TreeMap<>();
+        add(data, "branco", "cor da neve");
+        add(data, "branco", "descorado");
+        add(data, "branco", "palido");
+        add(data, "branco", "leite");
+        add(data, "vermelho", "cor de sangue venoso");
+        add(data, "vermelho", "cor de sangue arterial");
+        add(data, "verde", "cor da relva");
+        add(data, "azul", "cor do ceu");
+        add(data, "cinzento", "passeio");
 
-        System.out.println(dados);
-        System.out.println(dados.keySet());
-        System.out.println(dados.values());
-        System.out.println(randomValue(dados, "branco"));
+        System.out.println(data);
+        System.out.println(data.keySet());
+        System.out.println(data.values());
+        System.out.println(randomValue(data, "branco"));
     }
 
     public static void add(Map<String, List<String>> m, String k, String v) {
