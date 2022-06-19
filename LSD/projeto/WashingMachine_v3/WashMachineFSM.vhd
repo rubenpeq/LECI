@@ -9,6 +9,7 @@ entity WashMachineFSM is
 			time_exp:		in std_logic;
 			lid:				in std_logic;	-- '0' porta fechada
 			total_new_time:	out std_logic;
+			total_time_value:	out std_logic;
 			new_time:			out std_logic;
 			time_value:			out std_logic_vector(7 downto 0);
 			time_enable:		out std_logic;
@@ -25,11 +26,12 @@ architecture Behavioral of WashMachineFSM is
 	constant RINSE_TIME : std_logic_vector(7 downto 0) := "0001001"; -- 9 s
 	constant REMOVE_WATER_TIME : std_logic_vector(7 downto 0) := "0000010"; -- 2 s
 	constant SPIN_TIME : std_logic_vector(7 downto 0) := "0000100"; -- 4 s
-	type TState is (Tidle, Tp1, Tp2, Tp3, Tsoak, Trinse, Trm_water, Tspin, Tfinished);
+	type TState is (Tidle, Tsoak, Trinse, Trm_water, Tspin, Tfinished);
 	
 	signal s_currentState, s_nextState : TState;
 	signal s_stateChanged : std_logic := '1';
 	signal s_mode : std_logic_vector(1 downto 0);
+	signal s_spinNextState, s_p1nextState : std_logic := '0';
 
 
 begin
@@ -68,14 +70,30 @@ begin
 			s_mode <= p_in;
 			if (lid = '0') then
 				if ((s_mode = "01") and (start_stop = '1')) then
-					s_nextState <= Tp1;
+					s_nextState <= Tsoak;
 				elsif ((s_mode = "10") and (start_stop = '1')) then
-					s_nextState <= Tp2;
+					s_nextState <= Tsoak;
 				elsif ((s_mode = "11") and (start_stop = '1')) then
 					s_nextState <= Tspin;
 				end if;
 			else
 				s_nextState <= Tidle;
+			end if;
+			
+		when Tsoak =>
+			
+			if (s_mode = "01") then
+				total_new_time <= '1';
+				total_time_value <= SOAK_TIME;
+			elsif (s_mode = "10") then
+				total_new_time <= '1';
+				total_time_value <= SOAK_TIME + RINSE_TIME + 2*REMOVE_WATER_TIME + SPIN_TIME;
+			end if;s
+			if (start_stop = '1') then
+				time_enable <= time_enable + 1;
+			end if;
+			if (time_exp = '1') then
+				s_nextState <= Trinse;
 			end if;
 			
 		when Tspin =>
@@ -87,6 +105,16 @@ begin
 			rinse <= '0';
 			water_pump <= '0';
 			spin <= '1';
+			
+		when Trm_water =>
+			time_value <= REMOVE_WATER_TIME;
+			time_enable <= '1';	
+			display_out <= s_mode;
+			program_led <= '1';
+			water_valve <= '1';
+			rinse <= '0';
+			water_pump <= '0';
+			spin <= '0';
 			
 		when Tfinished => -- esperar 2s e apagar led
 			time_value <= REMOVE_WATER_TIME;

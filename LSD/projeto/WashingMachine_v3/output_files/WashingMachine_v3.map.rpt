@@ -1,5 +1,5 @@
 Analysis & Synthesis report for WashingMachine_v3
-Sun Jun 19 11:34:07 2022
+Sun Jun 19 15:06:48 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Jun 19 11:34:07 2022           ;
+; Analysis & Synthesis Status        ; Failed - Sun Jun 19 15:06:48 2022           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; WashingMachine_v3                           ;
 ; Top-level Entity Name              ; WashingMachine_v3                           ;
@@ -162,16 +162,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 19 11:33:59 2022
+    Info: Processing started: Sun Jun 19 15:06:41 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off WashingMachine_v3 -c WashingMachine_v3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file TimerAuxFSM.vhd
     Info (12022): Found design unit 1: TimerAuxFSM-Behavioral File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 14
     Info (12023): Found entity 1: TimerAuxFSM File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file WashMachineFSM.vhd
-    Info (12022): Found design unit 1: WashMachineFSM-Behavioral File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 23
-    Info (12023): Found entity 1: WashMachineFSM File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 4
+Error (10500): VHDL syntax error at WashMachineFSM.vhd(92) near text "if";  expecting "(", or "'", or "." File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 92
+Info (12021): Found 0 design units, including 0 entities, in source file WashMachineFSM.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file Display_Decoder.vhd
     Info (12022): Found design unit 1: DisplayDecoder-Behavioral File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/Display_Decoder.vhd Line: 13
     Info (12023): Found entity 1: DisplayDecoder File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/Display_Decoder.vhd Line: 4
@@ -181,11 +180,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file ClkDivi
 Info (12021): Found 2 design units, including 1 entities, in source file BinaryToBCD.vhd
     Info (12022): Found design unit 1: binaryToBCD-Behavioral File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/BinaryToBCD.vhd Line: 9
     Info (12023): Found entity 1: binaryToBCD File: /home/rubenpeq/UA/UA_rep/LSD/projeto/WashingMachine_v3/BinaryToBCD.vhd Line: 4
-Error (12007): Top-level design entity "WashingMachine_v3" is undefined
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 412 megabytes
-    Error: Processing ended: Sun Jun 19 11:34:07 2022
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:27
+    Error: Peak virtual memory: 413 megabytes
+    Error: Processing ended: Sun Jun 19 15:06:48 2022
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:25
 
 
