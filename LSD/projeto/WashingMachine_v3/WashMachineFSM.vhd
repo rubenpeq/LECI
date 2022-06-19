@@ -8,10 +8,11 @@ entity WashMachineFSM is
 			start_stop:		in std_logic;
 			time_exp:		in std_logic;
 			lid:				in std_logic;	-- '0' porta fechada
+			total_new_time:	out std_logic;
 			new_time:			out std_logic;
-			time_value:			out std_logic_vector(2 downto 0);
+			time_value:			out std_logic_vector(7 downto 0);
 			time_enable:		out std_logic;
-			display_out:		out std_logic_vector(13 downto 0);
+			display_out:		out std_logic_vector(1 downto 0);
 			program_led:		out std_logic;
 			water_valve:		out std_logic;
 			rinse:				out std_logic;
@@ -20,11 +21,11 @@ entity WashMachineFSM is
 end WashMachineFSM;
 
 architecture Behavioral of WashMachineFSM is
-	constant SOAK_TIME : std_logic_vector(7 downto 0) := ""; -- 5 s
-	constant RINSE_TIME : std_logic_vector(7 downto 0) := ""; -- 9 s
-	constant REMOVE_WATER_TIME : std_logic_vector(7 downto 0) := ""; -- 2 s
-	constant SPIN_TIME : std_logic_vector(7 downto 0) := ""; -- 4 s
-	type TState is (Tinit, Tp1, Tp2, Tp3, Tsoak, Trinse, Trm_water, Tspin, Tfinished);
+	constant SOAK_TIME : std_logic_vector(7 downto 0) := "0000101"; -- 5 s
+	constant RINSE_TIME : std_logic_vector(7 downto 0) := "0001001"; -- 9 s
+	constant REMOVE_WATER_TIME : std_logic_vector(7 downto 0) := "0000010"; -- 2 s
+	constant SPIN_TIME : std_logic_vector(7 downto 0) := "0000100"; -- 4 s
+	type TState is (Tidle, Tp1, Tp2, Tp3, Tsoak, Trinse, Trm_water, Tspin, Tfinished);
 	
 	signal s_currentState, s_nextState : TState;
 	signal s_stateChanged : std_logic := '1';
@@ -36,19 +37,26 @@ begin
 	begin
 		if (rising_edge(clk)) then
 			if (reset = '1') then
-				s_currentState <= Tinit;
+			s_currentState <= Tidle;
+			s_stateChanged <= '1';
 			else
+				if (s_currentState /= s_nextState) then
+				s_stateChanged <= '1';
+				else
+				s_stateChanged <= '0';
+				end if;
 			s_currentState <= s_nextState;
 			end if;
 		end if;
 	end process;
+	new_time <= s_stateChanged;
 
 
-	comb_proc : process(s_currentState, p_in)
+	comb_proc : process(s_currentState, p_in, start_stop, lid, time_exp)
 	begin
 		case (s_currentState) is
 		
-		when  Tinit =>
+		when  Tidle =>
 			time_value <= x"0";
 			time_enable <= '0';
 			display_out <= "";
@@ -67,13 +75,13 @@ begin
 					s_nextState <= Tspin;
 				end if;
 			else
-				s_nextState <= Tinit;
+				s_nextState <= Tidle;
 			end if;
 			
 		when Tspin =>
 			time_value <= x"0";
 			time_enable <= '0';	
-			display_out <= "";
+			display_out <= s_mode;
 			program_led <= '0';
 			water_valve <= '0';
 			rinse <= '0';
@@ -81,10 +89,16 @@ begin
 			spin <= '1';
 			
 		when Tfinished => -- esperar 2s e apagar led
-			program_led <= '1';
 			time_value <= REMOVE_WATER_TIME;
+			time_enable <= '1';	
+			display_out <= s_mode;
+			program_led <= '1';
+			water_valve <= '0';
+			rinse <= '0';
+			water_pump <= '0';
+			spin <= '0';
 			if (time_exp = '1') then
-				s_nextState <= Tinit;
+				s_nextState <= Tidle;
 			else
 				s_nextState <= Tfinished;
 			end if;
