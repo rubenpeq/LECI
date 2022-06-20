@@ -17,7 +17,7 @@ signal s_counter : unsigned(3 downto 0) := (others => '1');
 signal s_cntZero : std_logic := '0';
 
 begin
-	process(clk)
+	process(clk, reset, newTime, timeEn, timeVal)
 	begin
 		if (rising_edge(clk)) then
 			if (reset = '1') then

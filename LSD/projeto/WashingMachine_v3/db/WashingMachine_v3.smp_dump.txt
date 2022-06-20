@@ -1,12 +1,9 @@
 
 State Machine - |WashingMachine_v3|WashMachineFSM:top_level|s_currentState
-Name s_currentState.Tfinished s_currentState.Tspin s_currentState.Trm_water s_currentState.Trinse s_currentState.Tsoak s_currentState.Tp3 s_currentState.Tp2 s_currentState.Tp1 s_currentState.Tidle 
-s_currentState.Tidle 0 0 0 0 0 0 0 0 0 
-s_currentState.Tp1 0 0 0 0 0 0 0 1 1 
-s_currentState.Tp2 0 0 0 0 0 0 1 0 1 
-s_currentState.Tp3 0 0 0 0 0 1 0 0 1 
-s_currentState.Tsoak 0 0 0 0 1 0 0 0 1 
-s_currentState.Trinse 0 0 0 1 0 0 0 0 1 
-s_currentState.Trm_water 0 0 1 0 0 0 0 0 1 
-s_currentState.Tspin 0 1 0 0 0 0 0 0 1 
-s_currentState.Tfinished 1 0 0 0 0 0 0 0 1 
+Name s_currentState.Tfinished s_currentState.Tspin s_currentState.Trm_water s_currentState.Trinse s_currentState.Tsoak s_currentState.Tidle 
+s_currentState.Tidle 0 0 0 0 0 0 
+s_currentState.Tsoak 0 0 0 0 1 1 
+s_currentState.Trinse 0 0 0 1 0 1 
+s_currentState.Trm_water 0 0 1 0 0 1 
+s_currentState.Tspin 0 1 0 0 0 1 
+s_currentState.Tfinished 1 0 0 0 0 1 

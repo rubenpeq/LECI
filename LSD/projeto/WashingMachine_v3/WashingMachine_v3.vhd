@@ -5,7 +5,7 @@ entity WashingMachine_v3 is
 	port(	CLOCK_50 :	in std_logic;
 			SW :			in std_logic_vector(3 downto 0);
 			KEY :			in std_logic_vector(0 downto 0);
-			LEDR:			out std_logic_vector(1 downto 0);
+			LEDR:			out std_logic_vector(0 downto 0);
 			LEDG :		out std_logic_vector(3 downto 0);
 			HEX0 :		out std_logic_vector(6 downto 0);
 			HEX1 :		out std_logic_vector(6 downto 0);
@@ -15,18 +15,18 @@ entity WashingMachine_v3 is
 end WashingMachine_v3;
 
 architecture Shell of WashingMachine_v3 is
-	signal s_clock, s_newTime, s_timeExp, s_timeEnable : std_logic;
+	signal s_clock, s_newTime, s_timeExp, s_timeEnable, s_st, s_rst, s_lid : std_logic;
 	signal s_timeValue, s_realTime : std_logic_vector(3 downto 0);
-	signal s_programMode : std_logic_vector(1 downto 0);
+	signal s_programMode, s_p : std_logic_vector(1 downto 0);
 
 begin
 	top_level: entity work.WashMachineFSM(Behavioral)
 		port map(clk => CLOCK_50,
-					reset => SW(3),
-					P_in => SW(1 downto 0),
-					start_stop => KEY(0),
+					reset => s_rst,
+					P_in => s_p,
+					start_stop => s_st,
 					time_exp => s_timeExp,
-					lid => SW(2),
+					lid => s_lid,
 					new_time => s_newTime,		
 					time_value 	=>	s_timeValue,	
 					time_enable =>	s_timeEnable,	
@@ -49,7 +49,7 @@ begin
 		
 	timer_aux: entity work.TimerAuxFSM(Behavioral)
 		port map(reset => SW(3) ,
-				clk => not s_clock,
+				clk => not CLOCK_50,
 				timeEn => s_timeEnable,
 				newTime => s_newTime,
 				timeVal => s_timeValue,
@@ -60,5 +60,16 @@ begin
 		generic map(divFactor =>50000000)
 		port map(clkIn => CLOCK_50,
 					clkOut => s_clock);
+					
+	reg: entity work.reg_1(Behavioral)
+		port map(clk => CLOCK_50,
+					reset => SW(3),
+					st => not KEY(0),
+					lid => SW(2),
+					p => SW(1 downto 0),
+					reset_out => s_rst,
+					st_out => s_st,
+					lid_out => s_lid,
+					p_out => s_p);
 				
 end Shell;

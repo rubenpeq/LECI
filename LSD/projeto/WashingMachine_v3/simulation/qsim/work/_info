@@ -10,14 +10,14 @@ z2
 cModel Technology
 Z0 dC:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/simulation/qsim
 Ehard_block
-Z1 w1655683284
+Z1 w1655760549
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z7 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
-!i122 12
+!i122 92
 R0
 Z8 8WashingMachine_v3.vho
 Z9 FWashingMachine_v3.vho
@@ -27,9 +27,9 @@ VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
 Z10 OV;C;2020.1;71
 32
-Z11 !s110 1655683285
+Z11 !s110 1655760550
 !i10b 1
-Z12 !s108 1655683285.000000
+Z12 !s108 1655760550.000000
 Z13 !s90 -work|work|WashingMachine_v3.vho|
 Z14 !s107 WashingMachine_v3.vho|
 !i113 1
@@ -43,7 +43,7 @@ R5
 R6
 R7
 DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
-!i122 12
+!i122 92
 l65
 L51 20
 Via>5o7W??azG@W@@eFOTF0
@@ -59,28 +59,28 @@ R14
 R15
 R16
 Ewashingmachine_v3
-R1
+Z17 w1655761265
 R3
 R7
 R2
-Z17 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+Z18 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
 R4
 R5
 R6
-Z18 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
-!i122 12
+Z19 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 96
 R0
 R8
 R9
 l0
-L80 1
-V0kEDa]oVg@97o9WY^YL7F0
-!s100 YYQ5nN>7G4m3cFKbeofJf0
+L37 1
+V_F8bhzkZ_i;P>;cJh1ZDV1
+!s100 fT?7g0<5n@G]BO0QC@P180
 R10
 32
-R11
+Z20 !s110 1655761265
 !i10b 1
-R12
+Z21 !s108 1655761265.000000
 R13
 R14
 !i113 1
@@ -90,65 +90,65 @@ Astructure
 R3
 R7
 R2
-R17
+R18
 R4
 R5
 R6
-R18
-DEx4 work 17 washingmachine_v3 0 22 0kEDa]oVg@97o9WY^YL7F0
-!i122 12
-l407
-L145 3884
-VKj5MiF6Y:52e?JFgaYbmm0
-!s100 doO@enZ>za7Iz`1]b2ZG_3
+R19
+DEx4 work 17 washingmachine_v3 0 22 _F8bhzkZ_i;P>;cJh1ZDV1
+!i122 96
+l212
+L52 2176
+V8K>IZJ>e1eHJRP`03HZBl3
+!s100 9dKen;0aiU`ofhQ28Q7eK0
 R10
 32
-R11
+R20
 !i10b 1
-R12
+R21
 R13
 R14
 !i113 1
 R15
 R16
 Ewashingmachine_v3_vhd_vec_tst
-Z19 w1655683283
+Z22 w1655761264
 R5
 R6
-!i122 13
+!i122 97
 R0
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+Z23 8Waveform.vwf.vht
+Z24 FWaveform.vwf.vht
 l0
 L32 1
 VMPlbzmTcjeXE<^JWQ8IXO0
 !s100 TMFL2Ucf245bW6_JOGCCS3
 R10
 32
-R11
+Z25 !s110 1655761266
 !i10b 1
-R12
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+R21
+Z26 !s90 -work|work|Waveform.vwf.vht|
+Z27 !s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
 Awashingmachine_v3_arch
 R5
 R6
-DEx4 work 29 washingmachine_v3_vhd_vec_tst 0 22 MPlbzmTcjeXE<^JWQ8IXO0
-!i122 5
+Z28 DEx4 work 29 washingmachine_v3_vhd_vec_tst 0 22 MPlbzmTcjeXE<^JWQ8IXO0
+!i122 97
 l61
-L34 94
-V:h1NNFJH:<EZEjkPUZ[X^1
-!s100 a[jKm=55zOJ7MShEfL@fS3
+Z29 L34 102
+Vf;iGglo0>5OlocQo?HO6c0
+!s100 4?GL:HTL4W]a0[@mQTPa=3
 R10
 32
-!s110 1655682905
+R25
 !i10b 1
-!s108 1655682905.000000
-R22
-R23
+R21
+R26
+R27
 !i113 1
 R15
 R16

@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/20/2022 01:01:23"
+-- Generated on "06/20/2022 22:41:04"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          WashingMachine_v3
 -- 
@@ -42,7 +42,7 @@ SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(0 DOWNTO 0);
 SIGNAL LEDG : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL LEDR : STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL LEDR : STD_LOGIC_VECTOR(0 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(3 DOWNTO 0);
 COMPONENT WashingMachine_v3
 	PORT (
@@ -54,7 +54,7 @@ COMPONENT WashingMachine_v3
 	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 	LEDG : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LEDR : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+	LEDR : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
@@ -77,30 +77,27 @@ BEGIN
 -- CLOCK_50
 t_prcs_CLOCK_50: PROCESS
 BEGIN
-LOOP
+	FOR i IN 1 TO 49
+	LOOP
+		CLOCK_50 <= '0';
+		WAIT FOR 10000 ps;
+		CLOCK_50 <= '1';
+		WAIT FOR 10000 ps;
+	END LOOP;
 	CLOCK_50 <= '0';
 	WAIT FOR 10000 ps;
 	CLOCK_50 <= '1';
-	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_CLOCK_50;
-
--- KEY
-t_prcs_KEY: PROCESS
-BEGIN
-	KEY <= '0';
 WAIT;
-END PROCESS t_prcs_KEY;
+END PROCESS t_prcs_CLOCK_50;
 
 -- KEY[0]
 t_prcs_KEY_0: PROCESS
 BEGIN
-	KEY(0) <= '0';
-	WAIT FOR 90000 ps;
 	KEY(0) <= '1';
-	WAIT FOR 40000 ps;
+	WAIT FOR 50000 ps;
 	KEY(0) <= '0';
+	WAIT FOR 40000 ps;
+	KEY(0) <= '1';
 WAIT;
 END PROCESS t_prcs_KEY_0;
 -- SW[3]
@@ -119,13 +116,19 @@ END PROCESS t_prcs_SW_2;
 t_prcs_SW_1: PROCESS
 BEGIN
 	SW(1) <= '0';
+	WAIT FOR 120000 ps;
+	SW(1) <= '1';
+	WAIT FOR 70000 ps;
+	SW(1) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_1;
 -- SW[0]
 t_prcs_SW_0: PROCESS
 BEGIN
+	SW(0) <= '0';
+	WAIT FOR 20000 ps;
 	SW(0) <= '1';
-	WAIT FOR 150000 ps;
+	WAIT FOR 170000 ps;
 	SW(0) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_0;

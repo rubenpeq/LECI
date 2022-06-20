@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity reg_1 is
+	port( clk, reset, st :		in std_logic;
+			p :	in std_logic_vector(1 downto 0));
+end reg_1;
+architecture Behavioral of reg_1 is
+begin
+process(clk) is
+begin
+	if rising_edge(clk) then
+		
+	end if;
+	end process;
+end Behavioral;

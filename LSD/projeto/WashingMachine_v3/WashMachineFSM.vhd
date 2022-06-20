@@ -25,7 +25,7 @@ architecture Behavioral of WashMachineFSM is
 	constant RINSE_TIME : std_logic_vector(3 downto 0) := "1001"; -- 9 s
 	constant REMOVE_WATER_TIME : std_logic_vector(3 downto 0) := "0010"; -- 2 s
 	constant SPIN_TIME : std_logic_vector(3 downto 0) := "0100"; -- 4 s
-	type TState is (Tidle, Tp1, Tp2, Tp3, Tsoak, Trinse, Trm_water, Tspin, Tfinished);
+	type TState is (Tidle, Tsoak, Trinse, Trm_water, Tspin, Tfinished);
 	
 	signal s_currentState, s_nextState : TState;
 	signal s_stateChanged, s_timeEnable : std_logic := '1';
@@ -33,7 +33,7 @@ architecture Behavioral of WashMachineFSM is
 	signal s_nextStateAUX : unsigned(1 downto 0) := (others => '0');
 
 begin
-	sync_proc : process(clk, reset, start_stop)
+	sync_proc : process(clk, reset)
 	begin
 		if (rising_edge(clk)) then
 			if (reset = '1') then
@@ -52,13 +52,13 @@ begin
 	new_time <= s_stateChanged;
 
 
-	comb_proc : process(s_currentState, p_in, lid, time_exp)
+	comb_proc : process(s_currentState, p_in, lid, time_exp, start_stop)
 	begin
 		case (s_currentState) is
 		
 		when  Tidle =>
 			s_nextStateAUX <= "00";
-			time_enable <= '0';		
+			s_timeEnable <= '0';		
 			program_led <= '0';
 			water_valve <= '0';
 			rinse <= '0';
@@ -66,62 +66,30 @@ begin
 			spin <= '0';
 			s_mode <= p_in;
 			if (s_mode = "01") then
-				s_nextState <= Tp1; 
+				time_value <= "1101"; -- 38s+2s >> display decoder
+				if ((lid = '0') and (start_stop = '1')) then
+					s_timeEnable <= '1';
+					s_nextState <= Tsoak;
+				end if;
 			elsif (s_mode = "10") then
-				s_nextState <= Tp2;
+				time_value <= "1110"; -- 22s+2s >> display decoder
+				if ((lid = '0') and (start_stop = '1')) then
+					s_timeEnable <= '1';
+					s_nextState <= Tsoak;
+				end if;
 			elsif (s_mode = "11") then
-				
+				time_value <= "1111"; -- 38s+2s >> display decoder
+				if ((lid = '0') and (start_stop = '1')) then
+					s_timeEnable <= '1';
+					s_nextState <= Tspin;
+				end if;
 			else
-				display_out <= "00";
 				time_value <= "0000";
 				s_nextState <= Tidle;
-			end if;
-			
-		when Tp1 =>
-			time_enable <= '0';		
-			program_led <= '0';
-			water_valve <= '0';
-			rinse <= '0';
-			water_pump <= '0';
-			spin <= '0';
-			display_out <= s_mode;
-			time_value <= "1101"; -- 38s+2s >> display decoder
-			if ((lid = '0') and (start_stop = '1')) then
-				s_timeEnable <= '1';
-				s_nextState <= Tsoak;
-			end if;
-			
-		when Tp2 =>
-			time_enable <= '0';		
-			program_led <= '0';
-			water_valve <= '0';
-			rinse <= '0';
-			water_pump <= '0';
-			spin <= '0';
-			display_out <= s_mode;
-			time_value <= "1110"; -- 22s+2s >> display decoder
-			if ((lid = '0') and (start_stop = '1')) then
-				s_timeEnable <= '1';
-				s_nextState <= Tsoak;
-			end if;
-			
-		when Tp3 =>
-			time_enable <= '0';		
-			program_led <= '0';
-			water_valve <= '0';
-			rinse <= '0';
-			water_pump <= '0';
-			spin <= '0';
-			display_out <= s_mode;
-			time_value <= "1111"; -- 6s+2s >> display decoder
-			if ((lid = '0') and (start_stop = '1')) then
-				s_timeEnable <= '1';
-				s_nextState <= Tspin;
 			end if;
 		
 		when Tsoak =>
 			time_value <= SOAK_TIME;
-			display_out <= s_mode;
 			program_led <= '1';
 			water_valve <= '1';
 			rinse <= '0';
@@ -138,7 +106,6 @@ begin
 			
 		when Trinse =>
 			time_value <= RINSE_TIME;
-			display_out <= s_mode;
 			program_led <= '1';
 			water_valve <= '0';
 			rinse <= '1';
@@ -155,7 +122,6 @@ begin
 			
 		when Tspin =>
 			time_value <= SPIN_TIME;
-			display_out <= s_mode;
 			program_led <= '1';
 			water_valve <= '0';
 			rinse <= '0';
@@ -172,7 +138,6 @@ begin
 			
 		when Trm_water =>
 			time_value <= REMOVE_WATER_TIME;
-			display_out <= s_mode;
 			program_led <= '1';
 			water_valve <= '0';
 			rinse <= '0';
@@ -206,7 +171,6 @@ begin
 			
 		when Tfinished => -- esperar 2s e apagar led
 			time_value <= REMOVE_WATER_TIME;
-			display_out <= s_mode;
 			program_led <= '1';
 			water_valve <= '0';
 			rinse <= '0';
@@ -222,7 +186,8 @@ begin
 			end if;
 		
 		end case;
-		time_enable <= s_timeEnable;
 	end process;
+	time_enable <= s_timeEnable;
+	display_out <= s_mode;
 
 end Behavioral;
