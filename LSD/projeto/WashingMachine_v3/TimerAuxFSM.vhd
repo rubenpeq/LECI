@@ -7,12 +7,13 @@ entity TimerAuxFSM is
 			clk: 		in std_logic;
 			newTime: in std_logic;
 			timeEn:	in std_logic; 
-			timeVal: in std_logic_vector(7 downto 0);
-			timeExp: out std_logic);
+			timeVal: in std_logic_vector(3 downto 0);
+			currentTime:	out std_logic_vector(3 downto 0);
+			timeExp: 		out std_logic);
 end TimerAuxFSM;
 
 architecture Behavioral of TimerAuxFSM is
-signal s_counter : unsigned(7 downto 0) := (others => '1');
+signal s_counter : unsigned(3 downto 0) := (others => '1');
 signal s_cntZero : std_logic := '0';
 
 begin
@@ -26,7 +27,7 @@ begin
 				s_counter <= unsigned(timeVal) - 1;
 				s_cntZero <= '0';
 			else
-				if (s_counter = "00000000") then
+				if (s_counter = "0000") then
 					s_cntZero <= '1';
 				else
 					if (timeEn = '1') then
@@ -39,6 +40,7 @@ begin
 			end if;
 		end if;
 	end process;
-	
+
+currentTime <= std_logic_vector(s_counter);
 timeExp <= s_cntZero;
 end Behavioral;

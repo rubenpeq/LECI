@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity WashingMachine_v3 is
+
+end WashingMachine_v3;
+
+architecture Shell of WashingMachine_v3 is
+
+end
