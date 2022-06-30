@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "06/20/2022 23:43:56"
+-- DATE "06/21/2022 12:25:07"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -82,13 +82,13 @@ ENTITY 	WashingMachine_v3 IS
 	CLOCK_50 : IN std_logic;
 	SW : IN std_logic_vector(3 DOWNTO 0);
 	KEY : IN std_logic_vector(0 DOWNTO 0);
-	LEDR : OUT std_logic_vector(0 DOWNTO 0);
-	LEDG : OUT std_logic_vector(3 DOWNTO 0);
-	HEX0 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX1 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX2 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX3 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX4 : OUT std_logic_vector(6 DOWNTO 0)
+	LEDR : BUFFER std_logic_vector(0 DOWNTO 0);
+	LEDG : BUFFER std_logic_vector(3 DOWNTO 0);
+	HEX0 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX1 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX2 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX3 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX4 : BUFFER std_logic_vector(6 DOWNTO 0)
 	);
 END WashingMachine_v3;
 
@@ -373,11 +373,11 @@ SIGNAL \divisor|s_divCounter\ : std_logic_vector(25 DOWNTO 0);
 SIGNAL \timer_aux|s_counter\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \reg|p_out\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \top_level|s_mode\ : std_logic_vector(1 DOWNTO 0);
-SIGNAL \divisor|ALT_INV_clkOut~clkctrl_outclk\ : std_logic;
-SIGNAL \top_level|ALT_INV_s_mode\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \display_decoder|ALT_INV_time1[6]~0_combout\ : std_logic;
 SIGNAL \display_decoder|ALT_INV_time0[6]~5_combout\ : std_logic;
 SIGNAL \display_decoder|ALT_INV_Equal1~1_combout\ : std_logic;
+SIGNAL \divisor|ALT_INV_clkOut~clkctrl_outclk\ : std_logic;
+SIGNAL \top_level|ALT_INV_s_mode\ : std_logic_vector(1 DOWNTO 0);
 
 COMPONENT hard_block
     PORT (
@@ -409,12 +409,12 @@ ww_devpor <= devpor;
 \top_level|Selector19~1clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \top_level|Selector19~1_combout\);
 
 \top_level|Selector16~0clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \top_level|Selector16~0_combout\);
-\divisor|ALT_INV_clkOut~clkctrl_outclk\ <= NOT \divisor|clkOut~clkctrl_outclk\;
-\top_level|ALT_INV_s_mode\(0) <= NOT \top_level|s_mode\(0);
-\top_level|ALT_INV_s_mode\(1) <= NOT \top_level|s_mode\(1);
 \display_decoder|ALT_INV_time1[6]~0_combout\ <= NOT \display_decoder|time1[6]~0_combout\;
 \display_decoder|ALT_INV_time0[6]~5_combout\ <= NOT \display_decoder|time0[6]~5_combout\;
 \display_decoder|ALT_INV_Equal1~1_combout\ <= NOT \display_decoder|Equal1~1_combout\;
+\divisor|ALT_INV_clkOut~clkctrl_outclk\ <= NOT \divisor|clkOut~clkctrl_outclk\;
+\top_level|ALT_INV_s_mode\(0) <= NOT \top_level|s_mode\(0);
+\top_level|ALT_INV_s_mode\(1) <= NOT \top_level|s_mode\(1);
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
