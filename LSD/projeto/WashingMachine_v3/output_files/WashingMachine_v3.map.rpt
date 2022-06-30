@@ -1,5 +1,5 @@
 Analysis & Synthesis report for WashingMachine_v3
-Mon Jun 20 22:41:00 2022
+Mon Jun 20 23:43:24 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,10 +19,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Parameter Settings for User Entity Instance: ClkDividerN:divisor
- 14. Port Connectivity Checks: "ClkDividerN:divisor"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -49,15 +48,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 20 22:41:00 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 20 23:43:24 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; WashingMachine_v3                           ;
 ; Top-level Entity Name              ; WashingMachine_v3                           ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 78                                          ;
-;     Total combinational functions  ; 77                                          ;
-;     Dedicated logic registers      ; 17                                          ;
-; Total registers                    ; 17                                          ;
+; Total logic elements               ; 121                                         ;
+;     Total combinational functions  ; 120                                         ;
+;     Dedicated logic registers      ; 44                                          ;
+; Total registers                    ; 44                                          ;
 ; Total pins                         ; 46                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -157,16 +156,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -175,12 +174,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; WashingMachine_v3.vhd            ; yes             ; User VHDL File  ; C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd ;         ;
-; DisplayDecoder.vhd               ; yes             ; User VHDL File  ; C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/DisplayDecoder.vhd    ;         ;
-; TimerAuxFSM.vhd                  ; yes             ; User VHDL File  ; C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd       ;         ;
-; WashMachineFSM.vhd               ; yes             ; User VHDL File  ; C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd    ;         ;
-; ClkDividerN.vhd                  ; yes             ; User VHDL File  ; C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/ClkDividerN.vhd       ;         ;
-; reg_1.vhd                        ; yes             ; User VHDL File  ; C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/reg_1.vhd             ;         ;
+; WashingMachine_v3.vhd            ; yes             ; User VHDL File  ; C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd ;         ;
+; DisplayDecoder.vhd               ; yes             ; User VHDL File  ; C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/DisplayDecoder.vhd    ;         ;
+; TimerAuxFSM.vhd                  ; yes             ; User VHDL File  ; C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd       ;         ;
+; WashMachineFSM.vhd               ; yes             ; User VHDL File  ; C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd    ;         ;
+; ClkDividerN.vhd                  ; yes             ; User VHDL File  ; C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/ClkDividerN.vhd       ;         ;
+; reg_1.vhd                        ; yes             ; User VHDL File  ; C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/reg_1.vhd             ;         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
 
 
@@ -189,20 +188,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 78             ;
+; Estimated Total logic elements              ; 121            ;
 ;                                             ;                ;
-; Total combinational functions               ; 77             ;
+; Total combinational functions               ; 120            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 40             ;
-;     -- 3 input functions                    ; 20             ;
-;     -- <=2 input functions                  ; 17             ;
+;     -- 4 input functions                    ; 53             ;
+;     -- 3 input functions                    ; 24             ;
+;     -- <=2 input functions                  ; 43             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 77             ;
-;     -- arithmetic mode                      ; 0              ;
+;     -- normal mode                          ; 95             ;
+;     -- arithmetic mode                      ; 25             ;
 ;                                             ;                ;
-; Total registers                             ; 17             ;
-;     -- Dedicated logic registers            ; 17             ;
+; Total registers                             ; 44             ;
+;     -- Dedicated logic registers            ; 44             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 46             ;
@@ -210,9 +209,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 17             ;
-; Total fan-out                               ; 360            ;
-; Average fan-out                             ; 1.94           ;
+; Maximum fan-out                             ; 27             ;
+; Total fan-out                               ; 555            ;
+; Average fan-out                             ; 2.17           ;
 +---------------------------------------------+----------------+
 
 
@@ -221,7 +220,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name       ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------------+--------------+
-; |WashingMachine_v3                  ; 77 (0)              ; 17 (0)                    ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |WashingMachine_v3                                ; WashingMachine_v3 ; work         ;
+; |WashingMachine_v3                  ; 120 (0)             ; 44 (0)                    ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |WashingMachine_v3                                ; WashingMachine_v3 ; work         ;
+;    |ClkDividerN:divisor|            ; 43 (43)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |WashingMachine_v3|ClkDividerN:divisor            ; ClkDividerN       ; work         ;
 ;    |DisplayDecoder:display_decoder| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |WashingMachine_v3|DisplayDecoder:display_decoder ; DisplayDecoder    ; work         ;
 ;    |TimerAuxFSM:timer_aux|          ; 22 (22)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |WashingMachine_v3|TimerAuxFSM:timer_aux          ; TimerAuxFSM       ; work         ;
 ;    |WashMachineFSM:top_level|       ; 42 (42)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |WashingMachine_v3|WashMachineFSM:top_level       ; WashMachineFSM    ; work         ;
@@ -271,8 +271,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 17    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 44    ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -314,33 +314,27 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ClkDividerN:divisor"                                                                  ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; clkout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 46                          ;
-; cycloneiii_ff         ; 17                          ;
-;     plain             ; 17                          ;
-; cycloneiii_lcell_comb ; 84                          ;
-;     normal            ; 84                          ;
+; cycloneiii_ff         ; 44                          ;
+;     SCLR              ; 26                          ;
+;     plain             ; 18                          ;
+; cycloneiii_lcell_comb ; 127                         ;
+;     arith             ; 25                          ;
+;         2 data inputs ; 25                          ;
+;     normal            ; 102                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
+;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 17                          ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 40                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 53                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.45                        ;
+; Average LUT depth     ; 2.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -359,110 +353,109 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Jun 20 22:40:52 2022
+    Info: Processing started: Mon Jun 20 23:43:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off WashingMachine_v3 -c WashingMachine_v3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file washingmachine_v3.vhd
-    Info (12022): Found design unit 1: WashingMachine_v3-Shell File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 17
-    Info (12023): Found entity 1: WashingMachine_v3 File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 4
+    Info (12022): Found design unit 1: WashingMachine_v3-Shell File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 17
+    Info (12023): Found entity 1: WashingMachine_v3 File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file displaydecoder.vhd
-    Info (12022): Found design unit 1: DisplayDecoder-Behavioral File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/DisplayDecoder.vhd Line: 15
-    Info (12023): Found entity 1: DisplayDecoder File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/DisplayDecoder.vhd Line: 4
+    Info (12022): Found design unit 1: DisplayDecoder-Behavioral File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/DisplayDecoder.vhd Line: 15
+    Info (12023): Found entity 1: DisplayDecoder File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/DisplayDecoder.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file timerauxfsm.vhd
-    Info (12022): Found design unit 1: TimerAuxFSM-Behavioral File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 15
-    Info (12023): Found entity 1: TimerAuxFSM File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 5
+    Info (12022): Found design unit 1: TimerAuxFSM-Behavioral File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 15
+    Info (12023): Found entity 1: TimerAuxFSM File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file washmachinefsm.vhd
-    Info (12022): Found design unit 1: WashMachineFSM-Behavioral File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 23
-    Info (12023): Found entity 1: WashMachineFSM File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 5
+    Info (12022): Found design unit 1: WashMachineFSM-Behavioral File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 23
+    Info (12023): Found entity 1: WashMachineFSM File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clkdividern.vhd
-    Info (12022): Found design unit 1: ClkDividerN-Behavioral File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/ClkDividerN.vhd Line: 11
-    Info (12023): Found entity 1: ClkDividerN File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/ClkDividerN.vhd Line: 5
+    Info (12022): Found design unit 1: ClkDividerN-Behavioral File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/ClkDividerN.vhd Line: 11
+    Info (12023): Found entity 1: ClkDividerN File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/ClkDividerN.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reg_1.vhd
-    Info (12022): Found design unit 1: reg_1-Behavioral File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/reg_1.vhd Line: 10
-    Info (12023): Found entity 1: reg_1 File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/reg_1.vhd Line: 4
+    Info (12022): Found design unit 1: reg_1-Behavioral File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/reg_1.vhd Line: 10
+    Info (12023): Found entity 1: reg_1 File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/reg_1.vhd Line: 4
 Info (12127): Elaborating entity "WashingMachine_v3" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at WashingMachine_v3.vhd(18): object "s_clock" assigned a value but never read File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 18
-Info (12129): Elaborating entity "WashMachineFSM" using architecture "A:behavioral" for hierarchy "WashMachineFSM:top_level" File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(68): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(74): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 74
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(80): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 80
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(99): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(115): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 115
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(131): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 131
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(147): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(150): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 150
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(151): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(153): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(154): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(157): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 157
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(160): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(161): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 161
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(164): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 164
-Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(180): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 180
-Warning (10631): VHDL Process Statement warning at WashMachineFSM.vhd(55): inferring latch(es) for signal or variable "s_nextStateAUX", which holds its previous value in one or more paths through the process File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Warning (10631): VHDL Process Statement warning at WashMachineFSM.vhd(55): inferring latch(es) for signal or variable "s_timeEnable", which holds its previous value in one or more paths through the process File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Warning (10631): VHDL Process Statement warning at WashMachineFSM.vhd(55): inferring latch(es) for signal or variable "s_mode", which holds its previous value in one or more paths through the process File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Warning (10631): VHDL Process Statement warning at WashMachineFSM.vhd(55): inferring latch(es) for signal or variable "s_nextState", which holds its previous value in one or more paths through the process File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_nextState.Tfinished" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_nextState.Tspin" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_nextState.Trm_water" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_nextState.Trinse" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_nextState.Tsoak" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_nextState.Tidle" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_mode[0]" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_mode[1]" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_timeEnable" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_nextStateAUX[0]" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (10041): Inferred latch for "s_nextStateAUX[1]" at WashMachineFSM.vhd(55) File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Info (12129): Elaborating entity "DisplayDecoder" using architecture "A:behavioral" for hierarchy "DisplayDecoder:display_decoder" File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 40
-Info (12129): Elaborating entity "TimerAuxFSM" using architecture "A:behavioral" for hierarchy "TimerAuxFSM:timer_aux" File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 50
-Info (12129): Elaborating entity "ClkDividerN" using architecture "A:behavioral" for hierarchy "ClkDividerN:divisor" File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 59
-Info (12129): Elaborating entity "reg_1" using architecture "A:behavioral" for hierarchy "reg_1:reg" File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 64
-Warning (13012): Latch WashMachineFSM:top_level|s_timeEnable has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_currentState.Tidle File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 30
-Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Tidle_354 has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal TimerAuxFSM:timer_aux|s_cntZero File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 22
-Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Tsoak_335 has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_currentState.Trm_water File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 30
-Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Trinse_316 has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal TimerAuxFSM:timer_aux|s_cntZero File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 22
-Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Tspin_278 has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_currentState.Trm_water File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 30
-Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Trm_water_297 has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal TimerAuxFSM:timer_aux|s_cntZero File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 22
-Warning (13012): Latch WashMachineFSM:top_level|s_nextStateAUX[0] has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_nextStateAUX[0] File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-Warning (13012): Latch WashMachineFSM:top_level|s_nextStateAUX[1] has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_currentState.Trm_water File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 30
-Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Tfinished_259 has unsafe behavior File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal TimerAuxFSM:timer_aux|s_cntZero File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 22
+Info (12129): Elaborating entity "WashMachineFSM" using architecture "A:behavioral" for hierarchy "WashMachineFSM:top_level" File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(68): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 68
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(74): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(80): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(99): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(115): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(131): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 131
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(147): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(150): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(151): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(153): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(154): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 154
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(157): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 157
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(160): signal "s_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(161): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(164): signal "s_nextStateAUX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at WashMachineFSM.vhd(180): signal "s_timeEnable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 180
+Warning (10631): VHDL Process Statement warning at WashMachineFSM.vhd(55): inferring latch(es) for signal or variable "s_nextStateAUX", which holds its previous value in one or more paths through the process File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at WashMachineFSM.vhd(55): inferring latch(es) for signal or variable "s_timeEnable", which holds its previous value in one or more paths through the process File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at WashMachineFSM.vhd(55): inferring latch(es) for signal or variable "s_mode", which holds its previous value in one or more paths through the process File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at WashMachineFSM.vhd(55): inferring latch(es) for signal or variable "s_nextState", which holds its previous value in one or more paths through the process File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_nextState.Tfinished" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_nextState.Tspin" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_nextState.Trm_water" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_nextState.Trinse" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_nextState.Tsoak" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_nextState.Tidle" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_mode[0]" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_mode[1]" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_timeEnable" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_nextStateAUX[0]" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (10041): Inferred latch for "s_nextStateAUX[1]" at WashMachineFSM.vhd(55) File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Info (12129): Elaborating entity "DisplayDecoder" using architecture "A:behavioral" for hierarchy "DisplayDecoder:display_decoder" File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 40
+Info (12129): Elaborating entity "TimerAuxFSM" using architecture "A:behavioral" for hierarchy "TimerAuxFSM:timer_aux" File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 50
+Info (12129): Elaborating entity "ClkDividerN" using architecture "A:behavioral" for hierarchy "ClkDividerN:divisor" File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 59
+Info (12129): Elaborating entity "reg_1" using architecture "A:behavioral" for hierarchy "reg_1:reg" File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 64
+Warning (13012): Latch WashMachineFSM:top_level|s_timeEnable has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_currentState.Tidle File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 30
+Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Tidle_354 has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TimerAuxFSM:timer_aux|s_cntZero File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 22
+Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Tsoak_335 has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_currentState.Trm_water File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 30
+Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Trinse_316 has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TimerAuxFSM:timer_aux|s_cntZero File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 22
+Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Tspin_278 has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_currentState.Trm_water File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 30
+Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Trm_water_297 has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TimerAuxFSM:timer_aux|s_cntZero File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 22
+Warning (13012): Latch WashMachineFSM:top_level|s_nextStateAUX[0] has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_nextStateAUX[0] File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+Warning (13012): Latch WashMachineFSM:top_level|s_nextStateAUX[1] has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal WashMachineFSM:top_level|s_currentState.Trm_water File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 30
+Warning (13012): Latch WashMachineFSM:top_level|s_nextState.Tfinished_259 has unsafe behavior File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashMachineFSM.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TimerAuxFSM:timer_aux|s_cntZero File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/TimerAuxFSM.vhd Line: 22
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 10
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 13
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 10
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 11
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 13
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/Ruben/Documents/UA/UA_rep/LSD/projeto/WashingMachine_v3/WashingMachine_v3.vhd Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 124 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 167 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 40 output pins
-    Info (21061): Implemented 78 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Mon Jun 20 22:41:00 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (21061): Implemented 121 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Mon Jun 20 23:43:24 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:27
 
 

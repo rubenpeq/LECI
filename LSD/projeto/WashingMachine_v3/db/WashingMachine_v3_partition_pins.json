@@ -108,11 +108,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[3]",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{

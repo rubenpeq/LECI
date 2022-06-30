@@ -21,7 +21,7 @@ architecture Shell of WashingMachine_v3 is
 
 begin
 	top_level: entity work.WashMachineFSM(Behavioral)
-		port map(clk => CLOCK_50,
+		port map(clk => s_clock,
 					reset => s_rst,
 					P_in => s_p,
 					start_stop => s_st,
@@ -49,7 +49,7 @@ begin
 		
 	timer_aux: entity work.TimerAuxFSM(Behavioral)
 		port map(reset => SW(3) ,
-				clk => not CLOCK_50,
+				clk => not s_clock,
 				timeEn => s_timeEnable,
 				newTime => s_newTime,
 				timeVal => s_timeValue,
@@ -62,7 +62,7 @@ begin
 					clkOut => s_clock);
 					
 	reg: entity work.reg_1(Behavioral)
-		port map(clk => CLOCK_50,
+		port map(clk => s_clock,
 					reset => SW(3),
 					st => not KEY(0),
 					lid => SW(2),

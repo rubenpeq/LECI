@@ -1,8 +1,5 @@
 |WashingMachine_v3
-CLOCK_50 => washmachinefsm:top_level.clk
 CLOCK_50 => clkdividern:divisor.clkIn
-CLOCK_50 => reg_1:reg.clk
-CLOCK_50 => timerauxfsm:timer_aux.clk
 SW[0] => reg_1:reg.p[0]
 SW[1] => reg_1:reg.p[1]
 SW[2] => reg_1:reg.lid

@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/20/2022 22:41:04"
+-- Generated on "06/20/2022 23:42:06"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          WashingMachine_v3
 -- 
@@ -47,14 +47,14 @@ SIGNAL SW : STD_LOGIC_VECTOR(3 DOWNTO 0);
 COMPONENT WashingMachine_v3
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX0 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-	LEDG : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LEDR : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+	LEDG : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
+	LEDR : BUFFER STD_LOGIC_VECTOR(0 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
