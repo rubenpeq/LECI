@@ -8,7 +8,7 @@ clean:
 	rm -f a.out
 	rm -f hello
 	rm -f table solution_table table.txt
-	rm -f sizes main.o sizes.o sizes_32 sizes_64
+	rm -f sizes main.o sizes.o sizes_32 sizes_x32 sizes_64
 	rm -f fibonacci fibonacci_m
 	rm -f command_line_arguments solution_command_line_arguments
 	rm -f integer_arithmetic_pitfalls
@@ -17,10 +17,11 @@ clean:
 	rm -f binary_search
 	rm -f count_words
 	rm -f primes
+	rm -f phi
 
 
 
-all:		hello table sizes fibonacci command_line_arguments integer_arithmetic_pitfalls factor rational_approximation
+all:		hello table sizes fibonacci command_line_arguments integer_arithmetic_pitfalls factor rational_approximation phi
 
 
 
@@ -49,6 +50,9 @@ sizes.o:	sizes.c sizes.h
 
 sizes_32:	main.c sizes.c sizes.h
 	cc -m32 -Wall -O2 main.c sizes.c -o sizes_32
+
+sizes_x32:	main.c sizes.c sizes.h
+	cc -mx32 -Wall -O2 main.c sizes.c -o sizes_x32
 
 sizes_64:	main.c sizes.c sizes.h
 	cc -m64 -Wall -O2 main.c sizes.c -o sizes_64
@@ -90,7 +94,8 @@ rational_approximation:		rational_approximation.c
 solution_rational_approximation:	solution_rational_approximation.c elapsed_time.h
 	cc -Wall -O2 solution_rational_approximation.c -DDEBUG=0 -o solution_rational_approximation -lm
 
-
+phi:	phi.c
+	gcc phi.c -o phi -lm
 
 #
 # programs with execution errors
