@@ -5,13 +5,16 @@
 \usepackage[margin=1in,letterpaper]{geometry} % decreases margins
 \usepackage{cite} % takes care of citations
 \usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
+\usepackage[utf8]{inputenc}
+
+\graphicspath{ {./images/} }
 
 \title{MCE - Movimento de Projéteis}
 \author{\texttt{102480} - Rúben Pequeno
 \and 
-\texttt{nmec} - Filipe
+\texttt{nmec} - Filipe Sousa
 \and
-\texttt{nmec} - António}
+\texttt{932779} - António Moreira}
 \date{\today}
 \renewcommand*\contentsname{Conteúdos}
 
@@ -28,40 +31,74 @@
 	Este trabalho tem como objetivo verificar o comportamento de diversos tipos de movimento de projéteis tais como 
 	\renewcommand{\theenumi}{\Alph{enumi}}
 	\begin{enumerate}
-		\item{Determinar a velocidade inicial do projétil através das equações do movimento}
+		\item{Determinar a velocidade inicial do projétil e calcular o respetivo erro}
 		\item{Verificar a dependência do alcance com o ângulo de lançamento}
 		\item{Determinar a velocidade inicial do projétil utilizando um pêndulo balístico}
 	\end{enumerate}
 
 
 \section{Resultados Esperados vs Resultados Obtidos}
+	Comparando os dados obtidos com os dados esperados, podemos observar que apesar de algumas
+	diferenças nos valores devido a possiveis erros de medição e de execução experimental, verifica-se
+	que o comportamento do projétil está de acordo com o resultado esperado.
 	
 
-\chapter{Teoria}
+\chapter{Parte A}
 
-\section{Parte A}
+\section{Preparação}
+	Para determinar-mos a velocidade inicial do projétil, tivemos de fazer uma montagem experimental
+	 utilizando parte dos materiais fornecidos (lançador de projéteis, sensores de passagem e a esfera plástica) 
+	 
+	 e coloca-los tal como está descrito Figura 1.
 
-\section{Parte B}
 
-\section{Parte C}
+\begin{figure}
+	\centering
+	\includegraphics{part_a.png}
+	\caption{Esquema da montagem experimental (experiência A). 1- Lançador de projéteis (LP); 2-
+	Base de fixação para o LP; 3-Sensor de passagem (inicia a contagem do tempo); 4-Sensor de
+	passagem (termina a contagem do tempo); 5-Sistema de controlo dos sensores.}
+	\label{fig:parteA}
+\end{figure}
 
-\chapter{Procedimento Exprimental}
+\section{Dados}
 
-\section{Parte A}
+\section{Erros}
 
-\section{Parte B}
+\chapter{Parte B}
 
-\section{Parte C}
+\section{Preparação}
 
-\chapter{Resultados}
+	Para esta experiência foi aproveitado a montagem feita anteriormente, apenas tirando
+	os sensores de passagem, pois já não será necessário calcular a velocidade do projétil 
+	e adicionando um alvo (sensor de impacto), de modo a podermos medir a distância percorrida 
+	pelo projétil, a um determinado angulo.
 
-\section{Parte A}
+\begin{figure}
+	\centering
+	\includegraphics{part_b.png}
+	\caption{Esquema da montagem experimental (experiência B). 1-Lançador de projéteis (LP); 2-
+	Base de fixação para o LP; 3-Alvo.}
+\end{figure}
 
-\section{Parte B}
+\section{Dados}
 
-\section{Parte C}
+\section{Erros}
 
-\chapter{Conclusions}
+\chapter{Parte C}
+
+\section{Preparação}
+\begin{figure}
+	\centering
+	\includegraphics{part_c.png}
+	\caption{Esquema da montagem experimental (experiência C).}
+\end{figure}
+
+\section{Dados}
+
+\section{Erros}
+
+\chapter{Conclusões}
 Conclusões.
 
 \end{document}
