@@ -12,8 +12,10 @@
 //   so the program can only have one hash table
 // * it is assumed that the malloc() function does not fail (if it fails, the program will
 //   terminate with a segmentation fault
-// * the are no functions to free memory
+// * there are no functions to free memory
 //
+
+typedef int T;
 
 typedef struct hash_table_node
 {
@@ -108,6 +110,7 @@ unsigned int hash_function(const char *str)
 hash_table_node *find_hash_table_node(char key[64])
 {
   // place your code here
+  
 }
 
 
@@ -126,4 +129,5 @@ hash_table_node *find_hash_table_node(char key[64])
 void insert_hash_table_node(hash_table_node *n)
 {
   // place your code here
+  
 }
