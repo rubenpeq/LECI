@@ -9,7 +9,7 @@
 //   cc -Wall -O2 -D_use_zlib_=1 solution_speed_run.c -lm -lz
 //
 // Place your student numbers and names here
-//   N.Mec. XXXXXX  Name: XXXXXXX
+//   N.Mec. 102480  Name: Rúben Pequeno
 //
 
 
