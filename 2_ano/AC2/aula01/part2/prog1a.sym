@@ -1,0 +1,10 @@
+GAS LISTING prog1a.s 			page 1
+
+
+DEFINED SYMBOLS
+            prog1a.s:3      *ABS*:0000000000000002 getChar
+            prog1a.s:4      *ABS*:0000000000000003 putChar
+            prog1a.s:10     .text:0000000000000000 main
+            prog1a.s:11     .text:0000000000000000 do
+
+NO UNDEFINED SYMBOLS

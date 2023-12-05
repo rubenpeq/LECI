@@ -1,8 +1,8 @@
-#Aula 2 Ex.1c
+# aula02 ex1c
 
-#.eqv val, 0x0F1E
-#.eqv val, 0x0614
-.eqv val, 0xE543
+	.eqv val, 0x0F1E
+#	.eqv val, 0x0614
+#	.eqv val, 0xE543
 
 	.data
 	.text

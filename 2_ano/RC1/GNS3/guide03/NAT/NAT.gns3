@@ -214,7 +214,7 @@
         "nodes": [
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5018,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -243,7 +243,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5002,
+                "console": 5021,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -274,7 +274,7 @@
                 "compute_id": "local",
                 "console": null,
                 "console_auto_start": false,
-                "console_type": null,
+                "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": null,
                 "height": 32,
@@ -336,7 +336,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5004,
+                "console": 5024,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -365,7 +365,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5006,
+                "console": 5026,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -396,7 +396,7 @@
                 "compute_id": "local",
                 "console": null,
                 "console_auto_start": false,
-                "console_type": null,
+                "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": null,
                 "height": 32,
@@ -458,7 +458,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5008,
+                "console": 5028,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -529,6 +529,6 @@
     },
     "type": "topology",
     "variables": null,
-    "version": "2.2.34",
+    "version": "2.2.35.1",
     "zoom": 100
 }
