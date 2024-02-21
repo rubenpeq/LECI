@@ -1,8 +1,11 @@
+# aula01/part_1/prog1
+
 # int main(void)
 # {
 # printStr("AC2 – Aulas praticas\n"); // system call
 # return 0;
 # }
+
 	.equ PRINT_STR,8
 	.data
 msg: 	.asciiz "AC2 - Aulas praticas\n"
