@@ -3,13 +3,34 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "/home/rubenpeq/UA/UA_rep/2_ano/AC2/**",
+                "/opt/pic32mx/include"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "/opt/pic32mx/pic32mx/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "intelliSenseMode": "linux-gcc-x64",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "/home/rubenpeq/UA/UA_rep/2_ano/AC2/**",
+                    "/home/rubenpeq/UA/UA_rep/2_ano/AC2"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "detpic32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/pic32mx/include"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/opt/pic32mx/pic32mx/bin/gcc"
         }
     ],
     "version": 4
