@@ -1,4 +1,4 @@
-// aula03/part_1/prog1
+// aula04/part_1/prog1
 
 #include <detpic32.h>
 
