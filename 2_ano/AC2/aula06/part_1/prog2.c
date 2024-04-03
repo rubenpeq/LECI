@@ -1,8 +1,8 @@
-// aula06/part_1/prog1
+// aula06/part_1/prog2
 
 #include <detpic32.h>
 
-void configureModule_AD(void){
+void configureModule_AD(){
     TRISBbits.TRISB4 = 1;       // RBx digital output disconnected
     AD1PCFGbits.PCFG4= 0;       // RBx configured as analog input
     AD1CON1bits.SSRC = 7;       // Conversion trigger selection bits: in this mode an internal counter ends sampling and starts conversion
@@ -21,7 +21,7 @@ int main(void)
     while(1){
         AD1CON1bits.ASAM = 1;   // Start conversion
         LATDbits.LATD11 = 1;    // Set LATD11 (LATD11=1)
-        while( IFS1bits.AD1IF == 0 );       // Wait while conversion not done (AD1IF == 0)
+        while( IFS1bits.AD1IF == 0 );       // Wait while conversion not done (AD1IF == 0)  
         LATDbits.LATD11 = 0;    // Reset LATD11 (LATD11=0)
         printInt(ADC1BUF0, 16 | 3 << 16);   // Read conversion result (ADC1BUF0 value) and print it
         printStr("\n");

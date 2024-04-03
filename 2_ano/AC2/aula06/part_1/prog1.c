@@ -2,7 +2,7 @@
 
 #include <detpic32.h>
 
-void configureModule_AD(void){
+void configureModule_AD(){
     TRISBbits.TRISB4 = 1;       // RBx digital output disconnected
     AD1PCFGbits.PCFG4= 0;       // RBx configured as analog input
     AD1CON1bits.SSRC = 7;       // Conversion trigger selection bits: in this mode an internal counter ends sampling and starts conversion
