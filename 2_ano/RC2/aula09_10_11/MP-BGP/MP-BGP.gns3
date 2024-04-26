@@ -4,8 +4,8 @@
     "auto_start": false,
     "drawing_grid_size": 25,
     "grid_size": 75,
-    "name": "BGP",
-    "project_id": "b2322af1-edba-4250-873c-ae8c0bc5e6c7",
+    "name": "MP-BGP",
+    "project_id": "375d6bbb-a0f3-4029-940a-7309c04b2214",
     "revision": 9,
     "scene_height": 1000,
     "scene_width": 2000,
@@ -20,7 +20,7 @@
         "links": [
             {
                 "filters": {},
-                "link_id": "26001f37-e7bd-4d47-a595-d23ef0350930",
+                "link_id": "9c178de1-066d-42a9-af7d-055170e9c720",
                 "link_style": {},
                 "nodes": [
                     {
@@ -32,7 +32,7 @@
                             "x": -6,
                             "y": 22
                         },
-                        "node_id": "10dbf0ff-5137-41b9-bff7-040ef2f5d8d8",
+                        "node_id": "e2c8b276-cc6c-47f0-b22d-2645f9ae2f05",
                         "port_number": 1
                     },
                     {
@@ -44,7 +44,7 @@
                             "x": 75,
                             "y": 15
                         },
-                        "node_id": "876e6bd2-487e-48ac-876e-81f0c1dcd1f6",
+                        "node_id": "6048d5ae-8d53-4dfd-a577-c23d261d4271",
                         "port_number": 0
                     }
                 ],
@@ -52,7 +52,7 @@
             },
             {
                 "filters": {},
-                "link_id": "38b647ec-6faa-4c61-a0da-b437960a0eae",
+                "link_id": "fb3815de-58d7-4cf0-b6c8-abeb659c2dd0",
                 "link_style": {},
                 "nodes": [
                     {
@@ -64,7 +64,7 @@
                             "x": 72,
                             "y": 24
                         },
-                        "node_id": "10dbf0ff-5137-41b9-bff7-040ef2f5d8d8",
+                        "node_id": "e2c8b276-cc6c-47f0-b22d-2645f9ae2f05",
                         "port_number": 0
                     },
                     {
@@ -76,7 +76,7 @@
                             "x": -6,
                             "y": 19
                         },
-                        "node_id": "f8b2187a-5e96-4a53-a0d4-7baa58a9dc82",
+                        "node_id": "2ea509fa-b4d1-4a0e-a556-5ddb670cfb25",
                         "port_number": 0
                     }
                 ],
@@ -84,7 +84,7 @@
             },
             {
                 "filters": {},
-                "link_id": "f68f5136-b28a-4efe-bebf-c6f892ebdc6f",
+                "link_id": "3f122bc7-57d7-4300-b227-d958e053c762",
                 "link_style": {},
                 "nodes": [
                     {
@@ -96,7 +96,7 @@
                             "x": 72,
                             "y": 22
                         },
-                        "node_id": "f8b2187a-5e96-4a53-a0d4-7baa58a9dc82",
+                        "node_id": "2ea509fa-b4d1-4a0e-a556-5ddb670cfb25",
                         "port_number": 0
                     },
                     {
@@ -108,7 +108,7 @@
                             "x": -4,
                             "y": 15
                         },
-                        "node_id": "e8ef09de-fd88-4dba-a303-44cb5d33ba6c",
+                        "node_id": "b26653d5-ef4a-43dc-9c05-71ebd23e67fb",
                         "port_number": 0
                     }
                 ],
@@ -116,7 +116,7 @@
             },
             {
                 "filters": {},
-                "link_id": "6edb771e-8dce-4739-9f70-fc9955658cf3",
+                "link_id": "2d358d6e-88e9-401a-afa0-6801ce05e08b",
                 "link_style": {},
                 "nodes": [
                     {
@@ -128,7 +128,7 @@
                             "x": 34,
                             "y": 61
                         },
-                        "node_id": "f8b2187a-5e96-4a53-a0d4-7baa58a9dc82",
+                        "node_id": "2ea509fa-b4d1-4a0e-a556-5ddb670cfb25",
                         "port_number": 1
                     },
                     {
@@ -140,7 +140,7 @@
                             "x": 33,
                             "y": -23
                         },
-                        "node_id": "3854b9ba-e8ed-4091-8d39-e5ece144913f",
+                        "node_id": "9ecb62a0-d0d2-4c81-9195-fe1dce10c542",
                         "port_number": 0
                     }
                 ],
@@ -148,7 +148,7 @@
             },
             {
                 "filters": {},
-                "link_id": "98442625-4ff3-4c4e-b8ad-77b7b5cefaf9",
+                "link_id": "4038ac93-5a6a-45d1-85f5-5e1c84a11f63",
                 "link_style": {},
                 "nodes": [
                     {
@@ -160,7 +160,7 @@
                             "x": 33,
                             "y": -17
                         },
-                        "node_id": "b7c844c0-4439-4b95-aadf-0188f11b0995",
+                        "node_id": "a6e0b655-6146-4e92-8265-a7154030c927",
                         "port_number": 1
                     },
                     {
@@ -172,7 +172,7 @@
                             "x": 35,
                             "y": 55
                         },
-                        "node_id": "3854b9ba-e8ed-4091-8d39-e5ece144913f",
+                        "node_id": "9ecb62a0-d0d2-4c81-9195-fe1dce10c542",
                         "port_number": 1
                     }
                 ],
@@ -180,7 +180,7 @@
             },
             {
                 "filters": {},
-                "link_id": "c87a4311-54b2-4cb1-9eb7-efe548b7e642",
+                "link_id": "a8b56715-d19b-40f8-910c-c7d658a1039f",
                 "link_style": {},
                 "nodes": [
                     {
@@ -192,7 +192,7 @@
                             "x": 70,
                             "y": 8
                         },
-                        "node_id": "b7c844c0-4439-4b95-aadf-0188f11b0995",
+                        "node_id": "a6e0b655-6146-4e92-8265-a7154030c927",
                         "port_number": 0
                     },
                     {
@@ -204,7 +204,7 @@
                             "x": -2,
                             "y": 29
                         },
-                        "node_id": "d814155f-30f8-49e3-b63c-67bea1b28b67",
+                        "node_id": "870d7422-546d-4b8f-8cb7-864ada8fc34d",
                         "port_number": 0
                     }
                 ],
@@ -212,7 +212,7 @@
             },
             {
                 "filters": {},
-                "link_id": "72bfcb66-f493-4661-9e77-fe1ca55549eb",
+                "link_id": "9620e4e4-d5a1-4dce-96ab-a7710b547b89",
                 "link_style": {},
                 "nodes": [
                     {
@@ -224,7 +224,7 @@
                             "x": -6,
                             "y": 20
                         },
-                        "node_id": "b7c844c0-4439-4b95-aadf-0188f11b0995",
+                        "node_id": "a6e0b655-6146-4e92-8265-a7154030c927",
                         "port_number": 0
                     },
                     {
@@ -236,7 +236,7 @@
                             "x": 72,
                             "y": 23
                         },
-                        "node_id": "6f3cce58-6d6d-431c-988f-7c34b386107f",
+                        "node_id": "f31afe33-c180-490c-9034-3679ee148c8b",
                         "port_number": 0
                     }
                 ],
@@ -244,7 +244,7 @@
             },
             {
                 "filters": {},
-                "link_id": "8fb3d60a-270a-4210-9521-e0749450a805",
+                "link_id": "efb0c499-9136-4120-add2-36db106f73c5",
                 "link_style": {},
                 "nodes": [
                     {
@@ -256,7 +256,7 @@
                             "x": -6,
                             "y": 23
                         },
-                        "node_id": "6f3cce58-6d6d-431c-988f-7c34b386107f",
+                        "node_id": "f31afe33-c180-490c-9034-3679ee148c8b",
                         "port_number": 1
                     },
                     {
@@ -268,7 +268,7 @@
                             "x": 75,
                             "y": 14
                         },
-                        "node_id": "6290f004-e77a-4432-ab67-e92214ad72e5",
+                        "node_id": "f7dadcea-0e54-4e01-be6d-bd4e419d99e3",
                         "port_number": 0
                     }
                 ],
@@ -278,7 +278,7 @@
         "nodes": [
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5009,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -293,7 +293,7 @@
                 },
                 "locked": false,
                 "name": "R1",
-                "node_id": "10dbf0ff-5137-41b9-bff7-040ef2f5d8d8",
+                "node_id": "e2c8b276-cc6c-47f0-b22d-2645f9ae2f05",
                 "node_type": "dynamips",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -347,7 +347,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5001,
+                "console": 5010,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -362,7 +362,7 @@
                 },
                 "locked": false,
                 "name": "R2A",
-                "node_id": "f8b2187a-5e96-4a53-a0d4-7baa58a9dc82",
+                "node_id": "2ea509fa-b4d1-4a0e-a556-5ddb670cfb25",
                 "node_type": "dynamips",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -416,7 +416,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5002,
+                "console": 5011,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -431,7 +431,7 @@
                 },
                 "locked": false,
                 "name": "R2B",
-                "node_id": "b7c844c0-4439-4b95-aadf-0188f11b0995",
+                "node_id": "a6e0b655-6146-4e92-8265-a7154030c927",
                 "node_type": "dynamips",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -485,7 +485,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5003,
+                "console": 5012,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -500,7 +500,7 @@
                 },
                 "locked": false,
                 "name": "R3",
-                "node_id": "6f3cce58-6d6d-431c-988f-7c34b386107f",
+                "node_id": "f31afe33-c180-490c-9034-3679ee148c8b",
                 "node_type": "dynamips",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -554,7 +554,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5004,
+                "console": 5013,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -569,7 +569,7 @@
                 },
                 "locked": false,
                 "name": "Switch1",
-                "node_id": "876e6bd2-487e-48ac-876e-81f0c1dcd1f6",
+                "node_id": "6048d5ae-8d53-4dfd-a577-c23d261d4271",
                 "node_type": "ethernet_switch",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -634,7 +634,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5005,
+                "console": 5014,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -649,7 +649,7 @@
                 },
                 "locked": false,
                 "name": "Switch2A",
-                "node_id": "e8ef09de-fd88-4dba-a303-44cb5d33ba6c",
+                "node_id": "b26653d5-ef4a-43dc-9c05-71ebd23e67fb",
                 "node_type": "ethernet_switch",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -714,7 +714,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5006,
+                "console": 5015,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -729,7 +729,7 @@
                 },
                 "locked": false,
                 "name": "Switch2B",
-                "node_id": "d814155f-30f8-49e3-b63c-67bea1b28b67",
+                "node_id": "870d7422-546d-4b8f-8cb7-864ada8fc34d",
                 "node_type": "ethernet_switch",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -794,7 +794,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5007,
+                "console": 5016,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -809,7 +809,7 @@
                 },
                 "locked": false,
                 "name": "Switch3",
-                "node_id": "6290f004-e77a-4432-ab67-e92214ad72e5",
+                "node_id": "f7dadcea-0e54-4e01-be6d-bd4e419d99e3",
                 "node_type": "ethernet_switch",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -874,7 +874,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5008,
+                "console": 5017,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -889,7 +889,7 @@
                 },
                 "locked": false,
                 "name": "Switch2",
-                "node_id": "3854b9ba-e8ed-4091-8d39-e5ece144913f",
+                "node_id": "9ecb62a0-d0d2-4c81-9195-fe1dce10c542",
                 "node_type": "ethernet_switch",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
