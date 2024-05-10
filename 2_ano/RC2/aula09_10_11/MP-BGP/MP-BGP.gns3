@@ -16,7 +16,17 @@
     "supplier": null,
     "topology": {
         "computes": [],
-        "drawings": [],
+        "drawings": [
+            {
+                "drawing_id": "62bf6fe4-9fa7-405d-9bd2-2a6932538c28",
+                "locked": false,
+                "rotation": 0,
+                "svg": "49b50b391bee74c66b56487c23c6385a.png",
+                "x": -94,
+                "y": -377,
+                "z": 0
+            }
+        ],
         "links": [
             {
                 "filters": {},
@@ -341,8 +351,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "94864ec9-2971-44b2-b49c-dce11ab76602",
                 "width": 66,
-                "x": -248,
-                "y": -212,
+                "x": -693,
+                "y": -341,
                 "z": 1
             },
             {
@@ -410,8 +420,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "94864ec9-2971-44b2-b49c-dce11ab76602",
                 "width": 66,
-                "x": 8,
-                "y": -208,
+                "x": -437,
+                "y": -337,
                 "z": 1
             },
             {
@@ -479,8 +489,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "94864ec9-2971-44b2-b49c-dce11ab76602",
                 "width": 66,
-                "x": 8,
-                "y": 48,
+                "x": -437,
+                "y": -81,
                 "z": 1
             },
             {
@@ -548,8 +558,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "94864ec9-2971-44b2-b49c-dce11ab76602",
                 "width": 66,
-                "x": -246,
-                "y": 46,
+                "x": -691,
+                "y": -83,
                 "z": 1
             },
             {
@@ -628,8 +638,8 @@
                 "symbol": ":/symbols/ethernet_switch.svg",
                 "template_id": "1966b864-93e7-32d5-965f-001384eec461",
                 "width": 72,
-                "x": -420,
-                "y": -206,
+                "x": -865,
+                "y": -335,
                 "z": 1
             },
             {
@@ -708,8 +718,8 @@
                 "symbol": ":/symbols/ethernet_switch.svg",
                 "template_id": "1966b864-93e7-32d5-965f-001384eec461",
                 "width": 72,
-                "x": 183,
-                "y": -204,
+                "x": -262,
+                "y": -333,
                 "z": 1
             },
             {
@@ -788,8 +798,8 @@
                 "symbol": ":/symbols/ethernet_switch.svg",
                 "template_id": "1966b864-93e7-32d5-965f-001384eec461",
                 "width": 72,
-                "x": 186,
-                "y": 54,
+                "x": -259,
+                "y": -75,
                 "z": 1
             },
             {
@@ -868,8 +878,8 @@
                 "symbol": ":/symbols/ethernet_switch.svg",
                 "template_id": "1966b864-93e7-32d5-965f-001384eec461",
                 "width": 72,
-                "x": -430,
-                "y": 51,
+                "x": -875,
+                "y": -78,
                 "z": 1
             },
             {
@@ -948,8 +958,8 @@
                 "symbol": ":/symbols/ethernet_switch.svg",
                 "template_id": "1966b864-93e7-32d5-965f-001384eec461",
                 "width": 72,
-                "x": 4,
-                "y": -72,
+                "x": -441,
+                "y": -201,
                 "z": 1
             }
         ]
@@ -957,5 +967,5 @@
     "type": "topology",
     "variables": null,
     "version": "2.2.46",
-    "zoom": 100
+    "zoom": 84
 }
