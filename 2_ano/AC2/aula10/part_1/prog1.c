@@ -12,20 +12,32 @@ void configurePorts()
     TRISB = (TRISB & 0xFFFFFC00); // RB[0:9] are outputs.
 }
 
-void configureUART2()
-{
-    // Configure UART2:
-    // 1 - Configure BaudRate Generator
-    // 2 – Configure number of data bits, parity and number of stop bits
-    // (see U2MODE register)
-    // 3 – Enable the trasmitter and receiver modules (see register U2STA)
-    // 4 – Enable UART2 (see register U2MODE)
+void configureUART2(unsigned int baud, char parity, unsigned int stopbits){   
+    U2MODEbits.BRGH = 0;    // configure pre-scaler for :16
+
+    if ((baud < 600) || (baud >115200)) baud = 115200; // baudrate is 115200 if out of bonds.
+    U2BRG = ((PBCLK + (8 * baud))/(16 * baud)) - 1; // config baudrate generator
+
+    switch (parity)
+    {
+    case 'E':   // even parity
+        U2MODEbits.PDSEL = 1;
+        break;
+    case 'O':   // odd parity
+        U2MODEbits.PDSEL = 2;
+        break;
+    case 'N':   // no parity
+        U2MODEbits.PDSEL = 0;
+        break;
     
-    U2MODEbits.BRGH = 0;
-    U2BRG = ((PBCLK + (8 * BAUDRATE))/(16 * BAUDRATE));
-    
-    U2MODEbits.PDSEL = 8;   // data bits
-    U2MODEbits.STSEL = 1;   // stop bits
+    default:    // parity value not allowed
+        U2MODEbits.PDSEL = 0;
+        break;
+    }
+
+    if (stopbits == 2) U2MODEbits.STSEL = 1;    // two stop bits
+    else U1MODEbits.STSEL = 0;  // one stop bit
+
     U2STAbits.UTXEN = 1;    // Enable TX module
     U2MODEbits.ON = 1;  // Enable UART2
 }
@@ -45,7 +57,7 @@ void delay(int ms)
 int main(void)
 {
     configurePorts();
-    configureUART2();
+    configureUART2(115200, 'N', 1);
 
     while (1)
     {
