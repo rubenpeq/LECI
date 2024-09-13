@@ -278,7 +278,7 @@
         "nodes": [
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5003,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -341,13 +341,13 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "94864ec9-2971-44b2-b49c-dce11ab76602",
                 "width": 66,
-                "x": -248,
-                "y": -212,
+                "x": -242,
+                "y": -209,
                 "z": 1
             },
             {
                 "compute_id": "local",
-                "console": 5001,
+                "console": 5004,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -416,7 +416,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5002,
+                "console": 5005,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -485,7 +485,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5003,
+                "console": 5006,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -554,7 +554,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5004,
+                "console": 5007,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -634,7 +634,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5005,
+                "console": 5008,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -714,7 +714,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5006,
+                "console": 5009,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -794,7 +794,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5007,
+                "console": 5010,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -874,7 +874,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5008,
+                "console": 5011,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -956,6 +956,6 @@
     },
     "type": "topology",
     "variables": null,
-    "version": "2.2.46",
+    "version": "2.2.47",
     "zoom": 100
 }
