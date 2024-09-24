@@ -6,3 +6,6 @@
 	path = 2_ano/RC1/RC1_projeto
 	url = https://github.com/rubenpeq/RC1_projeto.git
 	branch = main
+[submodule "3_ano/IA/P/guiao-de-programacao-funcional-rubenpeq"]
+	path = 3_ano/IA/P/guiao-de-programacao-funcional-rubenpeq
+	url = https://github.com/detiuaveiro/guiao-de-programacao-funcional-rubenpeq.git
