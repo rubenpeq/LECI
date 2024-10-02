@@ -9,3 +9,6 @@
 [submodule "3_ano/IA/P/guiao-de-programacao-funcional-rubenpeq"]
 	path = 3_ano/IA/P/guiao-de-programacao-funcional-rubenpeq
 	url = https://github.com/detiuaveiro/guiao-de-programacao-funcional-rubenpeq.git
+[submodule "3_ano/IA/P/guiao-sobre-pesquisa-rubenpeq"]
+	path = 3_ano/IA/P/guiao-sobre-pesquisa-rubenpeq
+	url = https://github.com/detiuaveiro/guiao-sobre-pesquisa-rubenpeq.git
