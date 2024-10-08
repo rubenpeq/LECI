@@ -1,32 +1,50 @@
     # AC1/aula03/ex1a.asm
 
     # Mapa de registos:
-    # value: $t0
-    # bit: $t1
+    # soma: $t0
+    # value: $t1
     # i: $t2
+
         .data
-str1:   .asciiz ...
-str2:   .asciiz ...
+str1:   .asciiz "Introduza um numero: "
+str2:   .asciiz "Valor ignorado\n"
+str3:   .asciiz "A soma dos positivos e: "
         .eqv    print_string, 4
-        .eqv    ...
-        .eqv    ...
+        .eqv    read_int, 5
+        .eqv    print_int10, 1
+        
         .text
         .globl  main
-main:       la      ...                         # (instrução virtual)
-    li      ...                                 # (instrução virtual)
-    syscall                                     # print_string(str1);
-    (...)                                       # value=read_int();
-    (...)                                       # print_string("...");
-    li      ...                                 # i = 0
-for:        b??     $t2,    ...,        endfor  # while(i < 32) {
-    li      $t3,    0x80000000, #
-    and     $t1,    ...,        ...             # bit=value & 0x80000000
-if:         b??     $t1,    ...,        else    # if(bit != 0)
-    (...)                                       # print_char('1');
-else:                                           # else
-    (...)                                       # print_char('0');
-endif:                                          # value = value << 1;
-    # i++;
-    j       ...                                 # }
-endfor:     #
-    jr      $ra                                 # fim do programa
+main:       li      $t0,    0                       # soma = 0
+    li      $t0,    0                               # i = 0;
+
+for:        bge     $t2,    5,              endfor  # while(i < 5) {
+
+    la      $a0,    str1
+    li      $v0,    print_string
+    syscall                                         # print_string(str1)
+
+    li      $v0,    read_int
+    syscall
+    or      $t1,    $0,             $v0             # value=read_int()
+
+if:         ble     $t1,    0,              else    # if(value > 0)
+    add     $t0,    $t0,            $t1             # soma += value
+    j       endif,  #
+
+else:       la      $a0,    str2
+    li      $v0,    print_string
+    syscall                                         # print_string(str2)
+
+endif:      addi    $t2,    $t2,            1       # i++
+    j       for                                     # }
+
+endfor:
+    la      $a0,    str3
+    li      $v0,    print_string
+    syscall                                         # print_string(str3)
+
+    or      $a0,    $0,             $t0
+    li      $v0,    print_int10
+    syscall                                         # print_int10(soma)
+    jr      $ra                                     # end program
