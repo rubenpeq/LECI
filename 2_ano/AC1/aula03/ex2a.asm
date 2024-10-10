@@ -1,6 +1,6 @@
     # AC1/aula03/ex2a.asm
 
-    # Mapa de registos:
+    # Register map:
     # value: $t0
     # bit: $t1
     # i: $t2

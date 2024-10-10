@@ -1,6 +1,6 @@
     # AC1/aula03/ex1a.asm
 
-    # Mapa de registos:
+    # Register map:
     # soma: $t0
     # value: $t1
     # i: $t2
