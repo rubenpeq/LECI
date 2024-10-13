@@ -11,7 +11,7 @@
         .eqv    SIZE, 20
         .eqv    read_string, 8
         .eqv    print_int10, 1
-str:    .space  SIZE
+str:    .space  21                                  # SIZE + 1
 
         .text
         .globl  main
