@@ -15,7 +15,7 @@ str:    .space  21                                  # SIZE + 1
 
         .text
         .globl  main
-main:       la      $a0,    str                     # $a0=&str[0] (endereço da posição 0 do array, i.e., endereço inicial do array)
+main:       la      $a0,    str                     # $a0=&str[0] (address of position 0 of the array)
     li      $a1,    SIZE                            # $a1=SIZE
     li      $v0,    read_string
     syscall                                         # read_string(str,SIZE)
@@ -35,4 +35,4 @@ endif:
 endw:       or      $a0,    $0,             $t0
     li      $v0,    print_int10
     syscall                                         # print_int10(num);
-    jr      $ra                                     # termina o programa
+    jr      $ra                                     # end program
