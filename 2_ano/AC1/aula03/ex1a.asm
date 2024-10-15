@@ -12,7 +12,7 @@ str3:   .asciiz "A soma dos positivos e: "
         .eqv    print_string, 4
         .eqv    read_int, 5
         .eqv    print_int10, 1
-        
+
         .text
         .globl  main
 main:       li      $t0,    0                       # soma = 0
@@ -39,8 +39,7 @@ else:       la      $a0,    str2
 endif:      addi    $t2,    $t2,            1       # i++
     j       for                                     # }
 
-endfor:
-    la      $a0,    str3
+endfor:     la      $a0,    str3
     li      $v0,    print_string
     syscall                                         # print_string(str3)
 

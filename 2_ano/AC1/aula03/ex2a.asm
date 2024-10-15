@@ -38,8 +38,7 @@ if:         beq     $t1,    0,              else    # if(bit != 0)
     syscall                                         # print_char('1')
     j       endif
 
-else:                                               # else
-    li      $a0,    '0'
+else:       li      $a0,    '0'
     li      $v0,    print_char
     syscall                                         # print_char('0')
 
