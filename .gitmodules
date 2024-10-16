@@ -8,3 +8,6 @@
 [submodule "3_ano/IA/P/guiao-sobre-pesquisa-rubenpeq"]
 	path = 3_ano/IA/guiao-sobre-pesquisa-rubenpeq
 	url = https://github.com/detiuaveiro/guiao-sobre-pesquisa-rubenpeq.git
+[submodule "2_ano/AED/AED-assignments"]
+	path = 2_ano/AED/AED-assignments
+	url = https://github.com/rubenpeq/AED-assignments.git
