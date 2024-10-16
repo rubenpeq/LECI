@@ -1,0 +1,164 @@
+<html lang="pt">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Degradação de Hardware</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/graficos.js"></script>
+</head>
+    </head>
+    <body>
+		<div class="nav">
+			<ul>
+				<li><a style="color: black;" href="index.html">Home</a></li>
+				<li><a href="gpus.html">GPUs</a></li>
+				<li><a href="cpus.html">CPUs</a></li>
+				<li style="width: 150px;"><a href="degradation.html">Degradação</a></li>
+				<li><a href="about.html">Sobre</a></li>
+			</ul>	</div>		
+        <div style="border: 3px white; background: black; opacity: 0.6; text-align:left;">
+		<h1 style="color: white; text-align: center"> Degradação da Performance
+            do Hardware</h1>
+        <p style="color: lightgray;">
+            Com o aumento da populariedade de crypto-moedas e crypto-mining, surgiu
+uma ideia que leva consumidores a não desejarem comprar hardware (especialmente processadores e placas gráficas) que tenha sido préviamente utilizado
+para minerar crypto-moedas ou até outras tarefas como gaming e trabalhos
+profissionais como rendering, pois muitos acreditam que estas tarefas estam diretamente relacionadas à degradação da performance de CPUs e GPUs. Esta
+ideia levou à pergunta: Será que existe mesmo degradação da performance do
+hardware dos computadores?
+<br>
+Para responder a esta questão, devemos primeiro dividir os componentes de
+computadores em diferentes categorias:
+            <ol style="color: lightgray; font-size: 18px;">
+                <li>Partes mecânicas, ou seja, partes que se movem fisicamente
+                    com outras partes.</li>
+                <li>Componentes que têm reações químicas ao longo do tempo.</li>
+                <li>Todos os outros componentes que não se encontram nas categorias anteriores, que neste caso serão maior parte dos componentes num computador.</li>
+            </ol>
+        </p>
+    <h2 style="color: white;">Partes Mecânicas</h2>
+    <p style="color: lightgray;">Partes mecânicas têm necessidade de um movimento relativo entre
+        as duas superfícies de contato, que devido à existencia de fricção,
+        levam ao desgaste de ambas as superfícies. Isto é, quer seja um
+        componente de um computador ou outro sistema qualquer, partes
+        11mecânicas irão sempre tender a a desgastar-se quanto mais forem
+        utilizadas, ou seja, podemos concluir que irá existir perda de perfor-
+        mance em partes mecânicas do Hardware de um computador e even-
+        tualmente estas irão falhar com o tempo. Exemplos deste tipo de
+        Hardware são ventoinhas com a representada na figura abaixo (usadas
+        para manter a temperatura do hardware dentro da sua temperatura
+        de utilização), discos rígidos ou até mesmo periféricos como teclados,
+        ratos e outros botões fisicos.</p><br>
+        <img src="images/fan1.jpg" alt="Ventoinha.jpg" width="250" height="250" class="center"><br>
+        <h2 style="color: white;">Componentes que Degradam por Reações Químicas e Magnéticas</h2>
+        <p style="color: lightgray;">Degradação por reações químicas acontece em componentes como
+            baterias que vão perdendo capacidade a cada ciclo de carga e des-
+            carga, alguns tipos de capacitores também se degradam por outras
+            reações quimicas e, por exemplo, no caso dos discos rijidos (arma-
+            zenamento por reações magnéticas) que também se encontram na
+            categoria anterior, o computador irá mostrar sinais de lentidão ao
+            longo do tempo pois os tempos de leitura e escrita destes irá de-
+            gradar quanto mais estes sejam usados, embora para estes já haja
+            alternativas como Solid State Drive que são mais rápidos e
+            estão menos sujeitos a degradação. Por outro lado, os discos rígidos
+            ainda são os com maior capacidade de armazenamento.</p><br>
+        <h2 style="color: white;">Resto dos Componentes</h2>
+        <p style="color: lightgray;">Apesar de haver muitos outros componentes, vamos testar apenas
+            alguns dos principais componentes de processamento dos computadores, ou seja, CPUs e GPUs.</p><br>
+		<h3 style="color: white;">Metodologia</h3>
+        <p style="color: lightgray;">Para testar se realmente existe degradação na performance deste
+            tipo de hardware, será efetuada uma série de benchmarks1 de
+            várias tarefas (tanto video-jogos como programas de rendering e
+            stress-testing2 ) de modo a podermos comparar a sua performance
+            atual com o resultado da performance que o mesmo hardware teve à
+            2 anos atrás. O hardware que vai ser utilizado para esta experiência
+            terá como CPU um AMD RYZEN 5 3600X e o GPU utilizado
+            será um AMD RADEON 5600XT. Este hardware foi usado ape-
+            nas para gaming durante o seu primeiro ano e está à pouco mais de
+            um ano, ligado quase 24 horas por semana a fazer crypto-mining.
+            Os jogos serão testados por uma função dentro do software oficial da
+            AMD(Radeon Software) que permetirá ver a média de Frames
+            Per Second (fps) que cada jogo obteve na duração do teste. Para
+            obter resultados coerentes, cada jogo teve um tempo de medição de
+            cerca de 10 minutos de modo estabilizar a temperatura e perfor-
+            mance do hardware. Os jogos escolhidos foram CS:GO, League
+            of Legends, GTA V, Rainbow Six Siege, Assassin's Creed
+            Origin, Shadow of the Tomb Raider, Final Fantasy XV e
+            For Honor pois eram os que já tinha feito o benchmark em 2019
+            quando montei o computador (ou seja, hardware estava completa-
+            mente novo, o que dará mais credibilidade aos resultados), por isso
+            não haverá nenhum título mais recente do que 2019. De seguida,
+            para um teste mais especifico para o CPU, iremos usar progamas
+            como o Cinebench R 20, Cinebench R 15, os quais são basea-
+            dos no Cinema 4, que é um software utilizado mundialmente para
+            rederizar e criar formas 3D. Também seram feitos benchmarks no
+            Geekbench 5 e no Blender 2.81(mais especificamente, um gráfico
+            3D popular para benchmarks com o nome "bmw27"). Finalmente,
+            para a testagem do GPU, apenas serão feitos 2 benchmarks diferentes, Furmark (neste caso, esta benchmark era a única que não
+            tinha feito em 2019, então fui ao site oficial da Furmark onde encontrei o resultado de um sistema similar ao meu) e Heaven DX11
+            Benchmark, sendo que este último irá fazer um stress-test ao GPU.</p><br>
+        <h3 style="color: white;">Resultados</h3>
+    
+    <div id="grafico-column" style="width: 400px; height: 300px;"></div>
+    <button class="btn btn-primary" onclick="desenhaGraficoColumn()">FPS Jogos</button>
+    <button class="btn btn-primary" onclick="desenhaGraficoColumn1()">Pontuação Ryzen 3600X</button>
+    <button class="btn btn-primary" onclick="desenhaGraficoColumn2()">Pontuação Radeon 5600XT</button>
+    <h3 style="color: white;"></h3>
+        <p style="color: lightgray;">Refeltindo sobre os resultados obtidos anteriormente
+            sobre a média de fps que cada jogo teve, podemos observar que, em
+            maior parte dos casos não há uma grande variação entre os valores
+            apesar dos 2 anos de diferença. O caso onde houve maior variação
+            foi no jogo League of Legends com a perda de cerca de 10% da
+            sua performance original.
+            Os resultados obtidos posteriormente (avaliando a performance do
+            CPU) mostram, pelo contrário ao que dizem os rumores da perda
+            de performance com o tempo, que houve uma subida em todos os
+            parâmetros testados (excepto na Geekbench 5 - Single-Core que se
+            manteve igual) desde a data dos primeiros testes. Isto poderá ter
+            acontecido devido a várias causas, as quais serão faladas com mais
+            detalhe posteriormente. Por ultimo, ao examinar os resultados
+            dos testes à GPU, podemos observar que na segunda benchmark
+            (Heaven DX11 Benchmark) também houve uma pontuação bastante parecida à pontuação original, no entanto, se analisarmos os
+            resultados da primeira benchmark (Furmark), conseguimos perce-
+            ber que houve uma diferença um pouco maior, de quase 15% maior
+            performance atualmente do que no original. Esta ultima diferença
+            poderá ter justificação, como este foi o unico caso em que o hardware era diferente, é que
+            a diferença seja dada devido a um fenómeno chamado de "silicone
+            lottery".</p>
+            <h3 style="color: white;"> O que poderá ter causado a diferença dos valores obtidos?</h3>
+            <p style="color: lightgray;">
+            Apesar de o hardware usado para efetuar os benchmarks tenha sido
+            o mesmo, no período de 2 anos de diferença das datas dos testes,
+            houveram alterações tanto nas aplicações e jogos, assim como houve
+            atualizações do próprio sistema operativo ou até mesmo alterações
+            nos próprios drivers do hardware.
+            Contudo, ainda poderá existir outros motivos para a desigualdade
+            dos resultados. Entre eles estará, por exemplo, a degradação da
+            performance dos componentes responsáveis pelo arrefecimento do
+            sistema (através da degradação das própria ventoinhas e/ou parti-
+            culas como pó e outros que estejam a empedir o airflow desejado
+            3 Um driver é essencialmente o software que trata da comunicação entre o sistema operativo
+            (e as suas aplicações) e o hardware
+            16para o sistema) ou até por vezes, a degradação do disco rígido.
+            Todos estes fatores podem ter levado ás diferenças que obeservamos
+            nos resultados, sendo que no geral, as atualizações dos drivers do
+            hardware tendem a trazer melhorias para o desempenho do hardware, embora isto não seja sempre o caso. No entanto, com o tempo
+            os requerimentos minimos de uso de software tende a aumentar pois
+            os desenvolvedores de software tentam tirar vantagem dos avanços
+            na evolução do hardware, fazendo desta forma parecer que a performance do hardware estará mesmo a degradar(o qual não é verdade
+            como podemos confirmar com os resultados anteriores).</p>
+            <h3 style="color: white;"> O que é Silicone Lottery?</h3>
+            <p style="color: lightgray;">
+            Apesar de em papel, os chips de CPUs e GPUs de modelo igual terem
+            as mesmas especificações, cada chip pode ter pequenas diferenças na
+            sua capacidade de performance. Daí o termo "silicone lottery", ás
+            vezes poderá-se "ganhar a loteria"e obter um chip que performe
+            melhor que a média do mesmo modelo, no entanto também se pode
+            perder, obtendo assim um chip com uma pior performance.</p><br></div>
+    </body>
+</html>
