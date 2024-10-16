@@ -1,7 +1,3 @@
-[submodule "1_ano/IEI/infor2021-ap-g29"]
-	path = 1_ano/IEI/infor2021-ap-g29
-	url = https://code.ua.pt/git/infor2021-ap-g29
-	branch = master
 [submodule "2_ano/RC1/RC1_projeto"]
 	path = 2_ano/RC1/RC1_projeto
 	url = https://github.com/rubenpeq/RC1_projeto.git
