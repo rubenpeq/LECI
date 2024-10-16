@@ -1,8 +1,7 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/rubenpeq/LECI/blob/main/README.md)
+[![pt](https://img.shields.io/badge/lang-pt-green.svg)](https://github.com/rubenpeq/LECI/blob/main/README-PT.md)
 
 # LECI Repository
-
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/rubenpeq/LECI/README.md)
-[![pt](https://img.shields.io/badge/lang-pt-green.svg)](https://github.com/rubenpeq/LECI/README-PT.md)
 
 This repository was made in order to save and organise my progress while studying Computer and Informatics Engeneering in Aveiro University, Portugal.
 
