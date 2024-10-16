@@ -1,3 +1,5 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/rubenpeq/LECI/blob/main/README.md)
+[![pt](https://img.shields.io/badge/lang-pt-green.svg)](https://github.com/rubenpeq/LECI/blob/main/README-PT.md)
 
 # LECI Repository
 
@@ -22,16 +24,16 @@ Some curricular units projects might have other collaborators but those projects
 
 | Curricular Unit | Semester |
 |      :---       |    :---:    |
-| Introdução aos Sistemas Digitais |  1  |
-| Fundamentos de Programação |  1  |
-| Álgebra Linear e Geometria Analítica |  1  |
-| Cálculo I |  1  |
-| Introdução à Engenharia Informática |  1  |
-| Laboratório de Sistemas Digitais |  2  |
-| Programação Orientada a Objetos |  2  |
-| Laboratórios de Informática |  2  |
-| Cálculo II |  2  |
-| Matemática Discreta |  2  |
+| Introduction to Digital Systems           |  1  |
+| Programming Fundamentals                  |  1  |
+| Linear Algebra and Analytical Geometry    |  1  |
+| Calculus I                                |  1  |
+| Introduction to Computer Engineering      |  1  |
+| Digital Systems Laboratory                |  2  |
+| Object-Oriented Programming               |  2  |
+| Computer Science Laboratories             |  2  |
+| Calculus II                               |  2  |
+| Discrete Mathematics                      |  2  |
 
 </details>
 
@@ -43,16 +45,16 @@ Some curricular units projects might have other collaborators but those projects
 
 | Curricular Unit | Semester |
 |      :---       |    :---:    |
-| Algoritmos e Estruturas de Dados |  1  |
-| Arquitetura de Computadores |  1  |
-| Redes de Comunicações I |  1  |
-| Mecânica e Campo Eletromagnético |  1  |
-| <details><summary> Competências Transferíveis I</summary> Gestão de Projetos <br /> Economia I <br /> Design Thinking </details> |  1  |
-| Sinais e Sistemas Eletrónicos |  2  |
-| Redes de Comunicações II |  2  |
-| Análise de Sistemas |  2  |
-| Arquitetura de Computadores II |  2  |
-| <details><summary> Competências Transferíveis I</summary> Option I <br /> Option II <br /> Option III </details> |  2  |
+| Algorithms and Data Structures        |  1  |
+| Computer Architecture I               |  1  |
+| Communication Networks I              |  1  |
+| Mechanics and Electromagnetic Field   |  1  |
+| <details><summary>**Transferable Skills I**</summary> Project Management <br /> Economics I <br /> Design Thinking </details> |  1  |
+| Electronic Signals and Systems        |  2  |
+| Communication Networks II             |  2  |
+| Systems Analysis                      |  2  |
+| Computer Architecture II              |  2  |
+| <details><summary>**Transferable Skills II**</summary> Option I <br /> Option II <br /> Option III </details> |  2  |
 
 </details>
 
@@ -64,14 +66,14 @@ Some curricular units projects might have other collaborators but those projects
 
 | Curricular Unit | Semester |
 |      :---       |    :---:    |
-| Projeto em Engenharia de Computadores e Informática |  Anual  |
-| Métodos Probabilísticos para Engenharia Informática |  1  |
-| Inteligência Artificial |  1  |
-| Sistemas de Operação |  1  |
-| Segurança Informática e nas Organizações |  1  |
-| Compiladores |  2  |
-| Interação Humano-Computador |  2  |
-| Base de Dados |  2  |
-| <details><summary> Opção I </summary> Option I </details>  |  2  |
+| Project in Computer and Informatics Engineering               |  Anual  |
+| Probabilistic Methods for Computer Engineering                |  1  |
+| Artificial Intelligence                                       |  1  |
+| Operating Systems                                             |  1  |
+| Information and Organizational Security                       |  1  |
+| Compilers                                                     |  2  |
+| Human-Computer Interaction                                    |  2  |
+| Databases                                                     |  2  |
+| <details><summary>**Option I**</summary> Option I </details>  |  2  |
 
 </details>
