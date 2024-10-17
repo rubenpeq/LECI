@@ -15,14 +15,14 @@ str:    .asciiz "\nIntroduza um numero: "           # static char str[]="\nIntro
         .globl  main
 main:       li      $t0,    0                       # i = 0
     la      $t1,    lista                           # $t1 = &lista[0]
-for:        bge     $t0,    SIZE,           efor    # for(i = 0; i < SIZE; i++)
-    # {
+for:        bge     $t0,    SIZE,           efor    # for(i < SIZE){
     la      $a0,    str
     li      $v0,    print_string
     syscall                                         # print_string(str)
 
     li      $v0,    read_int
     syscall                                         # $v0 = read_int()
+    
     sll     $t2,    $t0,            2               # $t2 = i * 4
     addu    $t2,    $t1,            $t2             # $t2 = lista+i
     sw      $v0,    0($t2)                          # lista[i] = $v0 = read_int()
