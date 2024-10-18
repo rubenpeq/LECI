@@ -9,13 +9,12 @@ void main(void)
     static int lista[SIZE];
     int houveTroca, i, aux;
 
-    // inserir aqui o código para leitura de valores e
-    //  preenchimento do array
-    for (...)
+    for (int i = 0; i < SIZE; i++) // read the array
     {
-        ...
+        printf("Insira o valor %d: ", i + 1);
+        scanf("%d", &lista[i]);
     }
-    do
+    do  // bubble sort
     {
         houveTroca = FALSE;
         for (i = 0; i < SIZE - 1; i++)
@@ -30,9 +29,9 @@ void main(void)
         }
     } while (houveTroca == TRUE);
 
-    // inserir aqui o código de impressão do conteúdo do array
-    for (...)
+    for (int i = 0; i < SIZE; i++) // print the array
     {
-        ...
+        printf("%d ", lista[i]);
     }
+    printf("\n");
 }
