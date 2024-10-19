@@ -9,7 +9,7 @@ This repository was made in order to save and organise my progress while studyin
 
 ## Authors
 
-- [@rubenpeq](https://www.github.com/rubenpeq)(me)
+- [@rubenpeq](https://www.github.com/rubenpeq)
 
 Some curricular units projects might have other collaborators but those projects are in their own repositories as submodules in this repository.
 
