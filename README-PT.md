@@ -9,7 +9,7 @@ Este repositório foi criado para guardar e organizar o meu progresso enquanto f
 
 ## Autores
 
-- [@rubenpeq](https://www.github.com/rubenpeq)(eu)
+- [@rubenpeq](https://www.github.com/rubenpeq)
 
 Alguns projetos das unidades curriculares podem ter outros colaboradores, mas esses projetos estão nos seus próprios repositórios como submódulos neste repositório.
 
