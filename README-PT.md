@@ -14,6 +14,7 @@ Este repositório foi criado para guardar e organizar o meu progresso enquanto f
 Alguns projetos das unidades curriculares podem ter outros colaboradores, mas esses projetos estão nos seus próprios repositórios como submódulos neste repositório.
 
 
+
 ## Plano Curricular
 
 <details>
