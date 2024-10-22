@@ -2,7 +2,8 @@
 
     # Register map:
     # $t0: i
-    # $t1: &lista[0]
+    # $t1: lista
+    # $t2: &lista[i]
 
         .data
 lista:  .space  20                                  # static int lista[SIZE*sizeof(int)]
