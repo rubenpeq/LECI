@@ -1,6 +1,0 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-
-entity SeqDetector is
-	port( SW:	in	std_logic_vector(0 downto 0);
-			LEDR:	out std_logic_vector(0 downto 0));

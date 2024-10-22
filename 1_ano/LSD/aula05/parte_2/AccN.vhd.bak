@@ -1,8 +1,0 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
-entity AccN is
-	generic(N : positive := 8);
-	port(
-	);
-end AccN;

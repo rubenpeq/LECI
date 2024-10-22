@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/rubenpeq/UA/ISD/testes_simulacao/simulation/qsim
+vTesteSim1
+Z1 !s110 1640091203
+!i10b 1
+!s100 >79_KJ^<zKG_1@9`gD<;[0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=LzF8oTK5:h?PY?NFHFN10
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1640091202
+8TesteSim1.vo
+FTesteSim1.vo
+!i122 12
+L0 32 232
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1640091203.000000
+!s107 TesteSim1.vo|
+!s90 -work|work|TesteSim1.vo|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+n@teste@sim1
+vTesteSim1_vlg_vec_tst
+R1
+!i10b 1
+!s100 NjB8h92[9U6K@n@9Wfz^61
+R2
+ICNJlG4i88Ijk<0hINTBAL1
+R3
+R0
+R4
+8testeSim1.vwf.vt
+FtesteSim1.vwf.vt
+!i122 13
+L0 30 94
+R5
+r1
+!s85 0
+31
+R6
+!s107 testeSim1.vwf.vt|
+!s90 -work|work|testeSim1.vwf.vt|
+!i113 1
+R7
+R8
+n@teste@sim1_vlg_vec_tst
