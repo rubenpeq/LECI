@@ -11,3 +11,6 @@
 [submodule "3_ano/IA/P/guiao-sobre-pesquisa-rubenpeq"]
 	path = 3_ano/IA/guiao-sobre-pesquisa-rubenpeq
 	url = https://github.com/detiuaveiro/guiao-sobre-pesquisa-rubenpeq.git
+[submodule "3_ano/IA/guiao-rc-rubenpeq"]
+	path = 3_ano/IA/guiao-rc-rubenpeq
+	url = https://github.com/detiuaveiro/guiao-rc-rubenpeq.git
