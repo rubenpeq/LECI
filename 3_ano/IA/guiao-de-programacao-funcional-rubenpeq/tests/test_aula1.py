@@ -113,7 +113,7 @@ def test_menor(mock_menor):
 
 #Exercicio 3.5
 @mock.patch('aula1.menorElem_lista', side_effect = aula1.menorElem_lista)
-def test_menor(mock_menorElem_lista):
+def test_menorElem_lista(mock_menorElem_lista):
     assert mock_menorElem_lista([1,2,3,0,5]) == [0, [1,2,3,5]]
     assert mock_menorElem_lista([]) == None
     assert mock_menorElem_lista.call_count <= 9

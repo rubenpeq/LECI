@@ -194,7 +194,7 @@ def menor(lista):
     # Compare the first element with the minimum of the rest of the list
     return min(lista[0], menor_que_resto)
 
-#Exercicio 3.5 -- TO DO
+# TODO Exercicio 3.5
 def menorElem_lista(lista):
     # Base case: If the list is empty, return None
     if not lista:
