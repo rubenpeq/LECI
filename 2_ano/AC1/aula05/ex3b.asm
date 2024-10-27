@@ -1,6 +1,6 @@
     #AC1/aula05/ex3b.asm
 
-    # Mapa de registos
+    # Register map
     # $t0: i
     # $t1: lista
     # $t2: &lista[i]
