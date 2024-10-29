@@ -7,11 +7,11 @@
     # $t3: houve_troca
 
         .data
-lista:  .space  20                                  # static int lista[SIZE*sizeof(int)]
+lista:  .space  40                                  # static int lista[SIZE*sizeof(int)]
 str:    .asciiz "\nIntroduza um numero: "           # static char str[]="\nIntroduza um numero: "
 str1:   .asciiz "Conteudo do array:\n"
 str2:   .asciiz "; "
-        .eqv    SIZE, 5
+        .eqv    SIZE, 10
         .eqv    print_int10, 1
         .eqv    print_string, 4
         .eqv    read_int, 5
