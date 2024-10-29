@@ -44,7 +44,7 @@ for1:       bge     $t0,    SIZE,           do      # for(i < SIZE){
     addiu   $t6,    $t6,            -1              # $t6 = SIZE – 1
     sll     $t6,    $t6,            2               # $t6 = (SIZE – 1) * 4
     addu    $t6,    $t5,            $t6             # pUltimo = lista + (SIZE – 1)
-do:         li      $t4,    FALSE                   # do { houveTroca = FALSE;
+do:         li      $t4,    FALSE                   # do { houveTroca = FALSE
 
 for:        bge     $t5,    $t6,            efor    # for (p < pUltimo){
     lw      $t7,    0($t5)                          # $t7 = *(p)
