@@ -8,13 +8,13 @@ void main(void)
     char **p, **pultimo, *ch;
     p = array;
     pultimo = array + SIZE;
-    for (; p < pultimo; p++)
+    for (; p < pultimo; p++) // Loop through the strings
     {
         ch = *p;
-        while (*ch != '\0')
+        while (*ch != '\0') // Loop through the characters of the string
         {
             printf("%c-", *ch);
-            ch++;
+            ch++; // Move to the next character
         }
         printf("\n");
     }
