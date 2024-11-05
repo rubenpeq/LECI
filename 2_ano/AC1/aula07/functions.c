@@ -45,8 +45,9 @@ char *strcpy(char *dst, char *src)
     return dst;
 }
 
-char *strcpy2(char *dst, char *src) // TODO: implement strcpy2
+char *strcpy2(char *dst, char *src)
 {
+    while ((*dst++ = *src++) != '\0');
     return dst;
 }
 
