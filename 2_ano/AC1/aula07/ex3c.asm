@@ -1,4 +1,4 @@
-    # AC1/aula07/ex3b.asm
+    # AC1/aula07/ex3c.asm
 
     .text
 
@@ -70,6 +70,7 @@ exchange:       or      $t0,        $a0,            $0          # $t0 = c1
     sb      $t2,        0($t1)                                  # *c2 = aux
     jr      $ra                                                 # end sub-routine
 
+    # TODO - remake strcpy using pointers
     ### strcpy ###
 
     # Register map:

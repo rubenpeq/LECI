@@ -47,7 +47,14 @@ char *strcpy(char *dst, char *src)
 
 char *strcpy2(char *dst, char *src)
 {
-    while ((*dst++ = *src++) != '\0');
+    /*  as guide suggests
+    char *p = dst;
+    do
+    {
+        *p++ = *src;
+    } while (*src++ != '\0');
+    */
+    while ((*dst++ = *src++) != '\0'); // better way
     return dst;
 }
 
