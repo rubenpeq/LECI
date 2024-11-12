@@ -22,7 +22,6 @@ do:
     move    $v0,    $t1                         # return dst
     jr      $ra                                 # end sub-routine
 
-    # TODO: fix strcat
     ### char *strcat(char *dst, char *src) ###
 
     # Register map:
@@ -43,17 +42,18 @@ strcat:     addiu   $sp,    $sp,            -16
 while:      lb      $t0,    0($s2)              # $t0 = *p
     beq     $t0,    '\0',           ewhile      # while(*p != '\0'){
     addiu   $s2,    $s2,            1           #   p++ }
+    j while
 
 ewhile:     move    $a0,    $s2                 # $a0 = p
     move    $a1,    $s1                         # $a1 = src
     jal     strcpy                              # strcpy(p, src)
+    move    $v0,    $s0                         # return dst
 
     lw      $ra,    0($sp)
     lw      $s0,    4($sp)
     lw      $s1,    8($sp)
     lw      $s2,    12($sp)
     addiu   $sp,    $sp,            16
-    move    $v0,    $s0                         # return dst
     jr      $ra                                 # end sub-routine
 
         .data
