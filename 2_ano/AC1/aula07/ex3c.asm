@@ -70,27 +70,24 @@ exchange:       or      $t0,        $a0,            $0          # $t0 = c1
     sb      $t2,        0($t1)                                  # *c2 = aux
     jr      $ra                                                 # end sub-routine
 
-    # TODO - remake strcpy using pointers
     ### strcpy ###
 
     # Register map:
-    # $t0: i
+    # $t0: *p
     # $t1: dst
     # $t2: src
 
 strcpy:         move    $t1,        $a0                         # $t1 = dst
     move    $t2,        $a1                                     # $t2 = src
-    li      $t0,        0                                       # i = 0
+    or      $t0,        $0,             $t1                     # *p = dst
+do:
+    lb      $t3,        0($t2)                                  # $t3 = *src
+    sb      $t3,        0($t0)                                  # *p = *src
+    addiu   $t0,        $t0,            1                       # p++
+    addiu   $t2,        $t2,            1                       # src ++
+    bne     $t3,        '\0',           do                      # } while (*src++ != '\0')
 
-do:             addu    $t3,        $t1,            $t0         # $t3 = dst + i
-    addu    $t4,        $t2,            $t0                     # $t4 = src + i
-    lb      $t4,        0($t4)                                  # $t4 = src[i]
-    sb      $t4,        0($t3)                                  # dst[i] = src[i]
-    beq     $t4,        '\0',           edo                     # while(src[i] != '\0')
-    addi    $t0,        $t0,            1                       # i++
-    j       do
-
-edo:            move    $v0,        $t1                         # return dst
+    move    $v0,        $t1                                     # return dst
     jr      $ra                                                 # end sub-routine
 
     ### main ###
