@@ -1,0 +1,50 @@
+### II - Agentes Reactivos
+
+### III - Representaçâo do Conhecimento
+
+## Exercício 11
+
+# Variaveis independentes
+    ST - Sobrecarga de trabalho
+    PT - Processador de texto
+
+# Variáveis dependentes
+    PA - Precisa de ajuda
+    CP - Cara preocupada
+    FER - Frequência exagerada do rato
+    CNL - Correio não lido
+
+# Tipologia
+
+        ST           PT
+       /  \         /  \
+      /    \       /    \
+    CNL     \    _PA ___ \
+             \  /       \ |
+              CP         FER
+
+# Probabilidades
+
+P(ST) = 0.6
+
+P(PT) = 0.05
+
+P(CP|ST,PA) = 0.02
+P(CP|ST,~PA) = 0.01
+P(CP|~ST,PA) = 0.011
+P(CP|~ST,~PA) = 0.001
+
+P(FER|PT,PA) = 0.9
+P(FER|PT,~PA) = 0.9
+P(FER|~PT,PA) = 0.1
+P(FER|~PT,~PA) = 0.01
+
+P(PA|PT) = 0.25
+P(PA|~PT) = 0.004
+
+P(CNL|ST) = 0.9
+P(CNL|~ST) = 0.001
+
+### IV - Técnicas de resolução automática de problemas
+
+### V - Aprendizagem automática
