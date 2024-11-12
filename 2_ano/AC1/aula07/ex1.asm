@@ -1,7 +1,7 @@
     # AC1/aula07/ex1.asm
 
     .text
-    ### strlen ###
+    ### int strlen(char *s) ###
     # O argumento da função é passado em $a0
     # O resultado é devolvido em $v0
     # Sub-rotina terminal: não devem ser usados registos $sx

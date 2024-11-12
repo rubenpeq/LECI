@@ -2,7 +2,7 @@
 
     .text
 
-    ### strrev ###
+    ### char *strrev(char *str) ###
 
     # Register map:
     # $a0 -> $s0: str
@@ -42,7 +42,7 @@ endwhile2:      move    $v0,        $s0                         # return str
     addiu   $sp,        $sp,            16                      # free stack
     jr      $ra                                                 # end sub-routine
 
-    ### exchange ###
+    ### void exchange(char *c1, char *c2) ###
 
     # Register map:
     # $t0: c1

@@ -2,7 +2,7 @@
 
     .text
 
-    ### strlen ###
+    ### int strlen(char *s) ###
 
 strlen:         li      $t1,        0                           # len = 0
 
@@ -15,7 +15,7 @@ while:          lb      $t0,        0($a0)                      # $t0 = *s
 endw:           move    $v0,        $t1                         # return len
     jr      $ra                                                 # end sub-routine
 
-    ### strrev ###
+    ### char *strrev(char *str) ###
 
     # Register map:
     # str: $a0 -> $s0 (argumento é passado em $a0)
@@ -55,7 +55,7 @@ endwhile2:      move    $v0,        $s0                         # return str
     addiu   $sp,        $sp,            16                      # free stack
     jr      $ra                                                 # end sub-routine
 
-    ### exchange ###
+    ### void exchange(char *c1, char *c2) ###
 
     # Register map:
     # $t0: *c1
@@ -70,7 +70,7 @@ exchange:       or      $t0,        $a0,            $0          # $t0 = c1
     sb      $t2,        0($t1)                                  # *c2 = aux
     jr      $ra                                                 # end sub-routine
 
-    ### strcpy ###
+    ### char *strcpy(char *dst, char *src) ###
 
     # Register map:
     # $t0: i
