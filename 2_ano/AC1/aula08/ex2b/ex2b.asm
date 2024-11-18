@@ -11,9 +11,8 @@ str:        .space  34
 
             .text
             .globl  main
-main:           addiu   $sp,        $sp,            -8          # allocate space in stack
-    sw      $ra,        0($sp)                                  # save $ra
-    sw      $s0,        4($sp)
+main:           addiu   $sp,        $sp,            -4          # allocate space in stack
+    sw      $ra,        0($sp)                                  # store $ra
 
 do:             li      $v0,        read_int                    # do{
     syscall
@@ -51,6 +50,5 @@ do:             li      $v0,        read_int                    # do{
     li      $v0,        0                                       # return 0
 
     lw      $ra,        0($sp)                                  # restore $ra
-    lw      $s0,        4($sp)
-    addiu   $sp,        $sp,            8                       # free stack
+    addiu   $sp,        $sp,            4                       # free stack
     jr      $ra                                                 # end program

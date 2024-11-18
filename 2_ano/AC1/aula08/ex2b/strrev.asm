@@ -24,10 +24,10 @@ exchange:       or      $t0,        $a0,        $0      # $t0 = c1
     # p2: $s2 (registo callee-saved)
 
 strrev:         addiu   $sp,        $sp,        -16     # reserva espaço na stack
-    sw      $ra,        0($sp)                          # safekeep $ra
+    sw      $ra,        0($sp)                          # store $ra
     sw      $s0,        4($sp)
     sw      $s1,        8($sp)
-    sw      $s2,        12($sp)                         # keep registers values
+    sw      $s2,        12($sp)                         # store safe registers
 
     move    $s0,        $a0                             # registo "callee-saved"
     move    $s1,        $a0                             # p1 = str
@@ -49,9 +49,9 @@ while2:         bge     $s1,        $s2,        endw2   # while(p1 < p2) {
     j       while2                                      # }
 endw2:          move    $v0,        $s0                 # return str
 
-    lw      $ra,        0($sp)                          # repõe endereço de retorno
-    lw      $s0,        4($sp)                          # repõe o valor dos registos
-    lw      $s1,        8($sp)                          # $s0, $s1 e $s2
-    lw      $s2,        12($sp)
+    lw      $ra,        0($sp)                          # restore $ra
+    lw      $s0,        4($sp)
+    lw      $s1,        8($sp)
+    lw      $s2,        12($sp)                         # restore safe registers
     addiu   $sp,        $sp,        16                  # free stack
     jr      $ra                                         # end sub-routine
