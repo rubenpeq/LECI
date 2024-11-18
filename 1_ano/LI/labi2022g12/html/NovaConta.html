@@ -1,0 +1,33 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<link rel="stylesheet"  href="../css/style.css" >
+		<script defer src="../js/genPass.js"></script>
+		<script defer src="../js/showPass.js"></script>
+		<title>Criar Conta</title>
+	</head>
+	
+	<body>
+		<main class="login">
+			<div class="login__container">
+				<h2 class="login__title">Nova Conta</h2>
+				<form action="users/create" method="post" class="login__form">
+			    	<input class="login__input" type="text" value="" placeholder="username" name="username">	
+					<label class="login-field-icon fui-user" for="login-name"></label>
+					<span class="login__input-border"></span>
+					<input id="pass" class="login__input" type="password" value="" placeholder="password" name="password">
+					<label class="login-field-icon fui-lock" for="login-pass"></label>
+					<span class="login__input-border"></span>
+					<button type="button" onclick="generatePassword(8)" class="button1">Generate Password</button>
+					<p></p>
+					<input type="submit" value="Criar Conta" class="login__submit">
+                    <br>
+                    <a class="login__reset" href="/index">Regressar ao Login</a>
+				</form>  
+		    </div>
+		</main>	
+	</body>
+
+</html>

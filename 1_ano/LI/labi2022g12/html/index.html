@@ -1,0 +1,32 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet"  href="../css/style.css" >
+		<title>Login</title>
+	</head>
+	
+	<body>
+		<main class="login">
+			<div class="login__container">
+				<h1 class="login__title">Login</h1>
+				<form action="/users/auth" method="post" class="login__form">
+			    	<input class="login__input" type="text" placeholder="username" name="username">	
+					<label class="login-field-icon fui-user" for="login-name"></label>
+					<span class="login__input-border"></span>
+					<input class="login__input" type="password" class="login-field" placeholder="password" name="password">	
+					<label class="login-field-icon fui-lock" for="login-pass"></label>
+					<span>	</span>
+					<span class="login__input-border"></span>
+					<input type="submit" value="Login" class="login__submit">
+					<br>
+					<a class="login__reset" href="/newUser">Criar conta</a>
+					<p></p>
+					<a class="login__reset" href="/about">About us</a>
+				</form>
+		    </div>
+		</main>	
+	</body>
+
+</html>
