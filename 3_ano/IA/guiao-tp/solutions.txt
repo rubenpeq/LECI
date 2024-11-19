@@ -1,50 +1,109 @@
 ### II - Agentes Reactivos
 
+_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 ### III - Representaçâo do Conhecimento
 
-## Exercício 11
+## III.10
+	
+	Predicados: A(a), E(a,e), V(a,t), Ext(e,t), P(p,a)
+	...
 
-# Variaveis independentes
-    ST - Sobrecarga de trabalho
-    PT - Processador de texto
+## III.11
 
-# Variáveis dependentes
-    PA - Precisa de ajuda
-    CP - Cara preocupada
-    FER - Frequência exagerada do rato
-    CNL - Correio não lido
+	# Variaveis independentes
+	
+		ST - Sobrecarga de trabalho
+		PT - Processador de texto
 
-# Tipologia
+	# Variáveis dependentes
+	
+		PA - Precisa de ajuda
+		CP - Cara preocupada
+		FER - Frequência exagerada do rato
+		CNL - Correio não lido
 
-        ST           PT
-       /  \         /  \
-      /    \       /    \
-    CNL     \    _PA ___ \
-             \  /       \ |
-              CP         FER
+	# Tipologia
 
-# Probabilidades
+		ST           PT
+	       /  \         /  \
+	      /    \       /    \
+	    CNL     \    _PA ___ \
+		     \  /       \ |
+		      CP         FER
 
-P(ST) = 0.6
+	# Probabilidades
 
-P(PT) = 0.05
+		P(ST) = 0.6
 
-P(CP|ST,PA) = 0.02
-P(CP|ST,~PA) = 0.01
-P(CP|~ST,PA) = 0.011
-P(CP|~ST,~PA) = 0.001
+		P(PT) = 0.05
 
-P(FER|PT,PA) = 0.9
-P(FER|PT,~PA) = 0.9
-P(FER|~PT,PA) = 0.1
-P(FER|~PT,~PA) = 0.01
+		P(CP|ST,PA) = 0.02
+		P(CP|ST,~PA) = 0.01
+		P(CP|~ST,PA) = 0.011
+		P(CP|~ST,~PA) = 0.001
 
-P(PA|PT) = 0.25
-P(PA|~PT) = 0.004
+		P(FER|PT,PA) = 0.9
+		P(FER|PT,~PA) = 0.9
+		P(FER|~PT,PA) = 0.1
+		P(FER|~PT,~PA) = 0.01
 
-P(CNL|ST) = 0.9
-P(CNL|~ST) = 0.001
+		P(PA|PT) = 0.25
+		P(PA|~PT) = 0.004
 
+		P(CNL|ST) = 0.9
+		P(CNL|~ST) = 0.001
+
+_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 ### IV - Técnicas de resolução automática de problemas
 
+## IV.1
+	(a)
+		Não é admissível.
+		F: 10 --> 8
+		E: 7 --> 6
+		G: 8 --> 6
+	
+	(b) 
+		1/F/10
+		-- 2/C/6
+		-- -- 5/B/6
+		-- -- -- 8/A/8 <-- SOLUÇÃO
+		-- -- 6/D/9
+		-- -- 7/E/11
+		-- 3/H/6
+		-- -- 9/E/16
+		-- --10/I/9
+		-- --11/G/16
+		-- 4/G/11
+		
+		Estado final imediatamente antes de encontrar a solucão
+		[8,10,6,7,4,9,11]
+	
+	(c) 
+		N - nº de nós da árvore = 11
+		X - nº de nós expandidos = 4
+		
+		FRM = (N-1)/X = 2.5
+		
+	(d)
+		B - factor de ramificação efectivo
+		d - profundidade da solução = 3
+		N - nº total de nós = 11
+		
+		B^(d+1)-1
+		--------- = N
+		   B-1
+		   
+		B?		N?
+		----------
+		2		15	(2^4-1)/(2-1) = 15
+		1.5		8	(1.5^4-1)/(1.5-1) ~= 8
+		1.7		11	(1.7^4-1)/(1.7-1) ~= 11	<-- solução
+	
+## IV.2
+
+	Mínimo = g+1
+	Máximo = SUM_(i=0...d){r^i} - SUM_(i=0...d-g){r^i} + 1(do nó solução)
+
+_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 ### V - Aprendizagem automática
