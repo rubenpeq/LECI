@@ -11,7 +11,6 @@ float1: .float  2.59375
 float2: .float  0.0
         .eqv    print_float, 2
         .eqv    read_int, 5
-        .eqv
 
         .text
         .globl  main
@@ -22,7 +21,7 @@ main:       la      $t0,    float2      # $t0 = float2
 do:         li      $v0,    read_int    # do{
     syscall
     move    $t1,    $v0                 # val = read_int()
-    mtc1    $t1,    $f0                 # move val to coprocessor
+    mtc1    $t1,    $f0                 # move val to coprocessor 1
     cvt.s.w $f0,    $f0                 # convert val to float
     mul.s   $f12,   $f0,            $f2 # res = (float)val * 2.59375
     li      $v0,    print_float
