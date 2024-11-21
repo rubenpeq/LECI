@@ -1,5 +1,17 @@
 ### II - Agentes Reactivos
 
+## II.1
+
+    (a)
+        Variáveis de estado:
+            A: Arpões disponíveis [0,10].
+            P: Peixes no depósito [0,20].
+            S: Sensor de peixe {0,1}.
+            D: Disparo do arpão acertou peixe {0,1}.
+    
+    (b)
+        
+
 _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 ### III - Representaçâo do Conhecimento
 
@@ -24,12 +36,12 @@ _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 
 	# Tipologia
 
-		ST           PT
+	    	ST           PT
 	       /  \         /  \
 	      /    \       /    \
 	    CNL     \    _PA ___ \
-		     \  /       \ |
-		      CP         FER
+		         \  /       \ |
+		          CP         FER
 
 	# Probabilidades
 
@@ -57,6 +69,7 @@ _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 ### IV - Técnicas de resolução automática de problemas
 
 ## IV.1
+
 	(a)
 		Não é admissível.
 		F: 10 --> 8
