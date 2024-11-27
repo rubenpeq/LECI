@@ -115,8 +115,44 @@ _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 	
 ## IV.2
 
-	Mínimo = g+1
-	Máximo = SUM_(i=0...d){r^i} - SUM_(i=0...d-g){r^i} + 1(do nó solução)
+	Min = g+1
+	Max = SUM_(i=0...d){r^i} - SUM_(i=0...d-g){r^i} + 1(do nó solução)
+	
+## IV.4
+	(a)
+		[ (A,B), (A,D), (A,E)
+		(B,A), (B,C), (B,E)
+		(C,B), (C,D), (C,E)
+		(D,A), (D,C), (D,E)
+		(E,A), (E,B), (E,C), (E,D) ]
+		
+		min(cores) = 3
 
+    (b)
+		[ (A,B), (A,D), (A,E),
+		(B,A), (B,C), (B,E),
+		(C,B), (C,F), (C,E),
+		(F,C), (F,D), (F,E),
+		(D,A), (D,F), (D,E),
+		(E,A), (E,B), (E,C), (E,D) ]
+		
+        min(cores) = ...
+        
+    (C)
+        [
+        
+        ]
+        
+        min(cores) = ...
+        
+## IV.5
+    (a) 
+        domain = 
+        { 'Andre': [('Bernardo', 'Claudio'), ('Claudio', 'Bernardo')], 
+        'Bernardo': [('Andre', 'Claudio'), ('Claudio', 'Andre')], 
+        'Claudio': [('Andre', 'Bernardo'), ('Bernardo', 'Andre')] }
+        
+        constraints = 
+    
 _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 ### V - Aprendizagem automática
