@@ -29,7 +29,15 @@ main:       la      $t0,    stg
     syscall
     sw      $v0,    0($t0)
 
-    
+    # TODO: complete commented instructions
+    # printf("N. Mec: ");
+    # scanf("%u", &stg.id_number);
+    # printf("Primeiro Nome: ");
+    # scanf("%17s", stg.first_name);
+    # printf("Ultimo Nome: ");
+    # scanf("%14s", stg.last_name);
+    # printf("Nota: ");
+    # scanf("%f", &stg.grade);
 
     la      $a0,    str1
     li      $v0,    print_string
