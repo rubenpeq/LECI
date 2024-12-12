@@ -14,7 +14,8 @@
                 .eqv    read_int, 5
                 .eqv    read_float, 6
                 .eqv    read_string, 8
-                .eqv    print_intu, 36
+                .eqv    print_char, 11
+                .eqv    print_intu10, 36
                 .eqv    MAX_STUDENTS, 4
                 .eqv    OFFSET_id, 0
                 .eqv    OFFSET_first_name, 4
@@ -133,7 +134,7 @@ for_max:            li      $t4,            sizeof_student
     mov.s   $f4,            $f8                                             #         max_grade = p->grade;
     move    $t3,            $t2                                             #         pmax = p; }
 
-endif_max:          addi    $t2,            $t2,                1           # p++
+endif_max:          addi    $t2,            $t2,             sizeof_student # p++
     j       for_max                                                         # }
 
 endfor_max:         mtc1    $t1,            $f2                             # move ns to $f2
@@ -146,7 +147,45 @@ endfor_max:         mtc1    $t1,            $f2                             # mo
 
     ### void print_student(student *p) ###
 
-print_student:      jr      $ra                                             # end sub-routine
+    # Register map
+    # $t0: p
+
+    .text
+print_student:      move    $t0,            $a0                             # $t0 = p
+
+    lw      $a0,            OFFSET_id($t0)
+    li      $v0,            print_intu10
+    syscall                                                                 # print_intu10(p->id_number);
+
+    li      $a0,            '\n'
+    li      $v0,            print_char
+    syscall
+
+    addiu   $a0,            $t0,                OFFSET_first_name
+    li      $v0,            print_string
+    syscall                                                                 # print_string(p->first_name);
+
+    li      $a0,            ' '
+    li      $v0,            print_char
+    syscall
+
+    addiu   $a0,            $t0,                OFFSET_last_name
+    li      $v0,            print_string
+    syscall                                                                 # print_string(p->last_name);
+
+    li      $a0,            '\n'
+    li      $v0,            print_char
+    syscall
+
+    l.s     $f12,           OFFSET_grade($t0)
+    li      $v0,            print_float
+    syscall                                                                 # print_float(p->grade);
+
+    li      $a0,            '\n'
+    li      $v0,            print_char
+    syscall
+
+    jr      $ra                                                             # end sub-routine
 
     ### int main(void) ###
 
