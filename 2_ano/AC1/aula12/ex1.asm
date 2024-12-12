@@ -22,13 +22,6 @@
                 .eqv    OFFSET_grade, 40
                 .eqv    sizeof_student, 44
 
-.data
-str2:           .asciiz "N. Mec: "
-str3:           .asciiz "Primeiro Nome: "
-str4:           .asciiz "Ultimo Nome: "
-str5:           .asciiz "Nota: "
-
-.text
     ### void read_data(student *st, int ns) ###
 
     # Register map
@@ -36,6 +29,13 @@ str5:           .asciiz "Nota: "
     # $s1: ns
     # $s2: i
 
+    .data
+str2:           .asciiz "N. Mec: "
+str3:           .asciiz "Primeiro Nome: "
+str4:           .asciiz "Ultimo Nome: "
+str5:           .asciiz "Nota: "
+
+    .text
 read_data:          addiu   $sp,            $sp,                -16
     sw      $ra,            0($sp)
     sw      $s0,            4($sp)
@@ -44,64 +44,109 @@ read_data:          addiu   $sp,            $sp,                -16
 
     move    $s0,            $a0
     move    $s1,            $a1
-    li      $s2,            0                                           # int i = 0
+    li      $s2,            0                                               # int i = 0
 
-for:                bge     $s2,            $s1,                endfor  # for(i < ns){
+for_rd:             bge     $s2,            $s1,                endfor_rd   # for(i < ns){
 
     mulu    $t0,            $s2,                sizeof_student
-    addu    $t0,            $t0,                $s0                     # $t0 = st[i]
+    addu    $t0,            $t0,                $s0                         # $t0 = st[i]
 
     la      $a0,            str2
     li      $v0,            print_string
-    syscall                                                             # print_string("N. Mec: ")
+    syscall                                                                 # print_string("N. Mec: ")
 
     li      $v0,            read_int
     syscall
-    sw      $v0,            OFFSET_id($t0)                              # st[i].id_number = read_int()
+    sw      $v0,            OFFSET_id($t0)                                  # st[i].id_number = read_int()
 
     la      $a0,            str3
     li      $v0,            print_string
-    syscall                                                             # print_string("Primeiro Nome: ")
+    syscall                                                                 # print_string("Primeiro Nome: ")
 
     addiu   $a0,            $t0,                OFFSET_first_name
     li      $a1,            17
     li      $v0,            read_string
-    syscall                                                             # read_string(st[i].first_name, 17)
+    syscall                                                                 # read_string(st[i].first_name, 17)
 
     la      $a0,            str4
     li      $v0,            print_string
-    syscall                                                             # print_string("Ultimo Nome: ")
+    syscall                                                                 # print_string("Ultimo Nome: ")
 
     addiu   $a0,            $t0,                OFFSET_last_name
     li      $a1,            14
     li      $v0,            read_string
-    syscall                                                             # read_string(st[i].last_name, 14);
+    syscall                                                                 # read_string(st[i].last_name, 14);
 
     la      $a0,            str5
     li      $v0,            print_string
-    syscall                                                             # print_string("Nota: ")
+    syscall                                                                 # print_string("Nota: ")
 
     li      $v0,            read_float
     syscall
-    swc1    $f0,            OFFSET_grade($t0)                           # st[i].grade = read_float()
+    swc1    $f0,            OFFSET_grade($t0)                               # st[i].grade = read_float()
 
-    addi    $s2,            $s2,                1                       # i++
-    j       for                                                         # }
+    addi    $s2,            $s2,                1                           # i++
+    j       for_rd                                                          # }
 
-endfor:             lw      $ra,            0($sp)
+endfor_rd:          lw      $ra,            0($sp)
     lw      $s0,            4($sp)
     lw      $s1,            8($sp)
     lw      $s2,            12($sp)
     addiu   $sp,            $sp,                16
-    jr      $ra                                                         # end sub-routine
+    jr      $ra                                                             # end sub-routine
 
     ### student *max(student *st, int ns, float *media) ###
 
-max:                jr      $ra                                         # end sub-routine
+    # Register map
+    # $t0: st
+    # $t1: ns
+    # $t5: media
+    # $t2: p
+    # $t3: pmax
+    # $f4: max_grade
+    # $f6: sum
+
+    .data
+floats_max:     .float  -20.0, 0.0
+
+    .text
+max:                move    $t0,            $a0                             # $t0 = st
+    move    $t1,            $a1                                             # $t1 = ns
+    move    $t5,            $a2                                             # $t5 = media
+
+    la      $t4,            floats_max
+    l.s     $f4,            0($t4)                                          # float max_grade = -20.0;
+    l.s     $f6,            4($t4)                                          # float sum = 0.0;
+
+    move    $t2,            $t0                                             # p = st
+for_max:            li      $t4,            sizeof_student
+    mul     $t4,            $t4,                $t1                         # $t4 = ns*sizeof_student
+    addu    $t4,            $t0,                $t4                         # $t4 = (st + ns)
+    bge     $t2,            $t4,                endfor_max                  # for (p < (st + ns)){
+
+    l.s     $f8,            OFFSET_grade($t2)                               # $f8 = p->grade
+    add.s   $f6,            $f6,                $f8                         # sum += p->grade;
+
+    c.le.s  $f8,            $f4
+    bc1t    endif_max                                                       #     if (p->grade > max_grade){
+
+    mov.s   $f4,            $f8                                             #         max_grade = p->grade;
+    move    $t3,            $t2                                             #         pmax = p; }
+
+endif_max:          addi    $t2,            $t2,                1           # p++
+    j       for_max                                                         # }
+
+endfor_max:         mtc1    $t1,            $f2                             # move ns to $f2
+    cvt.s.w $f2,            $f2                                             # $f2 = (float)ns
+    div.s   $f2,            $f6,                $f2                         # $f2 = sum / (float)ns
+    s.s     $f2,            0($t5)                                          # *media = sum / (float)ns;
+
+    move    $v0,            $t3                                             # return pmax;
+    jr      $ra                                                             # end sub-routine
 
     ### void print_student(student *p) ###
 
-print_student:      jr      $ra                                         # end sub-routine
+print_student:      jr      $ra                                             # end sub-routine
 
     ### int main(void) ###
 
@@ -109,44 +154,44 @@ print_student:      jr      $ra                                         # end su
     # $s0: *pmax
 
 
-.data
+    .data
                 .align  2
-st_array:       .space  176                                             # static student st_array[MAX_STUDENTS];
+st_array:       .space  176                                                 # static student st_array[MAX_STUDENTS];
                 .align  2
-media:          .space  4                                               # static float media;
+media:          .space  4                                                   # static float media;
 str1:           .asciiz "\nMedia: "
 
-.text
+    .text
                 .globl  main
-main:               addiu   $sp,            $sp,                -8      # allocate space in stack
-    sw      $ra,            0($sp)                                      # store $ra
+main:               addiu   $sp,            $sp,                -8          # allocate space in stack
+    sw      $ra,            0($sp)                                          # store $ra
     sw      $s0,            4($sp)
 
     la      $a0,            st_array
     li      $a1,            MAX_STUDENTS
-    jal     read_data                                                   # read_data( st_array, MAX_STUDENTS )
+    jal     read_data                                                       # read_data( st_array, MAX_STUDENTS )
 
     la      $a0,            st_array
     li      $a1,            MAX_STUDENTS
     la      $a2,            media
-    jal     max                                                         # max( st_array, MAX_STUDENTS, &media )
-    move    $s0,            $v0                                         # pmax = max()
+    jal     max                                                             # max( st_array, MAX_STUDENTS, &media )
+    move    $s0,            $v0                                             # pmax = max()
 
     la      $a0,            str1
     li      $v0,            print_string
-    syscall                                                             # print_string("\nMedia: ")
+    syscall                                                                 # print_string("\nMedia: ")
 
     la      $t1,            media
     l.s     $f12,           0($t1)
     li      $v0,            print_float
-    syscall                                                             # print_float( media )
+    syscall                                                                 # print_float( media )
 
     move    $a0,            $s0
-    jal     print_student                                               # print_student( pmax )
+    jal     print_student                                                   # print_student( pmax )
 
-    li      $v0,            0                                           # return 0
+    li      $v0,            0                                               # return 0
 
-    lw      $ra,            0($sp)                                      # restore $ra
+    lw      $ra,            0($sp)                                          # restore $ra
     lw      $s0,            4($sp)
-    addiu   $sp,            $sp,                8                       # free stack
-    jr      $ra
+    addiu   $sp,            $sp,                8                           # free stack
+    jr      $ra                                                             # end program
