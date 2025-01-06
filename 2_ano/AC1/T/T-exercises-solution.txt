@@ -1,0 +1,16 @@
+# Theory Exercises
+
+## 1. Quais são os 3 blocos fundamentais de um sistema computacional?
+    Os 3 blocos fundamentais de um sistema computacional são o CPU, memória e as unidades de I/O.
+
+## 2. Quais são os 3 principais blocos funcionais na arquitetura de um CPU?
+    Os 3 blocos principais na arquitetura de um CPU são a unidade de controlo, a secção de dados e o espaço de endereçamento.
+
+## 3. Qual a função do registo Program Counter?
+    O Program Counter serve para guardar o endereço da próxima instrução a ser executada.
+
+## 4. Descreva de forma sucinta a função de um compilador.
+    Um compilador é um programa que converte um código fonte de linguagem de mais alto nivel para uma linguagem de baixo nivel como código máquina.
+
+## 15. Qual é o conceito fundamental por detrás do modelo de arquitetura "stored-program"?
+    O conceito "stored-program" implica que na memória possa residir, ao mesmo tempo, informação de natureza tão variada como: o código fonte de um programa em C, um editor de texto, um compilador, e o próprio programa resultante da compilação.
