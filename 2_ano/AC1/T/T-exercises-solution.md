@@ -85,4 +85,15 @@ Existem 3 tipos de classes de instruções:
     - Alteração da sequência de execução (estruturas condicionais, ciclos, chamadas a funções,…)
 
 ## 19. O que carateriza e distingue as arquiteturas do tipo "**register-memory**" e "**load-store**"? De que tipo é a arquitetura MIPS?
-A arquitetura do tipo "**register-memory**"
+A arquitetura do tipo "**register-memory**" permite que os operandos das instruções aritméticas e lógicas residam tanto nos registos internos do CPU como em memória.
+No caso de "**load-store**", apenas permite que os operandos residam nos registos internos do CPU. MIPS usa uma arquitetura **load-store**.
+
+## 20. O ciclo de execução de uma instrução é composto por uma sequência ordenada de operações. Quantas e quais são essas operações (passos de execução)?
+O cicle do execução de uma instrução é composto por 5 operações:
+- Fase Fetch
+    - Instruction fetch: leitura do código máquina da instrução (instrução reside em memória)
+    - Instruction decode: descodificação da instrução pela unidade de controlo
+- Fase Execute
+    - Operand fetch: leitura do(s) operando(s)
+    - Execute: execução da operação especificada pela instrução
+    - Store result: armazenamento do resultado da operação no destino especificado na instrução
