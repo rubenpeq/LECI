@@ -90,10 +90,10 @@ No caso de "**load-store**", apenas permite que os operandos residam nos registo
 
 ## 20. O ciclo de execução de uma instrução é composto por uma sequência ordenada de operações. Quantas e quais são essas operações (passos de execução)?
 O cicle do execução de uma instrução é composto por 5 operações:
-- Fase Fetch
+- **Fase Fetch**
     - Instruction fetch: leitura do código máquina da instrução (instrução reside em memória)
     - Instruction decode: descodificação da instrução pela unidade de controlo
-- Fase Execute
+- **Fase Execute**
     - Operand fetch: leitura do(s) operando(s)
     - Execute: execução da operação especificada pela instrução
     - Store result: armazenamento do resultado da operação no destino especificado na instrução
