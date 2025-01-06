@@ -48,5 +48,19 @@
 ### d. Qual o registo usado para obter o resultado devolvido por um system call (nos casos em que isso se aplica)?
     O registo $v0 é usado para armazenar o resultado devolvido por um system call no MIPS.
 
+## 12. Em Arquitetura de Computadores, como definiria o conceito de endereço?
+    Um endereço é uma identificação única que indica a localização de um dado ou de uma instrução na memória de um computador.
+
+## 13. Defina o conceito de espaço de endereçamento de um processador?
+    O espaço de endereçamento de um processador é o conjunto total de endereços de memória que ele pode acessar.
+
+## 14. Como se organiza internamente um processador? Quais são os blocos fundamentais da secção de dados? Para que serve a unidade de controlo? 
+    Um CPU é organizado em blocos funcionais: secção de dados e a unidade de controlo.
+    Os blocos fundamentais da secção de dados são os registos internos, ALU e multiplexers.
+    A unidade de controlo é responsável pela coordenação dos elementos do datapath, durante a execução de um programa:
+        -> Gera os sinais de controlo que adequam a operação de cada um dos recursos da secção de dados às necessidades da instrução que estiver a ser executada
+        -> Dependendo da arquitetura, pode ser uma máquina de estados ou um elemento meramente combinatório
+        -> Independentemente da Unidade de Controlo ser combinatória ou sequencial, o CPU é sempre uma máquina de estados síncrona
+
 ## 15. Qual é o conceito fundamental por detrás do modelo de arquitetura "stored-program"?
     O conceito "stored-program" implica que na memória possa residir, ao mesmo tempo, informação de natureza tão variada como: o código fonte de um programa em C, um editor de texto, um compilador, e o próprio programa resultante da compilação.
