@@ -22,7 +22,7 @@ O MIPS tem **32 registos internos** de uso geral.
 Cada registo interno no MIPS pode armazenar **32 bits**.
 
 ## 8. Qual a sintaxe, em Assembly do MIPS, de uma instrução aritmética de soma ou subtração?
-soma        -> **add r, a, b**  (r = a+b)
+soma        -> **add r, a, b**  (r = a+b)<br>
 subtração   -> **sub r, a, b**  (r = a-b)
 
 ## 9. O que distingue a instrução **srl** da instrução **sra** do MIPS?
@@ -66,9 +66,9 @@ A unidade de controlo é responsável pela coordenação dos elementos do datapa
 O conceito "**stored-program**" implica que na memória possa residir, ao mesmo tempo, informação de natureza tão variada como: o código fonte de um programa em C, um editor de texto, um compilador, e o próprio programa resultante da compilação.
 
 ## 16. Como se codifica uma instrução? Que informação fundamental deverá ter o código máquina de uma instrução?
-A codificação em MIPS é feita por uma sequência de 32 bits e varia dependendo do formato (R, I ou J).
-Independentemente do formato, tem sempre o OpCode presente nos 6 bits mais significativos.
-Pode também conter registos(operandos): Identifica os registos a serem utilizados na operação.
+A codificação em MIPS é feita por uma sequência de 32 bits e varia dependendo do formato (R, I ou J).<br>
+Independentemente do formato, tem sempre o OpCode presente nos 6 bits mais significativos.<br>
+Pode também conter registos(operandos): Identifica os registos a serem utilizados na operação.<br>
 Offset de um endereço de memória (se necessário): Indica a localização de dados ou instruções na memória.
 
 ## 17. Descreva pelas suas próprias palavras o conceito de ISA (Instruction Set Architecture).
