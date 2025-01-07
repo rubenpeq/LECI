@@ -118,4 +118,45 @@ A dimensão de endereçamento seria de **$2^{32}$ endereços**.
 A dimensão máxima da memória seria de **$2^{32}$ bits**, ou seja, **$2^{29}$ bytes (512MB)**.
 
 ## 25. Considere agora uma arquitetura em que o respetivo ISA especifica uma organização de memória do tipo word-addressable, em que a dimensão da word é 32 bits. Tendo o espaço de endereçamento do processador 24 bits, qual a dimensão máxima de memória que este sistema pode acomodar se expresso em bytes?
-Este sistema pode acomodar $2^{24}*32$ bits, ou seja, **64 MB** de memória.
+Este sistema pode acomodar $2^{24} \times 32$ bits, ou seja, **64 MB** de memória.
+
+## 26. Relativamente à arquitetura MIPS:
+### a. Com quantos bits são codificadas as instruções no MIPS?
+Em MIPS, cada instrução é codificada com **32 bits**.
+
+### b. O que diferencia o registo $0 dos restantes registos de uso geral?
+O **registo $0** contém sempre o valor **0x00000000** na arquitetura MIPS.
+
+### c. Qual o endereço do registo interno do MIPS a que corresponde a designação lógica $ra?
+O registo correspondente à designação lógica $ra é o **registo $31**.
+
+## 27. No MIPS, um dos formatos de codificação de instruções é designado por R: 
+## a. Quais os campos em que se divide este formato de codificação?
+Este formato divide-se em 6 campos:
+- **op**
+- **rs**
+- **rt**
+- **rd**
+- **shamt**
+- **funct**
+
+## b. Qual o significado de cada um desses campos?
+- **op**
+    - OpCode (é sempre zero nas instruções tipo R)
+- **rs**
+    - Endereço do registo que contém o 1º operando fonte
+- **rt**
+    - Endereço do registo que contém o 2º operando fonte
+- **rd**
+    - Endereço do registo onde o resultado vai ser armazenado
+- **shamt**
+    - shift amount (útil apenas em instruções de deslocamento)
+- **funct**
+    - código da operação a realizar
+
+
+## c. Qual o valor do campo opCode nesse formato?
+O valor do campo OpCode no formato R é sempre 0.
+
+## d. O que faz a instrução cujo código máquina é: 0x00000000?
+O código máquina 0x00000000 executa a instrução **sll $0, $0, 0**.
