@@ -108,14 +108,14 @@ O barramento designado por **Data Bus** é o que permite a transferência de inf
 
 ## 23. Os processadores da arquitetura hipotética ZWYZ possuem 4 registos internos e todas as instruções são codificadas usando 24 bits. Num dos formatos de codificação existem 5 campos: um OpCode com 5 bits, três campos para identificar registos internos em operações aritméticas e lógicas e um campo para codificar valores constantes imediatos em complemento para dois. Qual a gama de representação destas constantes?
 Seria necessário 2 bits para identificar cada registo interno, ou seja, 6 bits para identificar 3 registos internos + 5 bits do OpCode.<br>
-Sobram 13 bits para o campo dos valores constantes imediatos, sendo que este está codificado em complemento para dois, a gama de representação seria entre **$2^(12)$** e **$(2^(12))-1$**
+Sobram 13 bits para o campo dos valores constantes imediatos, sendo que este está codificado em complemento para dois, a gama de representação seria entre **$2^{12}$** e **$2^{12}-1$**
 
 ## 24.  A arquitetura hipotética ZPTZ tem um barramento de endereços de 32 bits e um barramento de dados de 16 bits. Se a memória desta arquitetura for bit_addressable:
 ### a. Qual a dimensão do espaço de endereçamento desta arquitetura?
-A dimensão de endereçamento seria de **$2^(32)$ endereços**.
+A dimensão de endereçamento seria de **$2^{32}$ endereços**.
 
 ### b. Qual a dimensão máxima da memória, expressa em bytes, suportada por esta arquitetura?
-A dimensão máxima da memória seria de **$2^(32)$ bits**, ou seja, **$2^(29)$ bytes (512MB)**.
+A dimensão máxima da memória seria de **$2^{32}$ bits**, ou seja, **$2^{29}$ bytes (512MB)**.
 
 ## 25. Considere agora uma arquitetura em que o respetivo ISA especifica uma organização de memória do tipo word-addressable, em que a dimensão da word é 32 bits. Tendo o espaço de endereçamento do processador 24 bits, qual a dimensão máxima de memória que este sistema pode acomodar se expresso em bytes?
-Este sistema pode acomodar $(2^(24))*32$ bits, ou seja, **64 MB** de memória.
+Este sistema pode acomodar $2^{24}*32$ bits, ou seja, **64 MB** de memória.
