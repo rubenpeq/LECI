@@ -30,9 +30,11 @@ O **srl** não mantém o sinal (o bit inserido é sempre 0) enquanto **sra** man
 
 ## 10. Se $5=0x81354AB3, qual o resultado armazenado no registo destino, expresso em hexadecimal, das instruções:
 ### a. srl $3,$5,1
+$5 = 1000 0001 0011 0101 0100 1010 1011 0011 = **0x81354AB3**
 $3 = 0100 0000 1001 1010 1010 0101 0101 1001 = **0x409AA55A**
 
 ### b. sra $4,$5,1
+$5 = 1000 0001 0011 0101 0100 1010 1011 0011 = **0x81354AB3**
 $4 = 1100 0000 1001 1010 1010 0101 0101 1001 = **0xC09AA55A**
 
 ## 11. System calls:
@@ -97,3 +99,9 @@ O cicle do execução de uma instrução é composto por 5 operações:
     - Operand fetch: leitura do(s) operando(s)
     - Execute: execução da operação especificada pela instrução
     - Store result: armazenamento do resultado da operação no destino especificado na instrução
+
+## 21. Como se designa o barramento que permite identificar, na memória, a origem ou o destino da informação transferida?
+Designa-se como **Address Bus**.
+
+## 22. Qual a finalidade do barramento normalmente designado por Data Bus?
+O barramento designado por **Data Bus** é o que permite a transferência de informação entre **CPU** <-> **memória** ou **I/O**.
