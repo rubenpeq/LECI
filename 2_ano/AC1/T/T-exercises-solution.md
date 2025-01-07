@@ -131,7 +131,7 @@ O **registo $0** contém sempre o valor **0x00000000** na arquitetura MIPS.
 O registo correspondente à designação lógica $ra é o **registo $31**.
 
 ## 27. No MIPS, um dos formatos de codificação de instruções é designado por R: 
-## a. Quais os campos em que se divide este formato de codificação?
+### a. Quais os campos em que se divide este formato de codificação?
 Este formato divide-se em 6 campos:
 - **op**
 - **rs**
@@ -140,7 +140,7 @@ Este formato divide-se em 6 campos:
 - **shamt**
 - **funct**
 
-## b. Qual o significado de cada um desses campos?
+### b. Qual o significado de cada um desses campos?
 - **op**
     - OpCode (é sempre zero nas instruções tipo R)
 - **rs**
@@ -155,8 +155,32 @@ Este formato divide-se em 6 campos:
     - código da operação a realizar
 
 
-## c. Qual o valor do campo opCode nesse formato?
+### c. Qual o valor do campo opCode nesse formato?
 O valor do campo OpCode no formato R é sempre 0.
 
-## d. O que faz a instrução cujo código máquina é: 0x00000000?
-O código máquina 0x00000000 executa a instrução **sll $0, $0, 0**.
+### d. O que faz a instrução cujo código máquina é: 0x00000000?
+A instrução cujo código máquina é 0x00000000 no MIPS é um NOP (No Operation), que simplesmente não faz nada e avança o pipeline.
+
+## 28. O símbolo ”>>“ da linguagem C significa deslocamento à direita e é traduzido em assembly por srl ou sra (no caso do MIPS). Dê exemplos de casos em linguagem C em que o compilador gera um srl e exemplos em que gera um sra.
+O compilador utilizará **srl** para tipos **unsigned**(ex. **unsigned int**) e **sra** para tipos **signed**(ex. **int**).
+
+## 29. Qual a instrução nativa do MIPS em que é traduzida a instrução virtual "move $4,$15"?
+A instrução virtual **move $4, $15** será traduzida para **or $4, $15, $0**.
+
+## 30. Determine o código máquina das seguintes instruções (verifique a tabela na última página):   
+### a. xor $5,$13,$24
+op = 000000<br>
+rs = 01101<br>
+rt = 11000<br>
+rd = 00101<br>
+shamt = 00000<br>
+funct = 100110<br>
+Código máquina -> **0000 0001 1011 1000 0010 1000 0010 0110**(**0x01B82826**)
+
+### b. sub $25,$14,$8
+
+
+### c. sll $3,$9,7
+
+
+### d. sra $18,$9,8
