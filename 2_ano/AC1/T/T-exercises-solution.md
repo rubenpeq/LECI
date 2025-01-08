@@ -290,7 +290,7 @@ bne $1, $0, exit
 ```
 
 ## 39. Na tradução de C para assembly, quais as principais diferenças entre um ciclo "while(...){...}" e um ciclo "do{...}while(...);"?
-Num ciclo **"while(...){...}"** as instruções de branch encontram-se no inicio do ciclo, enquanto num ciclo **"do{...}while(...)"** situam-se no final do ciclo.
+Num ciclo **"while(...){...}"** as instruções de branch encontram-se no inicio do ciclo e tem um salto incondicional no final, enquanto um ciclo **"do{...}while(...)"** apenas tem instruções de branch no final do ciclo, sem salto incondicional.
 
 ## 40. Traduza para assembly do MIPS os seguintes trechos de código de linguagem C (admita que a, b e c residem nos registos $4, $7 e $13, respetivamente):  
 ### a.  
