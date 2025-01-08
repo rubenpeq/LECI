@@ -175,12 +175,37 @@ rt = 11000<br>
 rd = 00101<br>
 shamt = 00000<br>
 funct = 100110<br>
-Código máquina -> **0000 0001 1011 1000 0010 1000 0010 0110**(**0x01B82826**)
+Código máquina -> **0x01B82826** (**0000 0001 1011 1000 0010 1000 0010 0110**)
 
 ### b. sub $25,$14,$8
-
+op = 000000<br>
+rs = 01110<br>
+rt = 01000<br>
+rd = 11001<br>
+shamt = 00000<br>
+funct = 100010<br>
+Código máquina -> **0x01C8C822** (**0000 0001 1100 1000 1100 1000 0010 0010**)
 
 ### c. sll $3,$9,7
-
+op = 000000<br>
+rs = 00000<br>
+rt = 01001<br>
+rd = 00011<br>
+shamt = 00111<br>
+funct = 000000<br>
+Código máquina -> **0x000919C0** (**0000 0000 0000 1001 0001 1001 1100 0000**)
 
 ### d. sra $18,$9,8
+op = 000000<br>
+rs = 00000<br>
+rt = 01001<br>
+rd = 10010<br>
+shamt = 01000<br>
+funct = 000011<br>
+Código máquina -> **0x00099203** (**0000 0000 0000 1001 1001 0010 0000 0011**)
+
+## 31. Traduza para instruções Assembly do MIPS a seguinte expressão aritmética, supondo que x e y são inteiros e residentes em $t2 e $t5, respetivamente (apenas pode usar instruções nativas e não deverá usar a instrução de multiplicação): <br> y = -3 * x + 5;
+**add    $t5, $t2, $t2**    # $t5 = 2x
+**add    $t5, $t0, $t2**    # $t5 = 3x
+**sub    $t5, $0, $t0**     # $t5 = -3x
+**addi   $t5, $t5, 5**      # $t5 = -3 * x + 5
