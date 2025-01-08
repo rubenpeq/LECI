@@ -205,7 +205,14 @@ funct = 000011<br>
 Código máquina -> **0x00099203** (**0000 0000 0000 1001 1001 0010 0000 0011**)
 
 ## 31. Traduza para instruções Assembly do MIPS a seguinte expressão aritmética, supondo que x e y são inteiros e residentes em $t2 e $t5, respetivamente (apenas pode usar instruções nativas e não deverá usar a instrução de multiplicação): <br> y = -3 * x + 5;
-**add    $t5, $t2, $t2**    # $t5 = 2x
-**add    $t5, $t0, $t2**    # $t5 = 3x
-**sub    $t5, $0, $t0**     # $t5 = -3x
-**addi   $t5, $t5, 5**      # $t5 = -3 * x + 5
+**add     $t5, $t2, $t2**    # $t5 = 2x<br>
+**add     $t5, $t0, $t2**    # $t5 = 3x<br>
+**sub     $t5, $0, $t0**     # $t5 = -3x<br>
+**addi    $t5, $t5, 5**      # $t5 = -3 * x + 5
+
+## 32. Traduza para instruções assembly do MIPS o seguinte trecho de código: <br>int a, b, c;    //a:$t0, b:$t1, c:$t2 <br>unsigned int x, y, z;  //x:$a0, y:$a1, z:$a2 <br>z = (x >> 2) + y; <br>c = (a >> 5) – 2 * b;
+**sll     $a2, $a0, 2**         # $a2 = (x >> 2)
+**add     $a2, $a2, $a1**       # z = (x >> 2) + y
+**sra     $t2, $t0, 5**         # $t2 = (a >> 5)
+**add     $t3, $t1, $t1**       # $t3 = 2b
+**sub     $t2, $t2, $t3**       # c = (a >> 5) – 2 * b
