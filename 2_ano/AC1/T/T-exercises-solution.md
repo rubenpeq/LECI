@@ -30,11 +30,11 @@ O **srl** não mantém o sinal (o bit inserido é sempre 0) enquanto **sra** man
 
 ## 10. Se $5=0x81354AB3, qual o resultado armazenado no registo destino, expresso em hexadecimal, das instruções:
 ### a. srl $3,$5,1
-$5 = 1000 0001 0011 0101 0100 1010 1011 0011 = **0x81354AB3**
+$5 = 1000 0001 0011 0101 0100 1010 1011 0011 = **0x81354AB3**<br>
 $3 = 0100 0000 1001 1010 1010 0101 0101 1001 = **0x409AA55A**
 
 ### b. sra $4,$5,1
-$5 = 1000 0001 0011 0101 0100 1010 1011 0011 = **0x81354AB3**
+$5 = 1000 0001 0011 0101 0100 1010 1011 0011 = **0x81354AB3**<br>
 $4 = 1100 0000 1001 1010 1010 0101 0101 1001 = **0xC09AA55A**
 
 ## 11. System calls:
@@ -249,3 +249,9 @@ Após as instruções das alíneas anteriores, as variáveis têm os seguintes v
 A instrução **slt(set if lesser than)** é usada para comparar dois registos. ``slt $d, $s, $t``:
 - **$d = 1** se **$s < $t**
 - **$d = 0** se **$s >= $t**
+
+## 36.  Qual o valor armazenado no registo $1 na execução da instrução "slt $1, $3, $7", admitindo que:   
+### a. $3=5 e $7=23
+**$1 = 1** 
+### b. $3=0xFE e $7=0x913D45FC
+**$1 = 0** 0xFE > 0x913D45FC
