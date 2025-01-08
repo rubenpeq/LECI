@@ -133,12 +133,12 @@ O registo correspondente à designação lógica $ra é o **registo $31**.
 ## 27. No MIPS, um dos formatos de codificação de instruções é designado por R: 
 ### a. Quais os campos em que se divide este formato de codificação?
 Este formato divide-se em 6 campos:
-- **op**
-- **rs**
-- **rt**
-- **rd**
-- **shamt**
-- **funct**
+- **op** (6 bits)
+- **rs** (5 bits)
+- **rt** (5 bits)
+- **rd** (5 bits)
+- **shamt** (5 bits)
+- **funct** (6 bits)
 
 ### b. Qual o significado de cada um desses campos?
 - **op**
@@ -252,6 +252,79 @@ A instrução **slt(set if lesser than)** é usada para comparar dois registos. 
 
 ## 36.  Qual o valor armazenado no registo $1 na execução da instrução "slt $1, $3, $7", admitindo que:   
 ### a. $3=5 e $7=23
-**$1 = 1** 
+**$1 = 1** (5 < 23)
 ### b. $3=0xFE e $7=0x913D45FC
-**$1 = 0** 0xFE > 0x913D45FC
+**$1 = 0** (0xFE(-2) > 0x913D45FC(-1852024068))
+
+## 37. Com que registo implícito comparam as instruções "bltz", "blez", "bgtz" e "bgez"?
+As instruções **bltz**, **blez**, **bgtz** e **bgez** comparam com o **registo $0** (0).
+
+## 38.  Decomponha em instruções nativas do MIPS as seguintes instruções virtuais:  
+### a. blt $15,$3,exit
+```asm
+slt $1, $15, $3
+bne $1, $0, exit
+```
+### b. ble $6,$9,exit
+```asm
+slt $1, $9, $6
+beq $1, $0, exit
+```
+### c. bgt $5,0xA3,exit
+```asm
+...
+```
+### d. bge $10,0x57,exit
+```asm
+slti $1, $10, 0x57
+beq $1, $0, exit
+```
+### e. blt $19,0x39,exit
+```asm
+slti $1, $19, 0x39
+bne $1, $0, exit
+```
+### f. ble $23,0x16,exit
+```asm
+...
+```
+
+## 39. Na tradução de C para assembly, quais as principais diferenças entre um ciclo "while(...){...}" e um ciclo "do{...}while(...);"?
+Num ciclo **"while(...){...}"** as instruções de branch encontram-se no inicio do ciclo, enquanto num ciclo **"do{...}while(...)"** situam-se no final do ciclo.
+
+## 40. Traduza para assembly do MIPS os seguintes trechos de código de linguagem C (admita que a, b e c residem nos registos $4, $7 e $13, respetivamente):  
+### a.  
+```c
+if(a > b && b != 0)
+    c = b << 2;
+else
+    c = (a & b) ^ (a | b);
+```
+```asm
+    ble $4, $7, else
+    beq $7, $0, else
+if:
+    sll $13, $7, 2      # c = b << 2
+else:
+    and $8, $4, $7      # $8 = (a & b)
+    or $9, $4, $7       # $9 = (a | b)
+    xor $13, $8, $9     # c = (a & b) ^ (a | b)
+```
+### b.  
+```c
+if(a > 3 || b <= c)
+    c = c – (a + b);
+else
+    c = c + (a – 5);
+```
+```asm
+    bgt $4, 3, if
+    ble $7, $13, if
+    j else
+if:
+    add $5, $4, $7      # $5 = (a + b)
+    sub $13, $13, $5    # c = c – (a + b)
+else:
+    addi $5, $4, -5     # $5 = (a - 5)
+    add $13, $13, $5    # c = c + (a – 5)
+```
