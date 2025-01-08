@@ -442,7 +442,7 @@ O endereço a ser lido, calculado de $5 + 0x24 = 0x10010024:
 0x10010026: 0x27
 0x10010027: 0x28 (MSB)
 ```
-Em uma organização **little-endian**, o byte menos significativo é armazenado no endereço mais baixo da memória, assim o valor completo carregado em $3 será: **0x28272625**
+Em uma organização **little-endian**, o byte menos significativo é armazenado no endereço mais baixo da memória, assim o valor completo carregado em $3 será **0x28272625**
 
 ## 50. Considere as mesmas condições da questão anterior. Qual o valor armazenado no registo destino pelas instruções: 
 ### a.
@@ -459,3 +459,88 @@ lb  $4,0xA3($5)
 0x100100A3: 0xA4
 $3 = 0xFFFFFFA4
 ```
+
+## 51. Quantos bytes são reservados no segmento de dados da memória por cada uma das seguintes diretivas:  
+### a. L1: .asciiz "Aulas5&6T"
+**10 bytes**
+### b. L2: .byte 5,8,23
+**3 bytes**
+### c. L3: .word 5,8,23
+**12 bytes**
+### d. L4: .space 5
+**5 bytes**
+
+## 52. Desenhe esquematicamente a memória e preencha-a com o resultado das diretivas anteriores admitindo que são interpretadas sequencialmente pelo Assembler.
+|Address    |Value  |
+|   :---:   | :---:	|
+|0x10010000 | "aluA"  |
+|0x10010004 | "6&5s"  |
+|0x10010008 | 0x0805'\0T'|
+|0x1001000C | 0x00000017 |
+|0x10010010 | 0x00000005 |
+|0x10010014 | 0x00000008 |
+|0x10010018 | 0x00000017 |
+|0x1001001C | 0x00000000 |
+|0x10010020 | 0x00000000 |
+
+## 53. Supondo que "L1:" corresponde ao endereço inicial do segmento de dados, e que esse endereço é 0x10010000, determine os endereços a que correspondem os labels "L2:",  "L3:" e "L4:"
+- **L1** -> 0x10010000
+- **L2** -> 0x1001000A
+- **L3** -> 0x10010010
+- **L4** -> 0x1001001C
+
+## 54. Suponha que "b" é um array declarado como "int b[25];": 
+### a. Como é obtido, em C, o endereço inicial do array, i.e., o endereço a partir do qual está armazenado o seu primeiro elemento?  
+O endereço pode ser obtido por exemplo com ``int *p = b`` ou ``int *p = &b[0]``.
+
+### b. Supondo uma memória "byte-addressable", como é obtido, em assembly o endereço do elemento "b[6]"?
+```asm
+la $t1, array   # $t1 = &b[0]
+lw $t0, 24($t1) # $t0 = b[6]
+```
+
+## 55. O que é codificado no campo offset do código máquina das instruções "beq/bne"?
+No campo offset das instruções **beq/bne** está codificada a diferença entre o endereço do **label** e o valor do **PC(program counter)**, dividindo o resultado por 4 pois o endereço é sempre multiplo de 4 (**offset = (label - PC) >> 2**).
+
+## 56. A partir do código máquina de uma instrução "beq/bne", como é formado o endereço-alvo (Branch Target Address)?
+**Branch Target Adress = PC + (offset << 2)**.
+
+## 57. Qual o formato de codificação de cada uma das seguintes instruções: "beq/bne", "j", "jr"?
+- **beq/bne**: Formato I
+- **j**: Formato J
+- **jr**: Formato R
+
+## 58. A partir do código máquina de uma instrução "j", como se obtém o endereço-alvo (Jump Target Address)?
+O **Jump Target Adress** é pelos 4 bits mais significativos do PC, seguido dos 26 bits codificados no formato J, usando 2 shifts à esquerda (**PC[31-28]+(código máquina[25-0] << 2)**).
+
+## 59. Dada a seguinte sequência de declarações:  
+```c
+int b[25];
+int a;
+int *p = b;
+```
+Identifique qual ou quais das seguintes atribuições permitem aceder ao elemento de índice 5 do array "b":  
+| a = b[5]; | a = *p + 5; | a = *(p + 5); | a = *(p + 20); |
+|:---:|:---:|:---:|:---:|
+| sim | não | sim | não |
+
+## 60. Assuma que as variáveis f, g, h, i e j correspondem aos registos $t0, $t1, $t2, $t3 e $t4 respetivamente. Considere que o endereço base dos arrays de inteiros A e B está contido nos registos $s0 e $s1. Considere ainda as seguintes expressões:
+```c
+f = g + h + B[2]
+j = g - A[B[2]]
+```
+### a. Qual a tradução para assembly de cada uma das instruções C indicadas?
+```asm
+lw $t0, 8($s1)      # $t0 = B[2]
+add $t0, $t0, $t2   # $t0 = h + B[2]
+add $t0, $t0, $t1   # f = g + h + B[2]
+```
+```asm
+lw $t4, 8($s1)      # $t4 = B[2] 
+sll $t4, $t4, 2     # $t4 = B[2]*4
+addu $t4, $t4, $s1  # $t4 = A[B[2]]
+sub $t4, $t1, $t4   # j = g - A[B[2]]
+```
+
+### b. Quantas instruções assembly são necessárias para cada uma das instruções C indicadas? E quantos registos auxiliares são necessários?
+Para ``f = g + h + B[2]`` foram usadas 3 instruções assembly e em ``j = g - A[B[2]]`` são necessárias 4 instruções assembly. Em ambas não foi necessário utilizar nenhum registo auxiliar.
