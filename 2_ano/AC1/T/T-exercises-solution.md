@@ -328,3 +328,135 @@ else:
     addi $5, $4, -5     # $5 = (a - 5)
     add $13, $13, $5    # c = c + (a – 5)
 ```
+
+## 41. Como se designa o modo de endereçamento usado pelo MIPS para ter acesso a palavras residentes na memória externa?
+Designa-se por **endereçamento indireto por registo com deslocamento**, em que o endereço de acesso à memória é calculado pela soma algébrica do conteúdo do registo com o offset.
+
+## 42. Na instrução "lw $3,0x24($5)" qual a função dos registos $3, $5 e da constante 0x24?
+Na instrução ``lw $3,0x24($5)``:
+- $3: Registo no qual vai ser armazenado o valor lido da memória
+- $5: Registo que contém o endereço base, a partir do qual vai ser adicionado o offset
+- 0x24: Esta constante é o offset que irá ser adicionado ao conteúdo do registo $5, dando o endereço da memória a ser lido.
+
+## 43. Qual é o tipo de codificação das instruções de acesso à memória no MIPS? Descreva o seu formato e o significado de cada um dos seus campos?
+O formato do tipo I é o utilizado para o acesso à memória no MIPS. Este formato divide-se em 4 campos:
+- **op**(6 bits)
+    - OpCode.
+- **rs**(5 bits)
+    - Registo que contém o endereço base a ser somado pelo **offset**.
+- **rt**(5 bits)
+    - registo destino se for uma operação de leitura ou registo fonte se for uma operação de escrita.
+- **offset**(16 bits)
+    - **offset** a ser somado com **rs**.
+
+## 44. Qual a diferença entre as instruções "sw" e "sb"?
+A instrução **sb** guarda num endereço da memória 1 byte de informação, enquanto **sw** guarda 4 bytes (o endereço em que vai ser guardado o valor tem de estar alinhado a 4).
+
+## 45. O que distingue as instruções "lb" e "lbu"?
+Ambas as instruções leem 1 byte da memória mas **lbu(load byte unsigned)** coloca todos os 24 bits mais significativos a 0, enquanto **lb(load byte)** faz a extensão de sinal dos 8 bits menos significativos para 32 bits.
+
+## 46. O que acontece quando uma instrução lw/sw tenta aceder a um endereço que não é múltiplo de 4?
+Quando o MIPS tenta aceder à memória nesse endereço, verifica que o endereço é inválido e gera uma exceção, terminando aí a execução do programa.
+
+## 47. Traduza para assembly do MIPS os seguintes trechos de código de linguagem C (atribua registos internos para o armazenamento das variáveis i e k ):
+### a.
+```c
+int i, k;
+for(i=5, k=0; i < 20; i++, k+=5);
+```
+```asm
+li $t0, 5               # i=5
+li $t1, 0               # k=0
+for:
+bge $t0, 20, endfor     # for(i<20)
+addi $t0, $t0, 1        # i++
+addi $t1, $t1, 5        # k+=5
+j for
+
+endfor:
+```
+ 
+### b.
+```c
+int i=100, k=0;
+for( ; i >= 0; )
+{
+    i--;
+    k -= 2;
+}
+```
+```asm
+li $t0, 100             # i=100
+li $t1, 0               # k=0
+for: bltz $t0, endfor   # for(i>=0)
+addi $t0, $t0, -1       # i--
+addi $t1, $t1, -2       # k-=2
+
+endfor:
+```
+  
+### c.
+```c
+unsigned int k=0;
+for( ; ; )
+{
+k += 10;
+}
+```
+```asm
+li $t0, 0           # k=0
+for:
+addiu $t0, $t0, 10  # k+=10
+
+endfor:
+```
+### d.
+```c
+int k=0, i=100;
+do
+{
+    k += 5;
+} while(--i >= 0);
+```
+```asm
+li $t0, 0       # k=0
+li $t1, 100     # i=100
+do:
+addi $t0, $t0, 5    # k+=5
+addi $t1, $t1, -1   # --i
+bgez $t1, do
+```
+
+## 48. Sabendo que o OpCode da instrução "lw" é 0x23, determine o código máquina, expresso em hexadecimal, da instrução "lw $3,0x24($5)".
+OpCode = 100011<br>
+rs = 00101<br>
+rt = 00011<br>
+offset = 0000000000100100<br>
+Código máquina -> **0x8CA30024** (**1000 1100 1010 0011 0000 0000 0010 0100**)
+
+## 49. Suponha que o conteúdo da memória externa foi inicializada, a partir do endereço 0x10010000, com os valores 0x01,0x02,0x03,0x04,0x05,0x06,0x07 e assim sucessivamente. Suponha ainda que $3=0x1001 e $5=0x10010000. Qual o valor armazenado no registo destino após a execução da instrução "lw $3,0x24($5)" admitindo uma organização de memória little endian?
+O endereço a ser lido, calculado de $5 + 0x24 = 0x10010024:
+```
+0x10010024: 0x25 (LSB)
+0x10010025: 0x26
+0x10010026: 0x27
+0x10010027: 0x28 (MSB)
+```
+Em uma organização **little-endian**, o byte menos significativo é armazenado no endereço mais baixo da memória, assim o valor completo carregado em $3 será:<br>
+**0x28272625**
+
+## 50. Considere as mesmas condições da questão anterior. Qual o valor armazenado no registo destino pelas instruções: 
+### a.
+```
+lbu $3,0xA3($5)
+
+0x100100A3: 0xA4
+$3 = 0x000000A4
+```
+### b. 
+```
+lb  $4,0xA3($5)
+
+0x100100A3: 0xA4
+$3 = 0xFFFFFFA4
+```
