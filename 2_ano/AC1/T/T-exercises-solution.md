@@ -22,7 +22,7 @@ O MIPS tem **32 registos internos** de uso geral.
 Cada registo interno no MIPS pode armazenar **32 bits**.
 
 ## 8. Qual a sintaxe, em Assembly do MIPS, de uma instrução aritmética de soma ou subtração?
-soma        -> ``add r, a, b  # r = a+b``
+soma        -> ``add r, a, b  # r = a+b``<br>
 subtração   -> ``sub r, a, b  # r = a-b``
 
 ## 9. O que distingue a instrução **srl** da instrução **sra** do MIPS?
@@ -237,3 +237,15 @@ add  h, i, g    # h = i + g
 addi j, j, 1   # j++
 add  h, h, j   # h = h + j
 ```
+
+## 34. Assumindo que g=1, h=2, i=3 e j=4 qual o valor destas variáveis no final das sequências das alíneas da questão anterior?
+Após as instruções das alíneas anteriores, as variáveis têm os seguintes valores:
+- g = 1;
+- h = 9;
+- i = 3;
+- j = 5;
+
+## 35. Descreva a operação realizada pela instrução assembly "slt" e quais os resultados possíveis?
+A instrução **slt(set if lesser than)** é usada para comparar dois registos. ``slt $d, $s, $t``:
+- **$d = 1** se **$s < $t**
+- **$d = 0** se **$s >= $t**
