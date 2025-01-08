@@ -442,8 +442,7 @@ O endereço a ser lido, calculado de $5 + 0x24 = 0x10010024:
 0x10010026: 0x27
 0x10010027: 0x28 (MSB)
 ```
-Em uma organização **little-endian**, o byte menos significativo é armazenado no endereço mais baixo da memória, assim o valor completo carregado em $3 será:<br>
-**0x28272625**
+Em uma organização **little-endian**, o byte menos significativo é armazenado no endereço mais baixo da memória, assim o valor completo carregado em $3 será: **0x28272625**
 
 ## 50. Considere as mesmas condições da questão anterior. Qual o valor armazenado no registo destino pelas instruções: 
 ### a.
