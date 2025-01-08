@@ -22,8 +22,8 @@ O MIPS tem **32 registos internos** de uso geral.
 Cada registo interno no MIPS pode armazenar **32 bits**.
 
 ## 8. Qual a sintaxe, em Assembly do MIPS, de uma instrução aritmética de soma ou subtração?
-soma        -> **add r, a, b**  (r = a+b)<br>
-subtração   -> **sub r, a, b**  (r = a-b)
+soma        -> ``add r, a, b  # r = a+b``
+subtração   -> ``sub r, a, b  # r = a-b``
 
 ## 9. O que distingue a instrução **srl** da instrução **sra** do MIPS?
 O **srl** não mantém o sinal (o bit inserido é sempre 0) enquanto **sra** mantém o sinal (O bit inserido é igual ao bit mais significativo).
@@ -165,7 +165,7 @@ A instrução cujo código máquina é 0x00000000 no MIPS é um NOP (No Operatio
 O compilador utilizará **srl** para tipos **unsigned**(ex. **unsigned int**) e **sra** para tipos **signed**(ex. **int**).
 
 ## 29. Qual a instrução nativa do MIPS em que é traduzida a instrução virtual "move $4,$15"?
-A instrução virtual **move $4, $15** será traduzida para **or $4, $15, $0**.
+A instrução virtual ``move $4, $15`` será traduzida para ``or $4, $15, $0``.
 
 ## 30. Determine o código máquina das seguintes instruções (verifique a tabela na última página):   
 ### a. xor $5,$13,$24
@@ -225,4 +225,15 @@ add     $a2, $a2, $a1       # z = (x >> 2) + y
 sra     $t2, $t0, 5         # $t2 = (a >> 5)
 add     $t3, $t1, $t1       # $t3 = 2b
 sub     $t2, $t2, $t3       # c = (a >> 5) – 2 * b
+```
+
+## 33. Considere que as variáveis g, h, i e j são conhecidas e podem ser representadas por uma variável de 32 bits num programa em C. Qual a correspondência, em linguagem C, às seguintes instruções:  
+### a.
+```asm
+add  h, i, g    # h = i + g
+```
+### b.
+```asm
+addi j, j, 1   # j++
+add  h, h, j   # h = h + j
 ```
