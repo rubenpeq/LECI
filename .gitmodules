@@ -1,0 +1,15 @@
+[submodule "LECI-1"]
+	path = LECI-1
+	url = https://github.com/rubenpeq/LECI-1.git
+[submodule "LECI-2"]
+	path = LECI-2
+	url = https://github.com/rubenpeq/LECI-2.git
+[submodule "LECI-3"]
+	path = LECI-3
+	url = https://github.com/rubenpeq/LECI-3.git
+[submodule "LECI-2/AED/AED-assignments"]
+	path = LECI-2/AED/AED-assignments
+	url = https://github.com/rubenpeq/AED-assignments.git
+[submodule "LECI-2/RC1/RC1_projeto"]
+	path = LECI-2/RC1/RC1_projeto
+	url = https://github.com/rubenpeq/RC1_projeto.git
