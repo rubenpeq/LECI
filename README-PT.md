@@ -55,7 +55,7 @@ Alguns projetos das unidades curriculares podem ter outros colaboradores, mas es
 | Redes de Comunicações II          |  2  |
 | Análise de Sistemas               |  2  |
 | Arquitetura de Computadores II    |  2  |
-| <details><summary>**Competências Transferíveis I**</summary> MICROCONTROLADORES E INTERAÇÃO COM SENSORES E ATUADORES <br /> MATERIAIS E DESENVOLVIMENTO SUSTENTÁVEL <br /> VISUALIZAÇÃO DE DADOS </details> |  2  |
+| <details><summary>**Competências Transferíveis II**</summary> MICROCONTROLADORES E INTERAÇÃO COM SENSORES E ATUADORES <br /> MATERIAIS E DESENVOLVIMENTO SUSTENTÁVEL <br /> VISUALIZAÇÃO DE DADOS </details> |  2  |
 
 </details>
 
